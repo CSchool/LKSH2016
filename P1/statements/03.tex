@@ -1,0 +1,158 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{tabularx}
+\usepackage{lastpage}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Начальное программирование. Тренировка 03 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+\begin{document}
+
+\section*{Задача A. Египетский треугольник}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Треугольник называется египетским, если длины его сторон --- целые числа
+и для них выполняется условие теоремы пифагора:
+
+$$ a^2 + b^2 = c^2 $$
+
+Даны длины сторон. Проверить является ли треугольник египетским.
+
+\subsection*{Формат входных данных}
+
+Три целых числа разделённых пробелом.
+
+\subsection*{Формат выходных данных}
+
+\texttt{YES} --- если треугольник египетский, \texttt{NO} --- иначе.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        3 4 5 & YES \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача B. Days}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+На вход подаётся номер дня недели. Вывести название дня.
+
+\subsection*{Формат входных данных}
+
+Число от 1 до 7.
+
+\subsection*{Формат выходных данных}
+
+Сокращённое название дня недели: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        2 & Wed \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача C. Проверить число на палиндром}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дано 4х значное число. Проверить, является ли оно палиндромом.
+
+\subsection*{Формат входных данных}
+
+4х значное число.
+
+\subsection*{Формат выходных данных}
+
+\texttt{YES} --- если число палиндром, \texttt{NO} --- иначе.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        1221 & YES \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+\section*{Задача D. Счастливый билет}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дан номер билета. Билет считается счастливым если сумма первых 3х цифр
+равна сумме последних 3х. Проверить, что билет счастливый.
+
+\subsection*{Формат входных данных}
+
+6 чисел через пробел.
+
+\subsection*{Формат выходных данных}
+
+Вывести \texttt{YES}, билет счастливый, \texttt{NO} --- иначе.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        0 0 0 1 1 1 & NO \\ \hline
+    \end{tabularx}
+}
+
+\newpage
+
+\end{document}

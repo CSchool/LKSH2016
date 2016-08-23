@@ -1,0 +1,66 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage[russian, english]{babel}
+
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{cmntClr}{rgb}{0.1,0.5,0.2}
+\definecolor{keyWClr}{rgb}{0.2,0.1,0.5}
+\definecolor{emphClr}{rgb}{0.5,0.1,0.2}
+\definecolor{bkgrndClr}{rgb}{0.95,0.95,0.95}
+
+\begin{document}
+
+\parindent=0cm
+
+\section*{Краткое напоминание}
+
+\lstset{
+    language=C++,
+    commentstyle=\color{cmntClr},
+    keywordstyle=\color{keyWClr},
+    emphstyle=\color{emphClr},
+    numbers=left,
+    basicstyle=\ttfamily,
+    backgroundcolor=\color{bkgrndClr},
+    frame=single
+}
+
+\subsection*{Циклы}
+
+Некоторые действия хочется повторять несколько раз. Для таких
+целей существуют циклы. Мы с вами рассмотрим цикл \lstinline|while|
+
+\textit{Пример:}
+\begin{lstlisting}
+while (expression) {
+    // block A
+}
+\end{lstlisting}
+
+Блок \textit{A} будет выполняться, пока \lstinline|expression|
+имеет значение \lstinline|true|.
+
+Из цикла можно выйти раньше если будет выполнена инструкция \lstinline|break|
+
+
+Простой пример цикла, который выводит числа от 1 до 10:
+
+\begin{lstlisting}
+int cnt = 1;
+while (cnt <= 10) {
+    cout << cnt << '\n';
+    cnt = cnt + 1;
+}
+\end{lstlisting}
+
+Переменная \lstinline|cnt| --- выполняет роль счётчика. Пока она не больше 10, мы её выводим на экран.
+
+\end{document}

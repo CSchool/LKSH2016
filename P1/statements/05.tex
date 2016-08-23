@@ -1,0 +1,184 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{tabularx}
+\usepackage{lastpage}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Начальное программирование. Тренировка 05 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+\begin{document}
+
+\section*{Задача A. Сумма цифр - 2}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дано число. Найти сумму его цифр.
+
+\subsection*{Формат входных данных}
+
+Одно целое число.
+
+\subsection*{Формат выходных данных}
+
+Вывести сумму цифр.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        12345 & 15 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача B. Возведение в степень}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Даны два числа: $x$ и $k$ найти $x^k$
+
+\subsection*{Формат входных данных}
+
+Два целых числа.
+
+\subsection*{Формат выходных данных}
+
+Одно число --- степень.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        2 3 & 8 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача C. Логарифмирование}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дано два числа: $x$  и $y$. Найти такое $k$ что $x^k = y$
+
+\subsection*{Формат входных данных}
+
+Два числа $x$ и $y$.
+
+\subsection*{Формат выходных данных}
+
+Одно число -- ответ.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        2 8 & 3 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+\section*{Задача D. Простые числа}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Проверить число на простоту.
+
+\subsection*{Формат входных данных}
+
+Одно число $x$.
+
+\subsection*{Формат выходных данных}
+
+Вывести \texttt{YES}, если число простое, \texttt{NO} --- иначе.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        7 & YES \\ \hline
+    \end{tabularx}
+}
+
+\newpage
+
+\section*{Задача E. Калькулятор}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дана формула, нужно её посчитать.
+
+\subsection*{Формат входных данных}
+
+Формула числа и операции разделены пробелом. Допустимые операции
+сложение и вычитание. Признак конца формулы \texttt{!}.
+
+\subsection*{Формат выходных данных}
+
+Посчитанная формула.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        7 + 1 - 2 + 3 - 8 !& 1 \\ \hline
+    \end{tabularx}
+}
+
+\newpage
+
+\end{document}

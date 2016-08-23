@@ -1,0 +1,162 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{tabularx}
+\usepackage{lastpage}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{graphicx}
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Начальное программирование. Тренировка 04 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+\begin{document}
+
+\section*{Задача A. Реверс числа}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дано 4х значное число. Нужно вывести ``перевёрнутое'' число.
+
+\subsection*{Формат входных данных}
+
+Целое число из 4х знаков.
+
+\subsection*{Формат выходных данных}
+
+Перевёрнутое число.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        4021 & 1204 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача B. Квадрат}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Квадрат расстояния между двумя точками $a$ и $b$ на плоскости вычисляется
+по формуле: 
+
+$$(a_x - b_x)^2 + (a_y - b_y)^2$$
+
+Вам даны координаты точек, найти квадрат расстояния между ними.
+
+\subsection*{Формат входных данных}
+
+4 целых числа через пробел: $a_x$, $a_y$, $b_x$, $b_y$.
+
+\subsection*{Формат выходных данных}
+
+Одно целое число -- квадрат расстояния между двумя точками.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        0 0 1 1 & 2 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача C. Площадь квадрата}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дана длина диагонали квадрата. Найти площадь квадрата.
+
+\textit{Подсказака}:
+
+\includegraphics[scale=0.5]{img.jpg}
+
+\subsection*{Формат входных данных}
+
+Одно натуральное число --- диагональ квадрата.
+
+\subsection*{Формат выходных данных}
+
+Площадь квадрата.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        2 & 2 \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача D. Произведение}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{stdin} \\
+    Имя выходного файла: & \texttt{stdout} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Дано трёхзначное число. Найти произведение его чисел.
+
+\subsection*{Формат входных данных}
+
+Трёхзначное число.
+
+\subsection*{Формат выходных данных}
+
+Одно число -- произведение цифр.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{\textwidth}{| X | X |}
+        \hline
+        stdin & stdout \\ \hline
+        241 & 8 \\ \hline
+    \end{tabularx}
+}
+
+\newpage
+
+\end{document}

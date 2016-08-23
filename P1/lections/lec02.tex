@@ -1,0 +1,91 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage[russian, english]{babel}
+
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{cmntClr}{rgb}{0.1,0.5,0.2}
+\definecolor{keyWClr}{rgb}{0.2,0.1,0.5}
+\definecolor{emphClr}{rgb}{0.5,0.1,0.2}
+\definecolor{bkgrndClr}{rgb}{0.95,0.95,0.95}
+
+\begin{document}
+
+\section*{Краткое напоминание}
+
+\lstset{
+    language=C++,
+    commentstyle=\color{cmntClr},
+    keywordstyle=\color{keyWClr},
+    emphstyle=\color{emphClr},
+    numbers=left,
+    basicstyle=\ttfamily,
+    backgroundcolor=\color{bkgrndClr},
+    frame=single
+}
+
+\subsection*{Ветвления}
+
+Иногда нужно уметь выполнять некоторые действия при выполнении
+каких-то условий. Для таких ситуаций есть ветвления.
+
+
+Пример:
+\begin{lstlisting}
+if (expression) {
+    // block A
+} else {
+    // block B
+}
+\end{lstlisting}
+
+
+Блок \textit{A} выполнится, если \lstinline|expression| имеет 
+значение \lstinline|true|, в противном случае выполнится блок \textit{B}.
+Часть с \lstinline|else| необязательная.
+
+Как может выглядеть выражение возвращающее логические значения?
+Это может быть сравнение:
+
+\begin{enumerate}
+\item \lstinline|==| --- равенство
+\item \lstinline|!=| --- неравенство
+\item \lstinline|>| --- меньше
+\item \lstinline|<| --- больше
+\item \lstinline|>=| --- больше или равно
+\item \lstinline|<=| --- меньше или равно
+\end{enumerate}
+
+Либо коомбинация логических выражений соединённых через:
+
+\begin{enumerate}
+\item \lstinline|!| --- логическое НЕ
+\item \lstinline|&&| --- логическое И
+\item || --- логическое ИЛИ
+\end{enumerate}
+
+Пример программы, выводящей ОК, если введённое число положительное
+и меньше 10.
+
+\begin{lstlisting}
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    cin >> a;
+    if (0 < a && a < 10) {
+        cout << "OK";
+    }
+}
+\end{lstlisting}
+
+\end{document}
