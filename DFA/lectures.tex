@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\newtheorem{Def}{Def:}
+\newtheorem{Lem}{Lem:}
+
+\begin{document}
+
+\section{Детерменированные конечные автоматы}
+
+\begin{Def}
+    Слово --- любая конечная последовательность символов.
+\end{Def}
+
+\begin{Def}
+    Язык -- множество слов.
+\end{Def}
+
+\begin{Def}
+    ДКА --- это следующий кортеж: $(\Sigma, q_0, Q, T, \delta)$, где
+    \begin{enumerate}
+        \item $\Sigma$ --- алфавит
+        \item $Q$ --- это множество состояний
+        \item $q_0$ --- стартовое состояние
+        \item $T \subset Q$ --- множество терминальных состояний
+        \item $\delta: Q \times \Sigma \rightarrow Q$
+    \end{enumerate}
+\end{Def}
+
+\begin{Def}
+$\varepsilon$ --- пустое слово
+\end{Def}
+
+Давайте обобщим функцию перехода следующим образом:
+
+$$ \hat{\delta}(q, cs) = 
+    \left\{
+        \begin{matrix}
+            q & cs = \varepsilon \\
+            \hat{\delta}(q, c), s) & 
+            c \in \Sigma, s \in \Sigma^*        \end{matrix}
+    \right.
+$$
+
+Теперь будем говорить, что слово принимается автоматом если 
+$\hat{\delta}(q_0, w) \in T$.
+
+Как можно представить себе это: есть некоторый вычислитель -- автомат, он принимает или отвергает слова. Обработка слова идёт
+посимвольно, каждый раз переходя на новый символ мы переходим в новое состояние, если в конце пришли в терминальное, то мы приняли слово.
+
+
+Связи с этим можно нарисовать граф автомата. Вершины --- состояния, ребра -- переходы.
+
+\subsection{Примеры автоматов:}
+
+\begin{enumerate}
+    \item Cлова, длина которых кратна 3м.
+\end{enumerate}
+
+\subsection{Задачки:}
+
+\subsubsection{Двоичные числа кратные 2}
+
+\subsubsection{Двоичные числа кратные 3}
+
+\subsubsection{Двоичные числа кратные 6}
+
+\subsubsection{Двочиные числа без 11}
+
+\subsubsection{Любой конечный язык распознаётся автоматом}
+
+\section{Пересечение, объединение, разность автоматов}
+
+Давайте попытаемся перенести операции над множествами на автоматы,
+т.е. хотим понять, что для всех этих операций ДКА существует.
+
+\begin{Def}
+    Пусть есть два ДКА: $A = (q_A, Q_A, T_A, \delta_A)$ и $B = (q_B, Q_B, T_B, \delta_B)$, тогда прямым произведением автоматов будет
+    называться следующий автомат: $A \times B = ((q_A, q_B), Q_A \times Q_B, T_A \times T_B, \delta)$, где $\delta((a, b), c) = (\delta_A(a, c), \delta_B(b, c))$. 
+\end{Def}
+
+Поймем теперь, что такой автомат принимает пересечение языков автоматов.
+
+\subsection{Задачи:}
+
+\subsubsection{Объединение}
+
+\subsubsection{Разница}
+
+\subsubsection{Инверсия}
+
+\subsubsection{Построить автомат чисел кратных 6 как произведение}
+
+\section{Лемма о накачке}
+
+Иногда нужно научиться показывать, что для какого-то языка нет автомата, для 
+этого существует следующая лемма:
+
+\begin{Lem}[О накачке]
+    Пусть для языка $L$ существует ДКА, тогда:
+     $$\exists n\colon \forall w \in L\colon |w| > n \Rightarrow 
+         \exists x, y, z\colon 
+             (w = xyz) \wedge 
+             (|x| + |y| \leq n) \wedge 
+             (|y| > 0) \wedge 
+             \forall i > 0\colon xy^iz \in L $$
+\end{Lem}
+
+Т.е. для правильного языка, есть некоторая длина, что для любого слова больше неё
+получаем, что его можно разбить на 3 части и середину можно повторять сколько угодно раз.
+
+\begin{proof}
+За $n$ возьмём количество состояний. Теперь расмотрим маршрут внутри автомата.
+Т.к. слово длинное то должна быть петля по принципу Дирихле, значит теперь мы можем по ней накручиваться.
+\end{proof}
+
+\subsection{Задачи:}
+    \subsubsection{$a^nb^n$}
+    \subsubsection{Правильные скобочные последовательности}
+    \subsubsection{Равное число 1 и 0}
+    
+\section{Динамика по автомату}
+
+\end{document}
