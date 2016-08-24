@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int N(int n) {
+	int a;
+	a = n >= 5 ? N(n - 5) : 0;
+	return 1 + a;
+}
+
+int D(int n) {
+	int a;
+	a = n >= 10 ? D(n - 10) : 0;
+	return N(n) + a;
+}
+
+int Q(int n) {
+	int a;
+	a = n >= 25 ? Q(n - 25) : 0;
+	return D(n) + a;
+}
+
+int C(int n) {
+	int a;
+	a = n >= 50 ? C(n - 50) : 0;
+	return Q(n) + a;
+}
+
+int main() {
+	int c;
+	cin >> c;
+	int n = C(c);
+	cout << n;
+	return 0;
+}

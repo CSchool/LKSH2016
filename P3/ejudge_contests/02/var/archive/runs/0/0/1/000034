@@ -1,0 +1,32 @@
+#include "iostream"
+#include "vector"
+#include "algorithm"    
+#include "string"
+using namespace std;
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n;
+	cin>>n;
+	vector<long long> table(n+5);
+	vector<long long> ans;
+	table[0]=1; table[1]=1;
+	for (int i=2;i<=n;i++)
+		table[i]=table[i-1]+table[i-2];
+	int k=n;
+	int lol=0;
+	for (int i=n;i>=0 && k>0;i--){
+		if(k-table[i]>=0){
+			ans.push_back(table[i]);
+			k=k - table[i];
+			lol++;
+		}
+	}
+	cout<<lol<<endl;
+	for (int i=ans.size()-1;i>0-1;i--){
+		cout<<ans[i]<<" ";
+	}
+	return 0;
+}

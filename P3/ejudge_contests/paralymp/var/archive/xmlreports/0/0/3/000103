@@ -1,0 +1,47 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="103" judge-id="45" status="RT" scoring="ACM" run-tests="1" contest-id="341" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>6214ebb2-643a-482e-bdbc-1fb41bcfd1f1</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>888.378</cpu-mhz>
+  <compiler_output>000103.cpp: In function ‘int main()’:
+000103.cpp:10:14: warning: unused variable ‘p’ [-Wunused-variable]
+     int mx=0,p=0,mxi=0,a=0,m[10000], n;
+              ^
+000103.cpp:20:16: warning: iteration 10000 invokes undefined behavior [-Waggressive-loop-optimizations]
+         if (m[i]&gt;mx){
+             ~~~^
+000103.cpp:19:19: note: within this loop
+     for (int i=0;i&lt;=10000;i++){
+                  ~^~~~~~~
+000103.cpp:13:13: warning: iteration 10000 invokes undefined behavior [-Waggressive-loop-optimizations]
+         m[i]=0;
+         ~~~~^~
+000103.cpp:12:19: note: within this loop
+     for (int i=0;i&lt;=10000;i++)
+                  ~^~~~~~~
+
+</compiler_output>
+  <tests>
+    <test num="1" status="RT" term-signal="11" time="4" real-time="26" max-memory-used="13201408" >
+  <program-stats-str>{ utime=3, stime=1, ptime=4, rtime=26, maxvsz=13201408, maxrss=2891776, nvcsw=5, nivcsw=1 }</program-stats-str>
+  <interactor-stats-str>{ utime=2, stime=3, ptime=5, rtime=25, maxvsz=38346752, maxrss=3366912, nvcsw=3, nivcsw=0 }</interactor-stats-str>
+      <input size="394">39
+481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 
+</input>
+      <output size="0"></output>
+      <stderr size="0"></stderr>
+    </test>
+  </tests>
+</testing-report>

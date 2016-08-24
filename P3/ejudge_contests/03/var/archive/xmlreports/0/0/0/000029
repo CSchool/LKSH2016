@@ -1,0 +1,33 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="29" judge-id="1" status="PE" scoring="ACM" run-tests="1" contest-id="303" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>3e215654-c1ca-4877-9664-fbff9018d475</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>816.113</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="PE" time="4" real-time="6" max-memory-used="4030464"  checker-comment="user program output: Unexpected EOF" >
+  <program-stats-str>{ utime=1, stime=3, ptime=4, rtime=6, maxvsz=4030464, maxrss=3477504, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=2498560, maxrss=1880064, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="2">6
+</input>
+      <output size="0"></output>
+      <correct size="2">2
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="36">user program output: Unexpected EOF
+</checker>
+    </test>
+  </tests>
+</testing-report>

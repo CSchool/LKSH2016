@@ -1,0 +1,74 @@
+type longinto = int64;
+var i,j,a,n,min,mini,sumr,sumb,sumg:longinto;
+mas:array[1..50000] of longinto;
+znak:array[1..50000] of char;
+
+procedure quicksort(first, last: longinto);
+var f, l, mid, count: longinto;
+b:char;
+begin
+ f:=first;
+ l:=last;
+ mid:=mas[(f+l) div 2];
+ repeat
+  while mas[f]<mid do inc(f);
+  while mas[l]>mid do dec(l);
+  if f<=l then
+  begin
+  count:=mas[f];
+  mas[f]:=mas[l];
+  mas[l]:=count;
+  b:=znak[f];
+  znak[f]:=znak[l];
+  znak[l]:=b;
+  inc(f);
+  dec(l);
+  end;
+ until f>l;
+if first<l then quicksort(first, l);
+if f<last then quicksort(f, last);
+end;
+
+procedure sum(k:longinto; var e:longinto);
+begin
+if k>=2 then e:=e+mas[k]*mas[k]*5-mas[k-1]*mas[k-1] else e:=e+mas[k]*mas[k]*5;
+end;
+
+begin
+read(n);
+for i:=1 to n do
+begin
+read(mas[i],znak[i]);
+while znak[i] = ' ' do read(znak[i]);
+end;
+
+quicksort(1,n);
+
+{for i:=1 to n do
+begin
+ min:=999999999;
+ for j:=i to n do if mas[j]<=min then
+  begin
+   min:=mas[j];
+   mini:=j;
+  end;
+ a:=mas[i];
+ mas[i]:=min;
+ mas[mini]:=a;
+ b:=znak[i];
+ znak[i]:=znak[mini];
+ znak[mini]:=b;
+end;   }
+
+for I:=1 to n do
+begin
+ if znak[i]='R' then sum(i,sumr);
+ if znak[i]='B' then sum(i,sumb);
+ if znak[i]='G' then sum(i,sumg);
+end;
+
+writeln('R - ',sumr);
+writeln('G - ',sumg);
+writeln('B - ',sumb);
+
+end.

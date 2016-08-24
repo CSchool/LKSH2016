@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+struct coord {
+	int x, y;
+	bool check = true;
+};
+
+int main() {
+
+	int k = 0;
+
+	string s;
+	cin >> s;
+
+	vector<coord> way(s.size()+1);
+
+	way[0].x = 0; way[0].y = 0;
+
+	for (int i = 0; i < s.size(); i++) {
+		switch (s[i]) {
+		case 'U': way[i + 1].x = way[i].x; way[i + 1].y = way[i].y - 1; break;
+		case 'D': way[i + 1].x = way[i].x; way[i + 1].y = way[i].y + 1; break;
+		case 'L': way[i + 1].x = way[i].x - 1; way[i + 1].y = way[i].y; break;
+		case 'R': way[i + 1].x = way[i].x + 1; way[i + 1].y = way[i].y; break;
+		}
+
+		for (int j = 0; j < i; j++) {
+			if (way[j].x == way[i + 1].x && way[j].y == way[i + 1].y) {
+				way[i + 1].check = false;
+				if (way[j].check) {
+					k++;
+					way[j].check = false;
+					break;
+				}
+			}
+		}
+	}
+
+	cout << k;
+
+	//system("pause");
+	return 0;
+}

@@ -1,0 +1,10 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="43" judge-id="1" status="CE" scoring="ACM" run-tests="0" contest-id="302" compile-error="yes" >
+  <uuid>7b2fb921-3afd-4b93-98c4-e27e69168c1b</uuid>
+  <compiler_output>000043.cpp:1:1: error: expected unqualified-id before '&lt;' token
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;windows-1251&quot;?&gt;
+ ^
+</compiler_output>
+</testing-report>

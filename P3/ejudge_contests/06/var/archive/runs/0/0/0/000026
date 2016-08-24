@@ -1,0 +1,58 @@
+#include "iostream"
+#include "vector"
+
+using namespace std;
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n;
+	cin >> n;
+    vector<vector<char> > a(n, vector<char>(n));
+    vector<vector<int> > s(n, vector<int>(n));
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> a[i][j];
+    
+    s[n-1][n-1] = (int)a[n-1][n-1] - 48;
+
+    for (int j = n-2; j >= 0; j--){
+        int i = n-1;
+        s[i][j] = (int)a[i][j] - 48 + s[i][j+1];
+    }
+    for (int i = n-2; i >= 0; i--){
+        int j = n-1;
+        s[i][j] = (int)a[i][j] - 48 + s[i+1][j];
+    }
+    for (int i = n - 2; i >= 0; i--){
+        for (int j = n - 2; j>= 0; j--){
+            s[i][j] = (int)a[i][j] - 48 + min(s[i+1][j],s[i][j+1]);
+        }
+    }
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            a[i][j] = '*';
+        }
+    }
+    int i=0; int j=0;
+    a[i][j]='#';
+    while(i != n - 1 && j != n - 1){
+        if(s[i+1][j] < s[i][j+1]){   //esli sprava bolwe sleva 
+            a[i+1][j] = '#';
+            i++;
+        }else{
+            a[i][j+1] = '#';
+            j++;
+        }
+    }
+    a[n-1][n-1]='#';
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<a[i][j];
+        }
+        cout<<endl;
+    }
+	return 0;
+}
+

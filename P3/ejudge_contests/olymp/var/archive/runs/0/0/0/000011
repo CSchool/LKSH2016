@@ -1,0 +1,25 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+
+	vector<long long> l(n+1);
+
+	l[0] = 1;
+
+	for (int i = 1; i <= n; i++) {
+		for (int j = max(0, i - 9); j < i; j++) {
+			l[i] += l[j];
+		}
+	}
+
+	cout << l[n];
+
+	//system("pause");
+	return 0;
+}

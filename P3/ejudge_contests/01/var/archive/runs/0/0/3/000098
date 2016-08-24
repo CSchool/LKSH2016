@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string s;
+int array[26];
+
+int main(){
+
+	cin >> s;
+	int min(101), max(0);
+
+	for (int i(0); i < s.size(); i++){
+		array[s[i] - 'a']++;
+	}
+
+	for (int i(0); i < 25; i++){
+		if ((array[i] < min) && (array[i] > 0)) min = array[i];
+		if (array[i] > max) max = array[i];
+	}
+
+	if (min == 101) min = 0;
+
+	cout << max - min;
+
+	return 0;
+}

@@ -1,0 +1,61 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="40" judge-id="1" status="WA" scoring="ACM" run-tests="2" contest-id="306" real-time-available="yes" max-memory-used-available="yes" failed-test="2" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>acc9df82-9c4c-4c75-a56c-41acf2a9c3cc</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>878.320</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="OK" time="8" real-time="9" max-memory-used="81940480"  checker-comment="ok" >
+  <program-stats-str>{ utime=6, stime=2, ptime=8, rtime=9, maxvsz=81940480, maxrss=11636736, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=4, ptime=5, rtime=19, maxvsz=5132288, maxrss=3072000, nvcsw=7, nivcsw=3 }</checker-stats-str>
+      <input size="298">10 200
+6 69 11 14 13 80 57 67 67 97
+93 85 17 29 64 44 73 59 16 78
+15 82 94 49 76 69 25 7 85 75
+35 67 29 77 13 90 43 55 24 16
+66 75 21 89 10 48 21 10 16 52
+34 46 20 60 66 31 41 4 43 28
+51 52 8 3 15 11 1 84 89 56
+25 68 28 58 51 4 27 60 21 80
+18 22 44 81 83 41 5 94 46 7
+25 86 74 57 46 70 90 41 18 45
+</input>
+      <output size="5">17721</output>
+      <stderr size="0"></stderr>
+      <checker size="3">ok
+</checker>
+    </test>
+    <test num="2" status="WA" time="8" real-time="9" max-memory-used="85733376"  checker-comment="wrong answer" >
+  <program-stats-str>{ utime=5, stime=3, ptime=8, rtime=9, maxvsz=85733376, maxrss=11927552, nvcsw=1, nivcsw=2 }</program-stats-str>
+  <checker-stats-str>{ utime=7, stime=1, ptime=8, rtime=10, maxvsz=1146880, maxrss=3080192, nvcsw=6, nivcsw=2 }</checker-stats-str>
+      <input size="499">10 2000
+9129 371 1198 7693 821 6465 978 8744 4917 1533
+1148 3284 3677 3670 3715 6454 5832 9165 745 9193
+6642 4628 4377 5195 7050 4670 4626 6781 7429 2494
+1679 3282 3874 3220 1925 8030 7505 2309 9409 2536
+9766 3903 6961 8969 9176 6456 3682 4515 7499 5477
+8045 3714 5811 5733 8301 7370 3430 7764 4416 9132
+5172 6047 8264 3325 4908 8655 1294 142 5886 747
+1376 6781 797 6751 3068 5624 7031 8563 7999 3049
+5129 9622 4606 4970 854 7191 8925 7703 3888 7698
+684 5246 8606 2482 1370 6564 4900 3774 3547 8988
+</input>
+      <output size="9">181035573</output>
+      <stderr size="0"></stderr>
+      <checker size="13">wrong answer
+</checker>
+    </test>
+  </tests>
+</testing-report>

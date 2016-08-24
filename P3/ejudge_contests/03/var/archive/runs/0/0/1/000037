@@ -1,0 +1,58 @@
+type longinto = int64;
+const k=10000;
+var a:longint;
+mas:array[2..5,0..k] of longinto;
+
+function p(n:longinto):longinto;
+begin
+if n>=0 then p:=1 else p:=0;
+end;
+
+function E(n:longinto):longinto;
+var temp:longinto;
+begin
+if (mas[2,n]<>0) and (n<=k) then e:=mas[2,n] else
+begin
+  if n>=5 then temp:=p(n)+e(n-5) else temp:=p(n);
+  e:=temp;
+  if n<=k then mas[2,n]:=temp;
+end;
+end;
+
+function d(n:longinto):longinto;
+var temp:longinto;
+begin
+if (mas[3,n]<>0) and (n<=k) then d:=mas[3,n] else
+begin
+ if n>=10 then temp:=e(n)+d(n-10) else temp:=e(n);
+ d:=temp;
+ if n<=k then mas[3,n]:=temp;
+end;
+end;
+
+function q(n:longinto):longinto;
+var temp:longinto;
+begin
+if (mas[4,n]<>0) and (n<=k) then q:=mas[4,n] else
+begin
+ if n>=25 then temp:=d(n)+q(n-25) else temp:=d(n);
+ q:=temp;
+ if n<=k then mas[4,n]:=temp;
+end;
+end;
+
+function c(n:longinto):longinto;
+var temp:longinto;
+begin
+if (mas[5,n]<>0) and (n<=k) then c:=mas[5,n] else
+begin
+ if n>=50 then temp:=q(n)+c(n-50) else temp:=q(n);
+ c:=temp;
+ if n<=k then mas[5,n]:=temp;
+end;
+end;
+
+begin
+read(a);
+write(c(a));
+end.

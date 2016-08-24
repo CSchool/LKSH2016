@@ -1,0 +1,50 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string st;
+long long p[62][62];
+
+void kek (int i, int j){
+    if (p[i][j] == 0){
+        if (i != j) {
+            if (st[i] == st[j]) {
+                kek(i + 1, j);
+                kek(i, j-1);
+                p[i][j] = 1 + p[i + 1][j] + p[i][j - 1];
+                return;
+            }
+            else
+                if (i + 1 == j) {
+                    kek(i + 1, j);
+                    kek(i, j - 1);
+                    p[i][j] = p[i + 1][j] + p[i][j - 1];
+                    return;
+                }
+                else {
+                    kek(i + 1, j);
+                    kek(i, j - 1);
+                    kek(i + 1, j - 1);
+                    p[i][j] = p[i + 1][j] + p[i][j - 1] - p[i + 1][j - 1];
+                    return;
+                }
+        }
+        else {
+            p[i][j] = 1;
+            return;
+        }
+    }
+}
+
+int main()
+{   
+    cin >> st;
+    int i = 0, j = st.length() - 1;
+    for (int z = 0; z <= j; z++)
+        for (int l = 0; l <= j; l++)
+            p[z][l] = 0;
+    kek(i, j);
+    cout << p[i][j];
+    return 0;
+}

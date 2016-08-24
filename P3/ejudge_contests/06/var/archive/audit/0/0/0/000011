@@ -1,0 +1,33 @@
+Date: 2016/08/15 10:47:54
+From: p3-sembratovich (uid 38)
+Ip: 192.168.1.73
+Command: submit
+Status: ok
+Run-id: 11
+Run-status: CG
+
+Date: 2016/08/15 10:47:57
+From: SYSTEM
+Status: testing completed
+Run-id: 11
+Run-status: PR
+  Profiling information:
+  Request start time:                2016/08/15 10:47:55.086890
+  Request completion time:           2016/08/15 10:47:57.416211
+  Total testing duration:            2.329
+  Waiting in compile queue duration: 0.046
+  Compilation duration:              0.767
+  Waiting in serve queue duration:   0.274
+  Waiting in run queue duration:     0.585
+  Testing duration:                  0.062
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.596
+
+Date: 2016/08/15 10:48:48
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: comment-run-ok
+Status: ok
+Run-id: 11
+Run-status: OK
+

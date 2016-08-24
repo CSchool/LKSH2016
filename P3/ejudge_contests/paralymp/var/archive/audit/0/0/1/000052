@@ -1,0 +1,25 @@
+Date: 2016/08/17 10:36:41
+From: p3-karpinskiy (uid 43)
+Ip: 192.168.1.82
+Command: submit
+Status: ok
+Run-id: 52
+Run-status: CG
+
+Date: 2016/08/17 10:36:43
+From: SYSTEM
+Status: testing completed
+Run-id: 52
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/17 10:36:42.017822
+  Request completion time:           2016/08/17 10:36:43.227565
+  Total testing duration:            1.210
+  Waiting in compile queue duration: 0.283
+  Compilation duration:              0.294
+  Waiting in serve queue duration:   0.018
+  Waiting in run queue duration:     0.523
+  Testing duration:                  0.010
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.082
+

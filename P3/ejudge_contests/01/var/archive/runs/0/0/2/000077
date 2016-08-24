@@ -1,0 +1,53 @@
+#include "iostream"
+#include "vector"
+#include "algorithm"    
+#include "string"
+using namespace std;
+
+struct s{
+	long long len;
+	char color;
+};
+
+bool cmp(const s&s1,const s&s2){
+	return (s1.len<s2.len);
+}
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n;
+	cin>>n;
+	vector<s> cub(n+1); 
+	for(int i=0;i<n;i++){
+		cin>>cub[i].len>>cub[i].color;
+	}
+	sort(cub.begin(),cub.end(),cmp);
+
+	long long r=0,g=0,b=0;
+	for(int i=0;i<=n;i++){
+		if(cub[i].color=='R'){
+			r+=cub[i].len*cub[i].len*5;
+				if(i>0){
+					r-=cub[i-1].len*cub[i-1].len;
+				}
+		}
+		if(cub[i].color=='G'){
+			g+=cub[i].len*cub[i].len*5;
+				if(i>0){
+					g-=cub[i-1].len*cub[i-1].len;
+				}
+		}
+		if(cub[i].color=='B'){
+			b+=cub[i].len*cub[i].len*5;
+				if(i>0){
+					b-=cub[i-1].len*cub[i-1].len;
+				}
+		}
+	}
+	cout<<"R - "<<r<<endl;;
+	cout<<"G - "<<g<<endl;
+	cout<<"B - "<<b;
+	return 0;
+}

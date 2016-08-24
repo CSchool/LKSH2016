@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+	int n, s;
+	cin >> n >> s;
+
+	vector<vector<long long>> vec(n, vector<long long>(n * 6, 0));
+
+	for (int i = 0; i < 6; i++)
+		vec[0][i] = 1;
+
+	for (int i = 1; i < n; i++) {
+		for (int j = i; j < (i + 1) * 6; j++) {
+			vec[i][j] = vec[i - 1][j - 1] + vec[i][j - 1];
+			if (j >= i + 6)
+				vec[i][j] -= vec[i - 1][j - 7];
+		}
+	}
+
+	if (s > n * 6)
+		cout << 0;
+	else
+		cout << vec[n - 1][s - 1] / pow(6, n);
+
+	//system("pause");
+	return 0;
+}

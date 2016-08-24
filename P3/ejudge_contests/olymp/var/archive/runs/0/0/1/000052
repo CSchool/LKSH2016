@@ -1,0 +1,56 @@
+var
+   a,n,j,t,s:longint;
+   b,c,d:longint;
+   i:longint;
+   st,st2,st3:string;
+   m,g:array[-1001..1001,-1001..1001] of boolean;
+begin
+readln(st);
+n:=length(st);
+m[0][0]:=true;
+for i:=1 to n do begin
+   case st[i] of
+      'U': begin
+           a:=a+1;
+           if (m[a,b]=true) and (g[a,b]=false) then begin
+              g[a,b]:=true;
+              inc(s)
+              end;
+           if m[a,b]=false then begin
+               m[a,b]:=true;
+               end;
+           end;
+      'D': begin
+           a:=a-1;
+           if (m[a,b]=true) and (g[a,b]=false) then begin
+              g[a,b]:=true;
+              inc(s)
+              end;
+           if m[a,b]=false then begin
+               m[a,b]:=true;
+               end;
+           end;
+      'L': begin
+           b:=b-1;
+           if (m[a,b]=true) and (g[a,b]=false) then begin
+              g[a,b]:=true;
+              inc(s)
+              end;
+           if m[a,b]=false then begin
+               m[a,b]:=true;
+               end;
+           end;
+      'R': begin
+           b:=b+1;
+           if (m[a,b]=true) and (g[a,b]=false) then begin
+              g[a,b]:=true;
+              inc(s)
+              end;
+           if m[a,b]=false then begin
+               m[a,b]:=true;
+               end;
+            end;
+      end;
+   end;
+write(s);
+end.

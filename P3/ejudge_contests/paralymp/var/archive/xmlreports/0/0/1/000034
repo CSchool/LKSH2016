@@ -1,0 +1,21 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="34" judge-id="9" status="CE" scoring="ACM" run-tests="0" contest-id="341" compile-error="yes" >
+  <uuid>149e0a66-56e3-4f2f-9b25-043c17b5c733</uuid>
+  <compiler_output>000034.cpp:21:18: error: use of undeclared identifier 'a'
+            cin&gt;&gt;a[i];
+                 ^
+000034.cpp:24:15: error: use of undeclared identifier 'a'
+        table[a[i]]++;
+              ^
+000034.cpp:25:18: error: use of undeclared identifier 'a'
+        if(table[a[i]]&gt;max) max=(int)a[i]-48;
+                 ^
+000034.cpp:25:38: error: use of undeclared identifier 'a'
+        if(table[a[i]]&gt;max) max=(int)a[i]-48;
+                                     ^
+4 errors generated.
+
+</compiler_output>
+</testing-report>

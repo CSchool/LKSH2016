@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+   int a=0,b=0,c=0,s=0,n=0;
+   cin >> s;
+   cin >> n;
+   int m[1001],g[1001];
+   bool zz[1001];
+   for (int i=1; i<=1000;i++)
+       zz[i]=false;
+   for (int i=1; i<=n; i++)
+       cin >> m[i] >> g[i];
+   for (int i=1; i<=n; i++)
+       for (int j=1; j<i; j++)
+            if ((m[i]<=g[j]&&m[j]<=m[i]||g[i]>=m[j]&&g[i]<=g[j])&&zz[j]!=true) {
+               zz[j]=true;
+               a++;
+           }
+ /*  for (int i=1; i<=n; i++) {
+       for (int j=i; j<=n-1; j++) {
+           if (m[j]>m[j+1]) {
+               swap(m[j],m[j+1]);
+               swap(g[j],g[j+1]);
+           }
+       }
+   }
+   int l=0;
+   while (l<n) {
+       l++;
+           if (m[l+1]<=g[l]) {
+           a++;
+         //  i++;
+           }
+   }*/
+   cout <<n-a;
+//  system("pause");
+    return 0;
+}

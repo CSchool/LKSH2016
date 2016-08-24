@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int s = 1;
+	string a;
+	cin >> a;
+	for (int i = 0; i <= a.length() - 1; i++)
+	{
+		char ch, ch2;
+		ch = a[i] - '0';
+		if ((ch >= 1) && (ch <= 3) && (i <= a.length() - 2))
+		{
+			ch2 = a[i + 1] - '0';
+			if ((ch == 3) && (ch2 > 3))
+			{
+				s = s;
+			}
+			else
+			{
+				s = s * 2;
+				i = i + 1;
+			}
+		}
+	}
+	cout << s;
+
+}

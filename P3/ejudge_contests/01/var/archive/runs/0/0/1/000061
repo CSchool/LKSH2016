@@ -1,0 +1,72 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+/*
+
+ГОВНОКОД
+
+*/
+
+int main()
+{
+    unsigned long long int N, R = 0, G = 0, B = 0, minL = 10000001; 
+    cin >> N;
+    struct Cub
+    {
+        int L;
+        char color;
+        long long int S = 0;
+    };
+    Cub cub[N];
+    Cub sor[N];
+    for(int i = 0; i < N; i++)
+    {
+        cin >> cub[i].L >> cub[i].color;
+    }
+
+    //SORT
+
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = 0; j < N; j++)
+        {
+            if(cub[j].L < minL)
+            {
+                minL = j;
+            }
+        }
+        sor[i] = cub[minL];
+        minL = 10000001;
+    }
+    cub[0].S = cub[0].L * cub[0].L * 5;
+    for(int i = 1; i < N; i++)
+    {
+        cub[i].S = cub[i].L * cub[i].L * 5 - cub[i-1].L * cub[i-1].L;
+    }
+    for(int i = 0; i < N; i++)
+    {
+        switch(cub[i].color)
+        {
+            case 'R':
+            {
+                R = R +cub[i].S;
+                break;
+            }
+            case 'G':
+            {
+                G = G + cub[i].S;
+                break;
+            }
+            case 'B':
+            {
+                B = B + cub[i].S;
+                break;
+            }
+        }
+    }
+    cout << "R - " << R << endl;
+    cout << "G - " << G << endl;
+    cout << "B - " << B << endl;
+    return 0;
+}

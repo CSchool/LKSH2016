@@ -1,0 +1,21 @@
+var
+   a,n,i,j,t,max,min:longint;
+   b,c,d:longint;
+   st:string;
+   ch:char;
+   m:array['a'..'z'] of integer;
+begin
+readln(st);
+min:=10000;
+for i:=1 to length(st) do
+  inc(m[st[i]]);
+for ch:='a' to 'z' do begin
+   if m[ch]<>0 then begin
+   if m[ch]>max then
+      max:=m[ch];
+   if m[ch]<min then
+      min:=m[ch];
+      end;
+   end;
+write(max-min);
+end.

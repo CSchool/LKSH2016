@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector <int> m;
+    int a;
+    cin >> a;
+    m  = {2, 7, 1, 8, 2, 8, 1, 8, 2, 8, 4, 5, 9, 0, 4, 5, 2, 3, 5, 3, 6, 0, 2, 8, 7, 5};
+    for (int i = 0; i <= a; i++)
+    {
+        if (a == 25)
+        {
+            cout << "2.7182818284590452353602875" << endl;
+            return 0;
+        }
+        if (a == 0)
+        {
+            cout << m[0]+1 << endl;
+            return 0;
+        }
+        if(i == 0)
+        {
+            cout << m[i] << ".";
+        }
+        if (a == i)
+        {
+            if (m[i+1] >= 5)
+            {
+                m[i]++;
+            }
+                
+        }
+        if(i > 0)
+        {
+            cout << m[i];
+        }
+    }
+    cout << endl;
+    return 0;
+}

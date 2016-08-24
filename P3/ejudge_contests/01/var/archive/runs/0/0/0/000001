@@ -1,0 +1,26 @@
+var
+   n,i,j,t:longint;
+   a,b,c,d:longint;
+   m:array[1..10,1..10] of char;
+begin
+for i:=1 to 8 do begin
+  for j:=1 to 8 do begin
+     read(m[i,j]);
+     case m[i,j] of
+       '1':begin inc(b); m[i,j]:='-'; end;
+       '2':begin inc(c); end;
+       '3':begin inc(d); m[i,j]:='-'; end;
+       '0':begin inc(a); m[i,j]:='-'; end;
+       end;
+     end;
+  readln;
+  end;
+if (a=0) or (b=0) or (c=0) or (d=0) then begin
+   write('BAD INPUT LIST'); halt; end;
+for i:=1 to 8 do begin
+   for j:=1 to 8 do
+       write(m[i,j]);
+   writeln;
+   end;
+write(a,' ',b,' ',c,' ',d);
+end.

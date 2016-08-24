@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int>c;
+
+int main() {
+	int n = 0, s = 0;
+	cin >> n;
+	c.resize(n);			// обуславливает количество элементов 
+	c[0] = 1;
+	for (int i = 1; i < n; i++) {
+		if (i % 2 == 0) {
+			c[i] = c[i - 1];
+		}
+		if (i % 2 == 1) {
+			c[i] = c[i - 1] +c[i/2];
+		}
+	}
+	cout << c[n - 1];
+	return 0;
+}

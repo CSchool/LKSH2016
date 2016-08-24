@@ -1,0 +1,26 @@
+type
+  longinto = int64;
+
+const
+  nmax = 100;
+
+var
+  k: longinto;
+  b: array[0..nmax, 0..nmax] of longinto;
+  n, i, j: longinto;
+
+begin
+  readln(n);
+  for i := 1 to n do
+    b[i, 0] := 0;
+  for j := 0 to n do
+    b[0, j] := 1;
+  for i := 1 to n do
+  begin
+    for j := 1 to i do
+      b[i, j] := b[i, j - 1] + b[i - j, j - 1];
+    for j := i + 1 to n do
+      b[i, j] := b[i, i];
+  end;
+  write(b[n, n]);
+end.

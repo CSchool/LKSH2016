@@ -1,0 +1,31 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="26" judge-id="27" status="WA" scoring="ACM" run-tests="1" contest-id="301" real-time-available="yes" max-memory-used-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>8f4c5f26-75b6-48ab-a296-21fd0ae8387b</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>883.398</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="WA" time="4" real-time="6" max-memory-used="2428928"  checker-comment="wrong answer expected 'yes', found 'no'" >
+  <program-stats-str>{ utime=3, stime=1, ptime=4, rtime=6, maxvsz=2428928, maxrss=3092480, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=10, stime=0, ptime=10, rtime=12, maxvsz=1335296, maxrss=3276800, nvcsw=6, nivcsw=1 }</checker-stats-str>
+      <input size="5">7 24
+</input>
+      <output size="2">no</output>
+      <stderr size="0"></stderr>
+      <checker size="40">wrong answer expected 'yes', found 'no'
+</checker>
+    </test>
+  </tests>
+</testing-report>

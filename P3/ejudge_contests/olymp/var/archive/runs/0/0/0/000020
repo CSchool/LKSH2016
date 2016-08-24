@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int a[30];
+int main()
+{
+    int x;
+    cin >>x;
+    a[1]=1;
+    a[2]=2;
+    a[3]=4;
+    a[4]=8;
+    a[5]=13;
+    for(int i=6;i<=29;i++)
+    {
+        a[i]=a[i-1]+a[i-2];
+    }
+    cout <<a[x];
+
+    return 0;
+}

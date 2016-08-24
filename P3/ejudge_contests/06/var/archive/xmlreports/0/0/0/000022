@@ -1,0 +1,35 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="22" judge-id="23" status="ML" scoring="ACM" run-tests="1" contest-id="306" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>958b2fd8-9a8d-473c-b277-0ad65aac5bc7</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>2900.000</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="ML" time="85" real-time="104" max-memory-used="7192576" >
+  <program-stats-str>{ utime=32, stime=53, ptime=85, rtime=104, maxvsz=7192576, maxrss=154284032, nvcsw=2, nivcsw=28 }</program-stats-str>
+      <input size="62">5 5
+1 1 1 1 1
+3 100 100 100 100
+1 1 1 1 1
+2 2 2 2 1
+1 1 1 1 1
+</input>
+      <output size="0"></output>
+      <stderr size="90">terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+</stderr>
+    </test>
+  </tests>
+</testing-report>

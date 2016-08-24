@@ -1,0 +1,31 @@
+var mas,out1:array[1..8,1..8] of char;
+b,w,r,g,i,j:byte;
+begin
+
+for i:=1 to 8 do
+ for j:=1 to 8 do read(mas[j,i]);
+
+for i:=1 to 8 do
+ for j:=1 to 8 do
+  if mas[j,i]<>'2' then out1[j,i]:='-' else out1[j,i]:=mas[j,i];
+
+for i:=1 to 8 do
+ for j:=1 to 8 do
+  begin
+  if mas[j,i]='0' then inc(b);
+  if mas[j,i]='1' then inc(w);
+  if mas[j,i]='2' then inc(r);
+  if mas[j,i]='3' then inc(g);
+  end;
+
+if (b=0) or (w=0) or (r=0) or (g=0) then write('BAD INPUT LIST') else
+begin
+for i:=1 to 8 do
+ begin
+  for j:=1 to 8 do write(out1[j,i]);
+  writeln;
+ end;
+write(b,' ',w,' ',r,' ',g);
+end;
+
+end.

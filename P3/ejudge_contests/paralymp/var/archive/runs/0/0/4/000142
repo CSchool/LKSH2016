@@ -1,0 +1,38 @@
+#include <iostream>
+ 
+using namespace std;
+int main()
+{
+    int n, a, b;
+    cin >> a >> b;
+    /*do {
+        cin>>n;
+    } while ((n<0)&&(n>15));*/
+    long long fib[15];
+    fib[0]=0;
+    fib[1]=1;
+    for (int i=2;i<15;i++)
+    {
+        fib[i] = fib[i-1]+fib[i-2];
+    }
+    if (a == 0 && b == 0)
+    {
+        cout << 0 << endl;
+        return 0;
+    }
+    if (a != 0 && b == 0)
+    {
+        cout << a << endl;
+        return 0;
+    }
+    if (a == 0 && b != 0)
+    {
+        cout << a << endl;
+        return 0;
+    }
+    else 
+    {
+        cout << fib[a+1] + fib[b+1] << endl;
+    }
+    return 0;
+}

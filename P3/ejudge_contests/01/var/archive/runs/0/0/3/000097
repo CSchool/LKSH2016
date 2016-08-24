@@ -1,0 +1,79 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+struct Alphabet
+{
+	char letter;
+	int score = 0;
+};
+
+int main()
+{
+	int maxIN, minIN;
+	string stringIN;
+	getline(cin, stringIN);
+	vector <Alphabet> alphabet(26);
+	alphabet[0].letter = 'a';
+	alphabet[1].letter = 'b';
+	alphabet[2].letter = 'c';
+	alphabet[3].letter = 'd';
+	alphabet[4].letter = 'e';
+	alphabet[5].letter = 'f';
+	alphabet[6].letter = 'g';
+	alphabet[7].letter = 'h';
+	alphabet[8].letter = 'i';
+	alphabet[9].letter = 'j';
+	alphabet[10].letter = 'k';
+	alphabet[11].letter = 'l';
+	alphabet[12].letter = 'm';
+	alphabet[13].letter = 'n';
+	alphabet[14].letter = 'o';
+	alphabet[15].letter = 'p';
+	alphabet[16].letter = 'q';
+	alphabet[17].letter = 'r';
+	alphabet[18].letter = 's';
+	alphabet[19].letter = 't';
+	alphabet[20].letter = 'u';
+	alphabet[21].letter = 'v';
+	alphabet[22].letter = 'w';
+	alphabet[23].letter = 'x';
+	alphabet[24].letter = 'y';
+	alphabet[25].letter = 'z';
+
+	for(int i = 0; i < 26; i++)
+	{
+		for(int j = 0; j < stringIN.size(); j++)
+		{
+			if(alphabet[i].letter == stringIN[j])
+			{
+				alphabet[i].score+=1;
+			}
+		}
+	}
+	/*for (int i = 0; i < alphabet.size(); i++)
+	{
+		cout << alphabet[i].letter << " " << alphabet[i].score << endl;
+	}*/
+	maxIN =  0;
+	minIN = 100;
+	for(int i = 0; i < 26; i++)
+	{
+		if(alphabet[i].score > maxIN)
+		{
+			maxIN = alphabet[i].score;
+		}
+	}
+	for(int i = 0; i < 26; i++)
+	{
+		if(alphabet[i].score != 0 && alphabet[i].score < minIN)
+		{
+			minIN = alphabet[i].score;
+		}
+	}
+	int result = maxIN - minIN;
+	cout << result << endl;
+	return 0;
+}

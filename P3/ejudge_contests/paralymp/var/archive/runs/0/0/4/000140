@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    long long int c,a,b;
+    cin >>a>>b;
+    if(a==b)
+    {
+        c=a+b;
+    }
+    else{c=a+b+3;};
+
+    cout <<c;
+    return 0;
+}

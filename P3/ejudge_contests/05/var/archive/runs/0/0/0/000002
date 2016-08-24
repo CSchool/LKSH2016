@@ -1,0 +1,22 @@
+var a,k:longint;
+mas:array[1..10000] of longint;
+
+function calc(n:longint):longint;
+var temp:longint;
+begin
+if mas[n]<>0 then calc:=mas[n] else
+if n=a then calc:=1 else
+if n<a then
+ begin
+ temp:=calc(n+1)+calc(n*2);
+ mas[n]:=temp;
+ calc:=temp;
+ end;
+end;
+
+begin
+k:=0;
+read(a);
+k:=calc(1);
+write(k);
+end.

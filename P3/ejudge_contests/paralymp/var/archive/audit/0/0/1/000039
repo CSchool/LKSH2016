@@ -1,0 +1,40 @@
+Date: 2016/08/17 10:16:48
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: priv-submit
+Status: ok
+Run-id: 39
+Run-status: CG
+
+Date: 2016/08/17 11:04:18
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 39
+Run-status: CG
+
+Date: 2016/08/17 11:04:22
+From: SYSTEM
+Status: testing completed
+Run-id: 39
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/17 11:04:18.805850
+  Request completion time:           2016/08/17 11:04:22.375506
+  Total testing duration:            3.570
+  Waiting in compile queue duration: 1.483
+  Compilation duration:              0.489
+  Waiting in serve queue duration:   0.114
+  Waiting in run queue duration:     0.829
+  Testing duration:                  0.009
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.646
+
+Date: 2016/08/18 17:36:20
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: clear-run
+Status: ok
+Run-id: 39
+

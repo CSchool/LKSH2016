@@ -1,0 +1,53 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="52" judge-id="1" status="CE" scoring="ACM" run-tests="0" contest-id="301" compile-error="yes" >
+  <uuid>93969aa9-ef02-43ad-9aa3-97d612214651</uuid>
+  <compiler_output>000052.cpp: In function 'int main()':
+000052.cpp:10:2: error: 'cin' was not declared in this scope
+  cin&gt;&gt;n&gt;&gt;s;
+  ^~~
+000052.cpp:10:2: note: suggested alternative:
+In file included from 000052.cpp:4:0:
+/usr/include/c++/6.1.1/iostream:60:18: note:   'std::cin'
+   extern istream cin;  /// Linked to standard input
+                  ^~~
+000052.cpp:11:2: error: 'vector' was not declared in this scope
+  vector&lt;long long&gt; table(n);
+  ^~~~~~
+000052.cpp:11:2: note: suggested alternative:
+In file included from /usr/include/c++/6.1.1/vector:64:0,
+                 from 000052.cpp:5:
+/usr/include/c++/6.1.1/bits/stl_vector.h:214:11: note:   'std::vector'
+     class vector : protected _Vector_base&lt;_Tp, _Alloc&gt;
+           ^~~~~~
+000052.cpp:11:9: error: expected primary-expression before 'long'
+  vector&lt;long long&gt; table(n);
+         ^~~~
+000052.cpp:17:5: error: 'cout' was not declared in this scope
+     cout&lt;&lt;&quot;yes&quot;&lt;&lt;endl;
+     ^~~~
+000052.cpp:17:5: note: suggested alternative:
+In file included from 000052.cpp:4:0:
+/usr/include/c++/6.1.1/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^~~~
+000052.cpp:17:18: error: 'endl' was not declared in this scope
+     cout&lt;&lt;&quot;yes&quot;&lt;&lt;endl;
+                  ^~~~
+000052.cpp:17:18: note: suggested alternative:
+In file included from /usr/include/c++/6.1.1/iostream:39:0,
+                 from 000052.cpp:4:
+/usr/include/c++/6.1.1/ostream:590:5: note:   'std::endl'
+     endl(basic_ostream&lt;_CharT, _Traits&gt;&amp; __os)
+     ^~~~
+000052.cpp:23:2: error: 'cout' was not declared in this scope
+  cout&lt;&lt;&quot;no&quot;;
+  ^~~~
+000052.cpp:23:2: note: suggested alternative:
+In file included from 000052.cpp:4:0:
+/usr/include/c++/6.1.1/iostream:61:18: note:   'std::cout'
+   extern ostream cout;  /// Linked to standard output
+                  ^~~~
+</compiler_output>
+</testing-report>

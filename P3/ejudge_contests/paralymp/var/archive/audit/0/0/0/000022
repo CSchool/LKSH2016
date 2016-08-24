@@ -1,0 +1,56 @@
+Date: 2016/08/17 09:56:31
+From: p3-kuznetsov (uid 44)
+Ip: 192.168.1.87
+Command: submit
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 09:57:45
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 09:59:11
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 10:10:59
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 10:14:34
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 10:14:41
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+
+Date: 2016/08/17 11:04:18
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 22
+Run-status: CG
+

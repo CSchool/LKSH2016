@@ -1,0 +1,50 @@
+Date: 2016/08/17 10:58:59
+From: p3-karpinskiy (uid 43)
+Ip: 192.168.1.82
+Command: submit
+Status: ok
+Run-id: 65
+Run-status: CG
+
+Date: 2016/08/17 10:59:02
+From: SYSTEM
+Status: testing completed
+Run-id: 65
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/17 10:59:00.075592
+  Request completion time:           2016/08/17 10:59:02.980639
+  Total testing duration:            2.905
+  Waiting in compile queue duration: 0.289
+  Compilation duration:              0.156
+  Waiting in serve queue duration:   0.917
+  Waiting in run queue duration:     0.859
+  Testing duration:                  0.028
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.656
+
+Date: 2016/08/17 15:47:34
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 65
+Run-status: CG
+
+Date: 2016/08/17 15:47:36
+From: SYSTEM
+Status: testing completed
+Run-id: 65
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/17 15:47:34.868769
+  Request completion time:           2016/08/17 15:47:36.996234
+  Total testing duration:            2.127
+  Waiting in compile queue duration: 0.989
+  Compilation duration:              0.055
+  Waiting in serve queue duration:   0.050
+  Waiting in run queue duration:     0.723
+  Testing duration:                  0.014
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.297
+

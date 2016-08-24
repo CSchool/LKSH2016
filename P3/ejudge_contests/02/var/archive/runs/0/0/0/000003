@@ -1,0 +1,29 @@
+var a,i,k:longint;
+mas:array[1..45] of longint;
+rez:array[1..1000] of longint;
+procedure fib;
+begin
+inc(k);
+mas[k]:=mas[k-1]+mas[k-2];
+if k<>45 then fib;
+end;
+
+begin
+mas[1]:=1;
+mas[2]:=2;
+k:=2;
+fib;
+read(a);
+k:=0;
+repeat
+for i:=45 downto 1 do
+ if a-mas[i]>=0 then
+ begin
+  inc(k);
+  rez[k]:=mas[i];
+  a:=a-mas[i];
+ end;
+until a=0;
+writeln(k);
+for i:=k downto 1 do write(rez[i],' ');
+end.

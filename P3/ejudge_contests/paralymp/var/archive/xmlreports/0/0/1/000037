@@ -1,0 +1,34 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="37" judge-id="16" status="PE" scoring="ACM" run-tests="1" contest-id="341" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>5109275a-a3f9-496b-b53f-a94189a12c32</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>859.082</cpu-mhz>
+  <compiler_output>
+</compiler_output>
+  <tests>
+    <test num="1" status="PE" time="4" real-time="6" max-memory-used="13410304"  checker-comment=" See file to check exit message" >
+  <program-stats-str>{ utime=3, stime=1, ptime=4, rtime=6, maxvsz=13410304, maxrss=3174400, nvcsw=3, nivcsw=1 }</program-stats-str>
+  <interactor-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=0, maxrss=3379200, nvcsw=2, nivcsw=1 }</interactor-stats-str>
+      <input size="394">39
+481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 481199252 
+</input>
+      <output size="0"></output>
+      <stderr size="0"></stderr>
+      <checker size="32">
+See file to check exit message
+</checker>
+    </test>
+  </tests>
+</testing-report>

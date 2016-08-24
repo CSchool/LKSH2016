@@ -1,0 +1,36 @@
+#include "iostream"
+#include "vector"
+
+using namespace std;
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n, m;
+	cin >> n >> m;
+    vector<vector<int> > a(n, vector<int>(m));
+    vector<vector<int> > s(n, vector<int>(m));
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < m; j++)
+            cin >> a[i][j];
+    
+    s[n-1][m-1]=a[n-1][m-1];
+
+    for (int j = m-2; j >= 0; j--){
+        int i = n-1;
+        s[i][j] = a[i][j] + s[i][j+1];
+    }
+    for (int i = n-2; i >= 0; i--){
+        int j = m-1;
+        s[i][j] = a[i][j] + s[i+1][j];
+    }
+    for(int i = n - 2; i >= 0; i--){
+        for(int j = m - 2; j>= 0; j--){
+            s[i][j] = a[i][j] + min(s[i+1][j],s[i][j+1]);
+        }
+    }
+    cout<<s[0][0];
+	return 0;
+}
+

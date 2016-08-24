@@ -1,0 +1,18 @@
+var a,k:longint;
+
+procedure calc(n:longint);
+begin
+if n=a then inc(k) else
+if n<a then
+ begin
+ calc(n+1);
+ calc(n*2);
+ end;
+end;
+
+begin
+k:=0;
+read(a);
+calc(1);
+write(k);
+end.

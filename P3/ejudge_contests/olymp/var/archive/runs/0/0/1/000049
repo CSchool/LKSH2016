@@ -1,0 +1,16 @@
+
+const e='27182818284590452353602875';
+var n,i,j,k:Integer;
+      str:string;
+begin
+ read(n);
+ for i:=1 to n+1 do str[i]:=e[i];
+ if ord(e[i+1])-ord('0')>4 then str[i]:=chr(ord(e[i])+1);
+ if n>0 then
+  begin
+   for i:=n+2 downto 2 do str[i+1]:=str[i];
+   str[2]:='.';
+   for i:=1 to n+2 do write(str[i]);
+  end else
+   for i:=1 to n+1 do write(str[i]);
+end.

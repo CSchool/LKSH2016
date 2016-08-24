@@ -1,0 +1,37 @@
+// perviy.cpp: определяет точку входа для консольного приложения.
+//
+
+#include"iostream"
+
+using namespace std;
+
+int main()
+{
+	char s;
+	char table[10][10];
+	int red=0, black=0, white=0, green=0;
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			cin>>s;
+			bool check=true;
+			if (s=='0') black++;
+			if (s=='1') white++;
+			if (s=='2') {red++;
+				table[i][j]='2';
+				continue;
+			} 
+			if(s=='3') green++;
+			table[i][j]='-';
+		}
+	}
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			cout<<table[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	cout<<endl;
+	cout<<black<<" "<<white<<" " <<red<<" "<<green;
+	return 0;
+}
+

@@ -1,0 +1,50 @@
+Date: 2016/08/17 12:09:29
+From: p3-serebrennikov (uid 42)
+Ip: 192.168.1.62
+Command: submit
+Status: ok
+Run-id: 99
+Run-status: CG
+
+Date: 2016/08/17 12:09:32
+From: SYSTEM
+Status: testing completed
+Run-id: 99
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/17 12:09:29.669831
+  Request completion time:           2016/08/17 12:09:32.349036
+  Total testing duration:            2.679
+  Waiting in compile queue duration: 0.108
+  Compilation duration:              0.015
+  Waiting in serve queue duration:   0.935
+  Waiting in run queue duration:     0.833
+  Testing duration:                  0.174
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.614
+
+Date: 2016/08/17 12:27:33
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 99
+Run-status: CG
+
+Date: 2016/08/17 12:27:36
+From: SYSTEM
+Status: testing completed
+Run-id: 99
+Run-status: PE
+  Profiling information:
+  Request start time:                2016/08/17 12:27:33.832131
+  Request completion time:           2016/08/17 12:27:36.880652
+  Total testing duration:            3.049
+  Waiting in compile queue duration: 0.532
+  Compilation duration:              0.005
+  Waiting in serve queue duration:   0.849
+  Waiting in run queue duration:     0.700
+  Testing duration:                  0.005
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.958
+

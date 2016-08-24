@@ -1,0 +1,19 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    vector < pair <long long, char> > a(n);
+    for (int j = 0; j < n; j++)
+        cin >> a[j].first >> a[j].second;
+    sort(a.begin(), a.end());
+    for (int i = n - 1; i > 0; i--)
+        a[i].first = 5 * a[i].first * a[i].first - a[i - 1].first * a[i - 1].first;
+    a[0].first  *= 5 * a[0].first;
+    for (int k = 0; k < n; k++)
+        cout << a[k].second << " " << "-" << " " << a[k].first << endl;
+}

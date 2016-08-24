@@ -1,0 +1,42 @@
+#include "iostream"
+#include "algorithm"
+#include "string"
+#include "cmath"
+#include "cstdlib"
+#include "vector"
+using namespace std;
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    string s;
+    getline(cin,s);
+    vector<vector<int> > p(s.size()+2,vector<int> (s.size()+2));
+    bool check=true;
+    int i=0; int j=0; int k=0;
+    while(check==true){
+        p[i][i]=1;
+        if(s[i]!=s[j] && i<j){
+            p[i][j]=p[i+1][j] + p[i][j-1] - p[i+1][j-1];
+        }
+        if(s[i]==s[j] && i<j){
+            p[i][j]=1 + p[i+1][j]+p[i][j-1];
+        }
+        if(j==s.size()-1){
+            if(j==s.size()-1 && i==0)
+                check=false;
+            k++;
+            j=k-1; 
+            i=-1;
+        }
+        i++;j++;
+    }
+    int ans=0;
+    for(int i=0;i<s.size();i++){
+        for(int j=0;j<s.size();j++){
+           if (ans<p[i][j]) ans=p[i][j];
+        }
+    }
+    cout<<ans;
+	return 0;
+}

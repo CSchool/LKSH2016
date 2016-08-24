@@ -1,0 +1,25 @@
+Date: 2016/08/11 15:04:03
+From: p3-ivanov (uid 45)
+Ip: 192.168.1.84
+Command: submit
+Status: ok
+Run-id: 29
+Run-status: CG
+
+Date: 2016/08/11 15:04:06
+From: SYSTEM
+Status: testing completed
+Run-id: 29
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/11 15:04:03.411255
+  Request completion time:           2016/08/11 15:04:06.246644
+  Total testing duration:            2.835
+  Waiting in compile queue duration: 0.971
+  Compilation duration:              1.125
+  Waiting in serve queue duration:   0.006
+  Waiting in run queue duration:     0.609
+  Testing duration:                  0.007
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.117
+

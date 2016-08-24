@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int x[10000];
+int main()
+{
+    long long int a,c,b,z=0;
+    cin>>a>>b;
+    c=a+b;
+    for(int i=1;i<=10000;i=i+2)
+    {
+        x[i]=c%7;
+        x[i+1]=c/7;
+        c=c/7;
+        if(c<7){z=i+1;break;};
+    }
+
+    for(int i=z;i>=1;i--)
+    {
+        if(x[z]==0){i=i-1;}
+            cout <<x[i];}
+    return 0;
+}

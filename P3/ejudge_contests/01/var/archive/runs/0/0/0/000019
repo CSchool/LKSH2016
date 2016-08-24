@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int color[4] = { 0,0,0,0 };
+	string a;
+	char array1[8][8];
+	for (int i = 0; i < 8; i++) {
+			cin >> a;
+			for (int j = 0; j < 8; j++) {
+				color[a[j] - '0']++;
+				if (a[j] == '2')
+					array1[i][j] = '2';
+				else
+					array1[i][j] = '-';
+			}
+		}
+	for (int k = 0; k < 4; k++)
+		if (color[k] == 0) {
+			cout << "BAD INPUT LIST" << endl;
+			return 0;
+		}
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++)
+			cout << array1[i][j];
+		cout << endl;
+	}
+	for (int k = 0; k < 4; k++)
+		cout << color[k] << " ";
+	return 0;
+}

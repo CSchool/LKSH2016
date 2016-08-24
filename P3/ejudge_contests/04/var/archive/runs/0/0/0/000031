@@ -1,0 +1,56 @@
+var
+  kount, i, kmax: longint;
+  mas, check, ansver: array[0..10001] of longint;
+
+function last(n:longint):longint;
+var j,e:longint;
+begin
+for J:=n downto 1 do
+ if check[j]=1 then
+  begin
+   e:=j;
+   break;
+  end else e:=0;
+last:=e;
+end;
+
+procedure find(n, k: longint);
+var
+  a: longint;
+begin
+  if n < kount then
+  begin
+    if mas[n] > mas[last(n)] then
+    begin
+      check[n] := 1;
+      find(n + 1, k + 1);
+      check[n] := 0;
+      find(n + 1, k);
+    end else find(n + 1, k);
+  end else
+  if k > kmax then
+  begin
+    if mas[n] > mas[last(n)] then check[n] := 1;
+    for a := 1 to n do ansver[a] := check[a];
+    kmax := k;
+    check[n] := 0;
+  end;
+end;
+
+begin
+
+  ansver[0] := 1;
+
+  mas[0] := -1;
+
+  read(kount);
+
+  for i := 1 to kount do read(mas[i]);
+
+  find(1, 0);
+  
+  writeln(kmax);
+
+  for i := 1 to kount do if ansver[i] = 1 then write(mas[i], ' ');
+
+end.

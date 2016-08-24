@@ -1,0 +1,22 @@
+var i,n,kount,k,temp:longint;
+mas:array[1..10] of word;
+begin
+read(n);
+for i:=1 to n do read(mas[i]);
+read(kount);
+temp:=kount;
+
+for i:=n downto 1 do
+ repeat
+  if temp-mas[i]>=0 then
+   begin
+    temp:=temp-mas[i];
+    inc(k);
+   end;
+ until temp-mas[i]<0;
+
+if temp<>0 then k:=-1;
+ 
+write(k);
+end.
+

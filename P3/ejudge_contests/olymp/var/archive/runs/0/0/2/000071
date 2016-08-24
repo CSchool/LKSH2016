@@ -1,0 +1,46 @@
+// kek.cpp: главный файл проекта.
+#include "iostream"
+#include "algorithm"
+#include "string"
+#include "vector"
+using namespace std;
+
+int main()
+{
+	string s,k;
+	getline(cin,s);
+	getline(cin,k);
+	int lol=0;
+	vector<int> a(256);
+	vector<int> b(256);
+	if(s==k){
+		cout<<"YES";
+		return 0;
+	}
+for (int i=0;i< s.size();i++){
+		a[s[i]]++;
+	}
+	for(int i=0;i< k.size();i++){
+		b[k[i]]++;
+	}
+	int check = 0;
+	for(int i=0;i<256;i++){
+		if(b[i]>a[i]) check++;;
+	}
+	
+	int kok=0;
+	for(int i=0;i<k.size();i++){
+		for(int j=kok;j<s.size();j++){
+			if(s[j]==k[i]){
+				lol++;
+				kok=j;
+				break;
+			}
+		}
+	}
+	if(lol==k.size() && check==0)
+		cout<<"YES";
+	else
+		cout<<"NO";
+	return 0;
+}

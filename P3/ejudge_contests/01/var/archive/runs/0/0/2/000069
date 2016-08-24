@@ -1,0 +1,90 @@
+#include <iostream>
+
+using namespace std;
+/*
+
+ГОВНОКОД
+
+*/
+
+
+int main()
+{
+    unsigned long long int N, R = 0, G = 0, B = 0;
+    cin >> N;
+    struct Cub
+    {
+        long int L;
+        char color;
+        long long int S = 0;
+    };
+    Cub cub[N];
+    for(int i = 0; i < N; i++)
+    {
+        cin >> cub[i].L >> cub[i].color;
+    }
+    //SORT
+    for (int i=1;i<N;i++) 
+	{
+		for (int j=0;j<N-1;j++)
+		{
+            if (cub[j].L>cub[j+1].L)
+            {
+                //(cub[j],cub[j+1]); //Если текущий элемент больше следующего, меняем их местами
+                Cub temp; //Временное значение
+                temp=cub[j]; //Запоминаем текущий элемент x во временное значение temp
+                cub[j]=cub[j+1]; //В текущее значение x записываем следующее за ним 
+                cub[j+1]=temp; //Текущее значение было изменено, но оно запомнено в temp, берем его оттуда
+            }
+		}
+	}
+    cub[0].S = cub[0].L * cub[0].L * 5;
+    for(int i = 1; i < N; i++)
+    {
+        cub[i].S = cub[i].L * cub[i].L * 5 - cub[i-1].L * cub[i-1].L;
+    }
+    for(int i = 0; i < N; i++)
+    {
+        switch(cub[i].color)
+        {
+            case 'R':
+            {
+                R = R +cub[i].S;
+                break;
+            }
+            case 'G':
+            {
+                G = G + cub[i].S;
+                break;
+            }
+            case 'B':
+            {
+                B = B + cub[i].S;
+                break;
+            }
+        }
+    }
+    cout << "R - " << R << endl;
+    cout << "G - " << G << endl;
+    cout << "B - " << B << endl;
+    return 0;
+}
+
+/*void swapper(int &x,int &y) //Функция перемены мест. Если параметры будут без ссылок, то эффекта не будет
+{
+	int temp; //Временное значение
+	temp=x; //Запоминаем текущий элемент x во временное значение temp
+	x=y; //В текущее значение x записываем следующее за ним 
+	y=temp; //Текущее значение было изменено, но оно запомнено в temp, берем его оттуда
+}
+
+void cubt(int cub[].L, const int N) //Функция пузырьковой сортировки одномерного массива
+{
+	for (int i=1;i<N;i++) 
+	{
+		for (int j=0;j<N-1;j++)
+		{
+                  if (cub[j].L>cub[j+1].L) swapper(cub[j],cub[j+1]); //Если текущий элемент больше следующего, меняем их местами
+		}
+	}
+}*/

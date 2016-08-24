@@ -1,0 +1,28 @@
+#include "iostream"
+#include "vector"
+#include "string"
+#include "stdio.h"
+#include "algorithm"
+#include "math.h"
+using namespace std;
+
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n,max=0;
+    cin>>n;
+    vector<char> a(n+1);
+    vector<int> table(256);
+    for(int i=1;i<=n;i+=1){
+        cout<<"? "<<i<<endl;
+        cin>>a[i];
+        table[a[i]]++;
+    }
+    for(int i=0;i<256;i++){
+        if(table[i]>max) max=(int)a[i]-48;
+    }
+    cout<<"+ "<<max;
+	return 0;
+}

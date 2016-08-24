@@ -1,0 +1,46 @@
+var i,j,a,n,min,mini,sumr,sumb,sumg:int64;
+b:char;
+mas:array[1..50000] of longint;
+znak:array[1..50000] of char;
+
+procedure sum(k:longint; var e:longint);
+begin
+if k>=2 then e:=e+mas[k]*mas[k]*5-mas[k-1]*mas[k-1] else e:=e+mas[k]*mas[k]*5;
+end;
+
+begin
+read(n);
+for i:=1 to n do
+begin
+read(mas[i],znak[i]);
+while znak[i] = ' ' do read(znak[i]);
+end;
+
+for i:=1 to n do
+begin
+ min:=999999999;
+ for j:=i to n do if mas[j]<=min then
+  begin
+   min:=mas[j];
+   mini:=j;
+  end;
+ a:=mas[i];
+ mas[i]:=min;
+ mas[mini]:=a;
+ b:=znak[i];
+ znak[i]:=znak[mini];
+ znak[mini]:=b;
+end;
+
+for I:=1 to n do
+begin
+ if znak[i]='R' then sum(i,sumr);
+ if znak[i]='B' then sum(i,sumb);
+ if znak[i]='G' then sum(i,sumg);
+end;
+
+writeln('R - ',sumr);
+writeln('G - ',sumg);
+writeln('B - ',sumb);
+
+end.

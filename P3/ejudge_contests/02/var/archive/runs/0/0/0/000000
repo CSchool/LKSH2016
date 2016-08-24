@@ -1,0 +1,41 @@
+// perviy.cpp: определяет точку входа для консольного приложения.
+//
+
+#include"iostream"
+#include"vector"
+#include"algorithm"
+#include"string"
+
+using namespace std;
+
+int g(long long n);
+int d(long long n);
+
+
+int main()
+{
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	long long n;
+	cin>>n;
+	vector<int> a(n+1);
+	a[0]=1; a[1]=1;
+	for(int i=2;n>a[i-1];i++){
+		a[i]=a[i-1]+a[i-2];
+		if(a[i]==n){
+			cout<<"1"<<endl;
+			cout<<a[i];
+			return 0;
+		}
+	}
+	for (int i=0;i<n;i++){
+		for(int j=0;j<n;j++){
+			if(a[i]+a[j] ==n){
+				cout<<"2"<<endl;
+				cout<<a[i]<<" "<<a[j];
+				return 0;
+			}
+		}
+	}
+	return 0;
+}

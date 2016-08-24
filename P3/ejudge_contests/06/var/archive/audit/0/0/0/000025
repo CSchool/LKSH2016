@@ -1,0 +1,33 @@
+Date: 2016/08/15 12:51:31
+From: p3-serebrennikov (uid 42)
+Ip: 192.168.1.62
+Command: submit
+Status: ok
+Run-id: 25
+Run-status: CG
+
+Date: 2016/08/15 12:51:34
+From: SYSTEM
+Status: testing completed
+Run-id: 25
+Run-status: PR
+  Profiling information:
+  Request start time:                2016/08/15 12:51:31.548203
+  Request completion time:           2016/08/15 12:51:34.898122
+  Total testing duration:            3.350
+  Waiting in compile queue duration: 0.769
+  Compilation duration:              1.239
+  Waiting in serve queue duration:   0.053
+  Waiting in run queue duration:     0.785
+  Testing duration:                  0.116
+  Post-processing duration:          0.002
+  Waiting in serve queue duration:   0.386
+
+Date: 2016/08/15 12:53:01
+From: TsarN (uid 48)
+Ip: 127.0.0.1
+Command: set-ok
+Status: ok
+Run-id: 25
+Run-status: OK
+

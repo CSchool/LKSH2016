@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main() {
+
+	int a;
+	std::cin >> a >> a >> a;
+
+	std::cout << 100;
+
+	return 0;
+}

@@ -1,0 +1,34 @@
+ #include "iostream"
+#include "vector"
+#include "string"
+#include "stdio.h"
+#include "algorithm"
+#include "math.h"
+#include "ctime"
+#include "cstdlib"
+using namespace std;
+
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	long long n,max=0;
+    cin>>n;
+    vector<char> a(n+1);
+    vector<long long> table(256);
+    srand(time(0));
+    for(int i=1;i<=100;i++){
+        int kek=rand() % n-1;
+        if(kek=0) kek=1;
+        cout<<"? "<<kek<<endl;
+        cin>>a[i];
+        table[a[i]]++;
+    }
+    int maxi=0;
+    for(int i=0;i<256;i++){
+        if(table[i]>max) { maxi=i-48; max=table[i];}
+    }
+    cout<<"+ "<<maxi<<endl;
+	return 0;
+}

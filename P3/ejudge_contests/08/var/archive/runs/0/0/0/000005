@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string st;
+
+int kek(char i, char j){
+    if (i != j) {
+        if (st[i] == st[j])
+            return 1 + kek(i + 1, j) + kek(i, j - 1);
+        else
+            if (i + 1 == j)
+                return kek(i + 1, j) + kek(i, j - 1);
+            else
+                return kek(i + 1, j) + kek(i, j - 1) - kek(i + 1, j - 1);
+    }
+    else
+        return 1;
+}
+
+int main()
+{   
+    cin >> st;
+    char i = 0, j = st.length() - 1;
+    cout << kek(i,j);
+    return 0;
+}

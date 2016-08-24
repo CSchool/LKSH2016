@@ -1,0 +1,51 @@
+var
+s,a,b,k,n,min,max,e,c:int64;
+i,j:longint;
+m,m2,p,g,v:array[-10..20000] of int64;
+   Begin
+assign(input,'input.txt'); reset(input);
+assign(output,'output.txt'); rewrite(output);
+readln(a,b);
+k:=b-a;
+readln(n);
+for i:=1 to k do begin
+   m[i]:=50000000000;
+   m2[i]:=0; end;
+for i:=1 to n do begin
+    readln(p[i],g[i]);
+    if (m[g[i]]>p[i]) or (m[g[i]]=0) then
+    m[g[i]]:=p[i];
+    if (m2[g[i]]<p[i]) or (m2[g[i]]=0) then
+    m2[g[i]]:=p[i]; end;
+min:=50000000000;
+for i:=1 to k do begin
+    for j:=1 to n do begin
+        if g[j]<=i then
+        if (m[i-g[j]]+p[j]<min) and (m[i-g[j]]<>0) and (m[i-g[j]]+p[j]<m[i]) then
+           min:=m[i-g[j]]+p[j];
+        end;
+    if min<50000000000 then
+      m[i]:=min;
+    min:=50000000000;
+    end;
+max:=0;
+for i:=1 to k do begin
+    for j:=1 to n do begin
+        if g[j]<=i then
+        if (m2[i-g[j]]+p[j]>max) and (m2[i-g[j]]<>0) and (m2[i-g[j]]+p[j]>m2[i]) then
+           max:=m2[i-g[j]]+p[j];
+        end;
+    if max>0 then
+      m2[i]:=max;
+    max:=0;
+    end;
+if (m[k]=50000000000) and (m2[k]<>0) then
+   m[k]:=m2[k];
+if (m[k]<>50000000000) and (m2[k]=0) then
+   m2[k]:=m[k];
+if (m[k]=50000000000) or (m2[k]=0) then
+   write('This is impossible.')
+   else
+write(m[k],' ',m2[k]);
+end.
+]]>

@@ -1,0 +1,17 @@
+var n:byte;
+k:longint;
+
+procedure cs(S:BYTE);
+var i:byte;
+begin
+if n=s then inc(k) else
+ if s<n then
+  for i:=1 to 9 do cs(s+i);
+end;
+
+begin
+read(n);
+k:=0;
+cs(0);
+write(k);
+end.

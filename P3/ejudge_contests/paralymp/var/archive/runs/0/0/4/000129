@@ -1,0 +1,17 @@
+import sys
+a, b = list(map(int, input().split()))
+def fib(n):
+    if n==1 or n==2:
+        return 1
+    return fib(n-1) + fib(n-2)
+if a == 0 and b == 0:
+    print(0)
+    sys.exit()
+if a != 0 and b == 0:
+    print (b)
+    sys.exit()
+if a == 0 and b != 0:
+    print (a)
+    sys.exit()
+else:
+    print(fib(a+1) + fib(b+1))

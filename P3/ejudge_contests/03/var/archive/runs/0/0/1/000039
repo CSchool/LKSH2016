@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main () 
+{
+    int i, value = 0;
+    cin >> i;
+ 
+    if (i > 50)
+	{
+		value += i / 50;
+		i = i % 50;
+	}
+ 	if (i > 25)
+	{
+		value += i / 25;
+		i = i % 25;
+	}
+	if (i > 10)
+	{
+		value += i / 10;
+		i = i % 10;
+	}
+	if (i > 5)
+	{
+		value += i / 5;
+		i = i % 5;
+	}
+	if (i >= 1)
+	{
+		value += i / 1;
+		i = i % 1;
+	}
+    cout << value << "\n";
+    return 0;
+}

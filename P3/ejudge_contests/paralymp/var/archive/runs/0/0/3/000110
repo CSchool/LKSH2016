@@ -1,0 +1,26 @@
+#include "iostream"
+#include "vector"
+#include "string"
+#include "stdio.h"
+#include "algorithm"
+#include "math.h"
+#include "ctime"
+#include "cstdlib"
+using namespace std;
+
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int a,b,kek=0;
+    cin>>a>>b;
+    if(a>b){
+        cout<<a+a;
+    }
+    if(b>a)
+        cout<<b+b;
+    if(a==b)
+        cout<<a+b;
+	return 0;
+}

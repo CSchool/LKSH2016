@@ -1,0 +1,66 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+int j, n, i, a, m[251][251];
+char s[251][251];
+cin >> n;
+a = n;
+for (i = 1; i <= a; i++)
+    for (j = 1; j <= n; j++)
+	{
+        cin >> s[i][j];
+		m[i][j]=int(s[i][j])-48; 
+		s[i][j]='-';
+	}
+for (i = 1; i <= a; i++)
+    for (j = 1;j <= n; j++)
+	{
+	    if (i == 1 && j == 1)
+		    continue;
+		if (i == 1)
+		    m[i][j] = m[i][j-1] + m[i][j];
+		if (j == 1)
+		    m[i][j] = m[i-1][j] + m[i][j];
+	    if (i != 1 && j != 1)
+		    m[i][j]=min(m[i-1][j], m[i][j-1]) + m[i][j];
+	}
+s[n][n] = '#';
+i = n; j = n;
+while (i != 1 || j != 1)
+{
+    if (i == 1) 
+	{
+		j--;
+		s[i][j] = '#';
+		continue;
+	}
+	if (j == 1)
+	{
+		i--;
+		s[i][j] = '#';
+		continue;
+	}
+	if (m[i-1][j] < m[i][j-1])
+	{
+		i--;
+		s[i][j] = '#';
+		continue;
+	}
+	else
+	{
+		j--;
+		s[i][j] = '#';
+		continue;
+	}
+}
+for (i = 1; i <= n; i++)
+{
+   for (j = 1; j <= n; j++)
+	   cout << s[i][j];
+cout << endl;
+}
+return 0;
+}

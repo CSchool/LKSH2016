@@ -1,0 +1,34 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="29" judge-id="1" status="WA" scoring="ACM" run-tests="1" contest-id="305" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>2b68c4ab-a12b-4c3c-a552-397ff7314584</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>2489.843</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="WA" time="1" real-time="2" max-memory-used="327680"  checker-comment="Answers do not match: output: 0, correct: 1" >
+  <program-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=327680, maxrss=2928640, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=0, ptime=0, rtime=1, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="2">1
+</input>
+      <output size="2">0
+</output>
+      <correct size="2">1
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="44">Answers do not match: output: 0, correct: 1
+</checker>
+    </test>
+  </tests>
+</testing-report>

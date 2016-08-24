@@ -1,0 +1,65 @@
+#include <iostream>
+//#include <conio.h>
+#include <queue>
+
+using namespace std;
+
+long long a[250][250], b[250][250];
+char c[250][250];
+
+int main() {
+
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			char ch;
+			cin >> ch;
+			a[i][j] = ch - '0';
+		}
+	}
+
+	for (int i = n - 1; i >= 0; i--) {
+		for (int j = n - 1; j >= 0; j--) {
+			b[i][j] = a[i][j];
+			long long k = i >= n ? 0 : b[i + 1][j];
+			long long l = j >= n ? 0 : b[i][j + 1];
+			if ((i == n - 1) || (j == n - 1)) {
+				b[i][j] += k + l;
+			}
+			else {
+				b[i][j] += min(k, l);
+			}
+		}
+	}
+
+	int x = 0, y = 0;
+	while ((x < n) && (y < n)) {
+		c[x][y] = '#';
+		if (x == n-1) {
+			y++;
+		}
+		else {
+			if (y == n-1) {
+				x++;
+			}
+			else {
+				b[x + 1][y] < b[x][y + 1] ? x++ : y++;
+			}
+		}
+	}
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (c[i][j] == '#')
+				cout << c[i][j];
+			else
+				cout << '-';
+		}
+		cout << endl;
+	}
+
+	//_getch();
+	return 0;
+}

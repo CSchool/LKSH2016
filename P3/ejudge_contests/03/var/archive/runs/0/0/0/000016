@@ -1,0 +1,68 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int E,F;
+  cin>>E>>F;
+  int N;
+  cin>>N;
+  int P[500];
+  int W[500];
+  for(int i = 0; i < N; i++)
+  {
+    cin>>P[i]>>W[i];
+  }
+
+  int max[10001];
+  bool use[10001];
+  max[0]=0;
+  use[0]=true;
+  for(int i=1;i <= F-E;i++)
+  {
+    max[i]=0;
+    use[i]=false;
+    for(int j=0; j<N;j++)
+    {
+      if(W[j]<=i)
+      {
+        if((!use[i]||max[i]<max[i-W[j]]+P[j])  && use[i-W[j]])
+        {
+          max[i]=max[i-W[j]]+P[j];
+          use[i]=true;
+        }
+      }
+    }
+  }
+  
+  bool iuse[10001];
+  int min[10001];
+
+  min[0]=0;
+  iuse[0]=true;
+  for(int i=1;i <=F-E;i++)
+  {
+    min[i]=0;
+    iuse[i]=false;
+    for(int j=0; j<N;j++)
+    {
+      if(W[j]<=i)
+      {
+        if((!iuse[i]||min[i]>min[i-W[j]]+P[j]) && iuse[i-W[j]])
+        {
+          min[i]=min[i-W[j]]+P[j];
+          iuse[i]=true;
+        }
+      }
+    }
+  }
+
+
+  if(use[F-E] && iuse[F-E])
+    cout<<min[F-E]<<" "<<max[F-E]<<endl;
+  else
+    cout<<"This is impossible."<<endl;
+
+  return 0;
+}

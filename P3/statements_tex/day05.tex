@@ -1,0 +1,234 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{lastpage}
+\usepackage{setspace} % single spacing between lines
+\usepackage{blindtext} % for generated text - can remove
+\usepackage{titlesec} % set header spacing
+\setlength{\parindent}{15pt} % paragraph indent
+
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Олимпиадное программирование (высокий уровень). Тренировка 01 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+%user-defined commands
+
+\newcommand{\inputFile}{стандартный ввод}
+\newcommand{\outputFile}{стандартный вывод}
+
+\begin{document}
+
+\singlespacing
+
+\section*{Задача A. SMS}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{mobila.png}
+\end{figure}
+
+Сообщения SMS сотового телефона MOBILA составлены из прописных латинских букв.
+Если буква первая на кнопке, нужно нажать эту кнопку один раз,
+чтобы добавить букву в сообщение. Если буква вторая --- нужно нажать кнопку дважды и т.д.
+Так, чтобы набрать слово \texttt{SMS}, нужно нажать \\
+\texttt{(PQRS)(PQRS)(PQRS)(PQRS)(MNO)(PQRS)(PQRS)(PQRS)(PQRS)}
+
+Чтобы ввести две буквы, находящиеся на одной кнопке,
+нужно между нажатиями клавиши сделать паузу.
+Например, чтобы ввести сообщение \texttt{AA}, нужно нажать \\
+\texttt{(ABC)(пауза)(ABC)}
+
+Если на кнопке три буквы, то, как только такая кнопка нажата три раза,
+последняя буква добавляется в сообщение немедленно, а следующие нажатия
+той же кнопки относятся к следующей букве сообщения. Аналогично,
+если на кнопке четыре буквы, то после четырёх нажатий в сообщение
+будет добавлена последняя буква. То есть последовательность нажатий \\
+\texttt{(ABC)(ABC)(ABC)(ABC)(пауза)(ABC)} \\
+соответствует сообщению \texttt{CAA}.
+
+К сожалению, сотовые телефоны этой модели давно не производятся,
+и остался только один такой телефон. Он может произвольно вставлять
+и игнорировать паузы во время ввода сообщения, что может привести к
+некоторым изменениям в сообщениях. Например, введя \texttt{MOSCOWQUARTERFINAL},
+можно получить вместо этого \texttt{OMSCMNWQTTARTERPDEINAL}.
+Вы получили SMS-сообщение и знаете, что оригинальное сообщение содержало $N$ букв. Чтобы определить вероятность угадывания оригинального сообщения, найдите число возможных сообщений, которые могли превратиться в то, которое Вы получили.
+
+\subsection*{Формат входных данных}
+В первой строке задана длина оригинального сообщения $N$ ($1 \le N \le 80$).
+Вторая строка содержит полученное SMS-сообщение.
+Оно состоит из прописных латинских букв, его длина не превышает 80.
+
+\subsection*{Формат выходных данных}
+Вывести число сообщений из $N$ букв, которые, будучи набранными на на этом
+телефоне, могут превратиться в данное сообщение.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            4 \\
+            MAMA \\
+        } & \parbox[t]{\textheight}{
+            1 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            2 \\
+            WWW \\
+        } & \parbox[t]{\textheight}{
+            2 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            80 \\
+            QUARTERFINAL \\
+        } & \parbox[t]{\textheight}{
+            0 \\
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\section*{Задача B. Калькулятор}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+У исполнителя Калькулятор две команды, которым присвоены номера:
+\begin{enumerate}
+    \item прибавь 1
+    \item умножь на 2
+\end{enumerate}
+
+Сколько есть программ, которые число 1 преобразуют в число $N$?
+
+\subsection*{Формат входных данных}
+На входе целое число $N$ ($1 \le N \le 1000$).
+
+\subsection*{Формат выходных данных}
+Целое число --- количество программ, которые число 1 преобразуют в число $N$.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            5 \\
+        } & \parbox[t]{\textheight}{
+            4 \\
+        } \\ \hline
+    \end{tabularx}
+}
+
+\subsection*{Примечание}
+Для $N = 5$ получаются такие варианты программ: \\
+\begin{itemize}
+    \item 1111
+    \item 121
+    \item 221
+    \item 2111
+\end{itemize}
+
+Итого получается 4 варианта
+
+\newpage
+
+\section*{Задача C. Гангстеры}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+$N$ гангстеров собираются в ресторан. $i$-й гангстер приходит в момент времени
+$T_i$ и имеет богатство $P_i$. Дверь ресторана имеет $K + 1$ степень открытости, они
+обозначаются целыми числами из интервала $[0, K]$. Степень открытости двери
+может изменяться на единицу в единицу времени, то есть дверь может открыться
+на единицу, закрыться на единицу или остаться в том же состоянии. В начальный
+момент времени дверь закрыта (степень открытости 0). $i$-й гангстер заходит в ресторан,
+только если дверь открыта специально для него, то есть когда степень открытости
+двери соответствует его полноте $S_i$. Если в момент, когда гангстер подходит к
+ресторану, степень открытости двери не соответствует его полноте, он уходит
+и больше не возвращается. Ресторан работает в интервале времени $[0, T]$.
+Требуется собрать гангстеров с максимальным суммарным богатством в ресторане,
+открывая и закрывая дверь соответствующим образом.
+
+\subsection*{Формат входных данных}
+В первой строке находятся числа $N, K, T$, во второй --- $T_1, T_2, \ldots, T_N$,
+в третьей --- $P_1, P_2, \ldots, P_N$. в четвёртой --- $S_1, S_2, \ldots, S_N$.
+$1 \le N \le 100$;
+$1 \le K \le 100$;
+$1 \le T \le 30000$;
+$0 \le T_i \le T$;
+$1 \le P_i \le 300$;
+$1 \le S_i \le K$; все числа целые.
+
+\subsection*{Формат выходных данных}
+Вывести одно число --- максимальное суммарное богатство гангстеров,
+попавших в ресторан. Если зайти не удалось никому, вывести 0.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+4 10 20 \\
+10 16 8 16 \\
+10 11 15 1 \\
+10 7 1 8 \\
+        } & \parbox[t]{\textheight}{
+            26 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+2 17 100 \\
+5 0 \\
+50 33 \\
+6 1 \\
+        } & \parbox[t]{\textheight}{
+            0 \\
+        } \\ \hline
+    \end{tabularx}
+}
+
+\newpage
+
+\end{document}

@@ -1,0 +1,73 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="2" judge-id="3" status="WA" scoring="ACM" run-tests="1" contest-id="301" real-time-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>50b0d3e8-96ac-4e81-864d-75a2c2abbc0b</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>866.796</cpu-mhz>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000002.pas
+000002.pas(10,23) Warning: Variable &quot;b&quot; does not seem to be initialized
+000002.pas(11,23) Warning: Variable &quot;c&quot; does not seem to be initialized
+000002.pas(12,23) Warning: Variable &quot;d&quot; does not seem to be initialized
+000002.pas(13,23) Warning: Variable &quot;a&quot; does not seem to be initialized
+000002.pas(2,4) Note: Local variable &quot;n&quot; not used
+000002.pas(2,10) Note: Local variable &quot;t&quot; not used
+Linking 000002
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?
+25 lines compiled, 0.1 sec
+4 warning(s) issued
+2 note(s) issued
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="0" real-time="1"  checker-comment="Different number of lines: output: 9, correct: 10" >
+  <program-stats-str>{ utime=0, stime=0, ptime=0, rtime=1, maxvsz=0, maxrss=2285568, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=3, maxvsz=2498560, maxrss=2351104, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="72">21103031
+01133100
+12131012
+11112210
+11101212
+01011211
+00000000
+11122233
+</input>
+      <output size="83">2-------
+--------
+-2-----2
+----22--
+-----2-2
+-----2--
+--------
+---222--
+18 28 11 7
+</output>
+      <correct size="85">2-------
+--------
+-2-----2
+----22--
+-----2-2
+-----2--
+--------
+---222--
+
+18 28 11 7 
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="50">Different number of lines: output: 9, correct: 10
+</checker>
+    </test>
+  </tests>
+</testing-report>

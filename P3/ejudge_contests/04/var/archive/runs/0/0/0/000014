@@ -1,0 +1,41 @@
+// zadacha.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "iostream"
+#include "vector"
+#include "string"
+
+using namespace std;
+
+int main()
+{
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	int n;
+	cin>>n;
+	vector<int> a(n);
+	vector<int> l(n);
+	for(int i=0;i<n;i++){
+		cin>>a[i];
+	}
+	int k=0;
+	for(int i=n-1;i>=0;i--){
+		int max=0;
+		for(int j=i;j<n;j++){
+			if(a[j]>a[i])
+				if(max < l[j]) 
+					max =  l[j];
+		}
+		l[i]= 1+max;
+		if(1+max > k) k=max+1;
+	}
+	cout<<k<<endl;
+	for(int i=0;i<n;i++){
+		if(l[i]==k){
+			cout<<a[i]<<" ";
+			k--;
+		}
+	}
+	return 0;
+}
+

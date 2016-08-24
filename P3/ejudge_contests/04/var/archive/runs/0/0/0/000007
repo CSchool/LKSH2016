@@ -1,0 +1,41 @@
+#include <iostream>
+//#include <conio.h>
+#include <vector>
+
+using namespace std;
+
+vector<int> numbers[10];
+
+int main() {
+
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < 10; j++) {
+			if (i == 0)
+				numbers[j].push_back(1);
+			else
+				switch (j) {
+				case 0: numbers[j].push_back(numbers[4][i - 1] + numbers[6][i - 1]); break;
+				case 3: numbers[j].push_back(numbers[4][i - 1] + numbers[8][i - 1]); break;
+				case 2: numbers[j].push_back(numbers[7][i - 1] + numbers[9][i - 1]); break;
+				case 1: numbers[j].push_back(numbers[8][i - 1] + numbers[6][i - 1]); break;
+				case 4: numbers[j].push_back(numbers[9][i - 1] + numbers[1][i - 1] + numbers[0][i - 1]); break;
+				case 5: numbers[j].push_back(0);
+				case 6: numbers[j].push_back(numbers[7][i - 1] + numbers[3][i - 1] + numbers[0][i - 1]); break;
+				case 7: numbers[j].push_back(numbers[6][i - 1] + numbers[2][i - 1]); break;
+				case 8: numbers[j].push_back(numbers[3][i - 1] + numbers[1][i - 1]); break;
+				case 9: numbers[j].push_back(numbers[4][i - 1] + numbers[2][i - 1]); break;
+				}
+		}
+	}
+
+	int s = 0;
+		s += numbers[1][n - 1] + numbers[2][n - 1] + numbers[3][n - 1] + numbers[4][n - 1] + numbers[6][n - 1] + numbers[7][n - 1] + numbers[9][n - 1] + numbers[5][n - 1];
+
+	cout << s;
+
+	//_getch();
+	return 0;
+}

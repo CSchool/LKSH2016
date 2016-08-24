@@ -1,0 +1,52 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="145" judge-id="106" status="WA" scoring="ACM" run-tests="1" contest-id="341" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>e56a0cdd-f519-4765-8704-758686326ccd</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>970.019</cpu-mhz>
+  <compiler_output>000145.cpp:16:10: warning: unused variable 'kek' [-Wunused-variable]
+        int a,b,kek;
+                ^
+000145.cpp:17:11: warning: variable 'a' is uninitialized when used here [-Wuninitialized]
+    cout&lt;&lt;a+b+max(a,b)-min(a,b);
+          ^
+000145.cpp:16:7: note: initialize the variable 'a' to silence this warning
+        int a,b,kek;
+             ^
+              = 0
+000145.cpp:17:13: warning: variable 'b' is uninitialized when used here [-Wuninitialized]
+    cout&lt;&lt;a+b+max(a,b)-min(a,b);
+            ^
+000145.cpp:16:9: note: initialize the variable 'b' to silence this warning
+        int a,b,kek;
+               ^
+                = 0
+3 warnings generated.
+
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="3" real-time="5" max-memory-used="4313088"  checker-comment="Answers do not match: output: 1720249560, correct: 10" >
+  <program-stats-str>{ utime=3, stime=0, ptime=3, rtime=5, maxvsz=4313088, maxrss=3084288, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=516096, maxrss=2101248, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="4">2 5
+</input>
+      <output size="10">1720249560</output>
+      <correct size="3">10
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="54">Answers do not match: output: 1720249560, correct: 10
+</checker>
+    </test>
+  </tests>
+</testing-report>

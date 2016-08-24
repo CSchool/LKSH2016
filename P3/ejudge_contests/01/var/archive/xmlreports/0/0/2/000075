@@ -1,0 +1,20 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="75" judge-id="10" status="CE" scoring="ACM" run-tests="0" contest-id="301" compile-error="yes" >
+  <uuid>40ec8a70-778e-4f7c-971c-a637d61dc3a2</uuid>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000075.pas
+000075.pas(37,32) Error: Call by var for arg no. 2 has to match exactly: Got &quot;Int64&quot; expected &quot;LongInt&quot;
+000075.pas(38,32) Error: Call by var for arg no. 2 has to match exactly: Got &quot;Int64&quot; expected &quot;LongInt&quot;
+000075.pas(39,32) Error: Call by var for arg no. 2 has to match exactly: Got &quot;Int64&quot; expected &quot;LongInt&quot;
+000075.pas(42,20) Warning: Variable &quot;sumr&quot; does not seem to be initialized
+000075.pas(43,20) Warning: Variable &quot;sumg&quot; does not seem to be initialized
+000075.pas(44,20) Warning: Variable &quot;sumb&quot; does not seem to be initialized
+000075.pas(46,4) Fatal: There were 3 errors compiling module, stopping
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode
+</compiler_output>
+</testing-report>

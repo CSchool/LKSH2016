@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int  main() {
+	int color[4] = { 0, 0, 0, 0 }; // создаю численный одномерный массив дл€ подсчЄта количества цветов //
+	string a;
+	char array[8][8];	// создаю сетку дл€ подсчЄта двоек //
+	for (int i = 0; i < 8; i++) {
+		cin >> a;
+		for (int j = 0; j < 8; j++) {
+			color[a[j] - '0']++;
+			if (a[j] == '2')	 // заполн€ю дваойки в созданную сетку //
+			array[i][j] = '2';
+			else
+				array[i][j] = '-';
+		}
+	}
+	for (int k = 0; k<4;k++)	// считаю все ли цвета присутсвуют//
+	if (color[k] == 0) {
+		cout << "BAD INPUT LIST" << endl;
+		return 0;
+	}
+	for (int i = 0; i < 8; i++) {  // вывожу сетку с двойками и прочерками //
+		for (int j = 0; j < 8; j++)
+			cout << array[i][j];
+			cout << endl;
+	}
+	cout << endl;	// вывожу количество каждого цвета //
+	for (int k = 0; k < 4; k++)
+		cout << color[k] << " ";
+	return 0;
+}

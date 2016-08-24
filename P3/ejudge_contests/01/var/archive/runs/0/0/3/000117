@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <conio.h>
+
+using namespace std;
+
+struct st{
+	long long gran;
+	char color;
+};
+
+bool cmp(const st&s1, const st&s2) {
+	return s1.gran < s2.gran;
+}
+
+int main() {
+	int n;
+	const char c[3] = { 'R', 'G' , 'B' };
+	long long s[3] = { 0, 0, 0 };
+	cin >> n;
+
+	vector<st> cub(n);
+
+	for (int i = 0; i < n; i++) {
+		cin >> cub[i].gran >> cub[i].color;
+	}
+
+	sort(cub.begin(), cub.end(), cmp);
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < 3; j++) {
+			s[j] += cub[i].color == c[j] ? cub[i].gran * cub[i].gran * 5 : 0;
+			if (i > 0)
+				s[j] -= cub[i].color == c[j] ? cub[i - 1].gran * cub[i - 1].gran : 0;
+		}
+	}
+
+	cout << "R - " << s[0] << endl;
+	cout << "G - " << s[1] << endl;
+	cout << "B - " << s[2] << endl;
+
+	_getch();
+	return 0;
+}

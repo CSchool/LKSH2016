@@ -1,0 +1,108 @@
+Date: 2016/08/23 10:57:32
+From: p3-serebrennikov (uid 42)
+Ip: 192.168.1.85
+Command: submit
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/23 10:57:36
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/23 10:57:32.455746
+  Request completion time:           2016/08/23 10:57:36.135380
+  Total testing duration:            3.680
+  Waiting in compile queue duration: 0.425
+  Compilation duration:              1.287
+  Waiting in serve queue duration:   0.849
+  Waiting in run queue duration:     0.394
+  Testing duration:                  0.090
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.634
+
+Date: 2016/08/23 11:44:13
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/23 11:44:15
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/23 11:44:13.423989
+  Request completion time:           2016/08/23 11:44:15.060620
+  Total testing duration:            1.637
+  Waiting in compile queue duration: 0.234
+  Compilation duration:              0.788
+  Waiting in serve queue duration:   0.063
+  Waiting in run queue duration:     0.359
+  Testing duration:                  0.004
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.189
+
+Date: 2016/08/23 11:47:35
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/23 11:47:38
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: PR
+  Profiling information:
+  Request start time:                2016/08/23 11:47:35.584746
+  Request completion time:           2016/08/23 11:47:38.245345
+  Total testing duration:            2.661
+  Waiting in compile queue duration: 0.891
+  Compilation duration:              0.672
+  Waiting in serve queue duration:   0.275
+  Waiting in run queue duration:     0.517
+  Testing duration:                  0.158
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.147
+
+Date: 2016/08/23 11:49:13
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/23 11:49:15
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: PR
+  Profiling information:
+  Request start time:                2016/08/23 11:49:13.362658
+  Request completion time:           2016/08/23 11:49:15.746655
+  Total testing duration:            2.384
+  Waiting in compile queue duration: 0.804
+  Compilation duration:              0.656
+  Waiting in serve queue duration:   0.234
+  Waiting in run queue duration:     0.067
+  Testing duration:                  0.053
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.569
+
+Date: 2016/08/23 11:50:15
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: comment-run-rejuect
+Status: ok
+Run-id: 10
+Run-status: RJ
+

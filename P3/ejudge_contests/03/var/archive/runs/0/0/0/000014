@@ -1,0 +1,40 @@
+var a:longint;
+mas:array[1..5] of longint;
+
+function p(n:longint):longint;
+begin
+if n>=0 then p:=1 else p:=0;
+end;
+
+function E(n:longint):longint;
+begin
+if (n=5) and (mas[2]<>0) then e:=mas[2] else
+if n>=5 then E:=p(n)+e(n-5) else e:=p(n);
+end;
+
+function d(n:longint):longint;
+begin
+if (n=10) and (mas[3]<>0) then d:=mas[3] else
+if n>=10 then d:=e(n)+d(n-10) else d:=e(n);
+end;
+
+function q(n:longint):longint;
+begin
+if (n=25) and (mas[4]<>0) then q:=mas[4] else
+if n>=25 then q:=d(n)+q(n-25) else q:=d(n);
+end;
+
+function c(n:longint):longint;
+begin
+if (n=50) and (mas[5]<>0) then c:=mas[5] else
+if n>=50 then c:=q(n)+c(n-50) else c:=q(n);
+end;
+
+begin
+read(a);
+mas[5]:=c(50);
+mas[4]:=q(25);
+mas[3]:=d(10);
+mas[2]:=e(5);
+write(c(a));
+end.

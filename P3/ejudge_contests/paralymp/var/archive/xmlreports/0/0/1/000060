@@ -1,0 +1,12 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="60" judge-id="42" status="CE" scoring="ACM" run-tests="0" contest-id="341" compile-error="yes" >
+  <uuid>b940ffaf-d71a-4667-aed2-eaf9b6c07cb0</uuid>
+  <compiler_output>000060.c:1:9: fatal error: 'iostream' file not found
+#include&lt;iostream&gt;
+        ^
+1 error generated.
+
+</compiler_output>
+</testing-report>

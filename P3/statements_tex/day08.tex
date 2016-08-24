@@ -1,0 +1,206 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{lastpage}
+\usepackage{setspace} % single spacing between lines
+\usepackage{blindtext} % for generated text - can remove
+\usepackage{titlesec} % set header spacing
+\setlength{\parindent}{15pt} % paragraph indent
+
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Олимпиадное программирование (высокий уровень). Тренировка 08 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+%user-defined commands
+
+\newcommand{\inputFile}{стандартный ввод}
+\newcommand{\outputFile}{стандартный вывод}
+
+\begin{document}
+
+\singlespacing
+
+\section*{Задача A. Палиндромы}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Непустая строка, содержащая некоторое слово, называется палиндромом,
+если это слово одинаково читается как слева направо, так и справа налево.
+Пусть дана строка, в которой записано слово $S$,
+состоящее из $N$ прописных букв латинского алфавита.
+Вычёркиванием из этого слова некоторого набора символов можно получить строку,
+которая будет палиндромом. Требуется найти количество способов вычёркивания из
+данного слова некоторого (возможно, пустого) набора символов таких,
+что полученная в результате строка являлась палиндромом. 
+Способы, различающиеся порядком вычёркивания символов, считаются одинаковыми.
+
+\subsection*{Формат входных данных}
+В первой строке записано слово $S$. $1 \le N \le 60$
+
+\subsection*{Формат выходных данных}
+Вывести одно целое число --- количество способов вычёркивания.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            BAOBAB \\
+        } & \parbox[t]{\textheight}{
+            22
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+
+\section*{Задача B. Скобки}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Определим правильные скобочные выражения так: 
+
+\begin{enumerate}
+    \item Пустое выражение --- правильное.
+    \item Если выражение \texttt{S} правильное, то \texttt{(S)} и \texttt{[S]} также правильные. 
+    \item Если выражения \texttt{A} и \texttt{B} правильные, то и выражение \texttt{AB} --- правильное. 
+\end{enumerate}
+
+Дана последовательность из круглых и квадратных скобок.
+Требуется найти самое короткое правильное выражение,
+в котором данная последовательность является подпоследовательностью,
+то есть такое, из которого можно вычеркнуть некоторые символы
+(возможно, ноль) и получить исходную последовательность, не меняя порядок оставшихся.
+
+\subsection*{Формат входных данных}
+В первой строке находится последовательность их круглых и квадратных скобок, её длина не превосходит 100.
+
+\subsection*{Формат выходных данных}
+Выводится искомая последовательность скобок без пробелов.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            \string(\string[\string(\string]
+        } & \parbox[t]{\textheight}{
+            \string(\string)\string[\string(\string)\string]
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            \string(\string[\string[\string)\string]\string]
+        } & \parbox[t]{\textheight}{
+            \string(\string[\string[\string(\string)\string]\string]\string)
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            \string(\string(\string[\string)\string)\string]
+        } & \parbox[t]{\textheight}{
+            \string(\string(\string[\string]\string)\string)\string[\string]
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            \string(\string(\string[\string[\string[\string)\string)\string]\string]\string]
+        } & \parbox[t]{\textheight}{
+            \string(\string)\string(\string)\string[\string[\string[\string(\string)\string(\string)\string]\string]\string]
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+
+\section*{Задача C. Упаковка символов}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Билл пытается компактно представить последовательности прописных символов от \texttt{A} до \texttt{Z}
+с помощью упаковки повторяющихся подпоследовательностей внутри них.
+Например, один из способов представить последовательность \texttt{AAAAAAAAAABABABCCD} ---
+это \texttt{10(A)2(BA)B2(C)D}. 
+н формально определяет сжатые последовательности символов и правила перевода их в несжатый вид следующим образом: 
+
+\begin{itemize}
+    \item Последовательность, содержащая один символ от \texttt{A} до \texttt{Z}, является упакованной.
+          Распаковка этой последовательности даёт ту же последовательность из одного символа. 
+    \item Если \texttt{S} и \texttt{Q} --- упакованные последовательности,
+          то \texttt{SQ} --- также упакованная последовательность.
+          Если \texttt{S} распаковывается в \texttt{S'}, 
+          а \texttt{Q} распаковывается в \texttt{Q'}, то \texttt{SQ} распаковывается в \texttt{S'Q'}. 
+      \item Если \texttt{S} --- упакованная последовательность, то \texttt{X(S)} --- также упакованная последовательность,
+          где \texttt{X} --- десятичное представление целого числа, большего 1. Если \texttt{S} распаковывается в \texttt{S'},
+          то \texttt{X(S)} распаковывается в \texttt{S'}, повторённую \texttt{X} раз. 
+\end{itemize}
+
+Следуя этим правилам, легко распаковать любую заданную упакованную последовательность.
+Однако Биллу более интересен обратный переход. Он хочет упаковать заданную последовательность так,
+чтобы результирующая сжатая последовательность содержала наименьшее возможное число символов.
+
+\subsection*{Формат входных данных}
+В первой строке находится последовательность символов от \texttt{A} до \texttt{Z}. Её длина не превосходит 100.
+
+\subsection*{Формат выходных данных}
+В единственной строке выводится упакованная последовательность наименьшей длины,
+которая распаковывается в заданную последовательность. Если таких последовательностей несколько, можно выводить любую.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            AAAAAAAAAABABABCCD 
+        } & \parbox[t]{\textheight}{
+            9(A)3(AB)CCD 
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            NEERCYESYESYESNEERCYESYESYES
+        } & \parbox[t]{\textheight}{
+            2(NEERC3(YES))
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+\end{document}

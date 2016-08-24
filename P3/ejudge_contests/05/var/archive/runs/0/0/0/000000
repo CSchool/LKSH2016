@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+    {
+    long long j,s,i,k,a,n,m[3100];
+	cin >> n;
+	m[1]=1;
+	m[2]=2;
+	for (i=3;i<=n;i++){
+		if (i%2==0)
+			m[i]=m[i/2]+m[i-1];
+		else
+			m[i]=m[i-1];
+	}
+	cout<<m[n];
+	return 0;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- $Id$ -->
+<contest id="auto"
+         disable_team_password="yes"
+         personal="yes"
+         managed="yes"
+         run_managed="yes">
+  <name>Группа П3 - тренировка 05</name>
+  <user_contest>5</user_contest>
+  <register_url>http://localhost/cgi-bin/new-register</register_url>
+  <team_url>http://localhost/cgi-bin/new-client</team_url>
+  <users_access default="allow">
+    <ip allow="yes" ssl="no">1.0.0.127</ip>
+    <ip allow="yes" ssl="no">::/128</ip>
+  </users_access>
+  <master_access default="allow">
+    <ip allow="yes" ssl="no">1.0.0.127</ip>
+    <ip allow="yes" ssl="no">::/128</ip>
+  </master_access>
+  <judge_access default="allow">
+    <ip allow="yes" ssl="no">1.0.0.127</ip>
+    <ip allow="yes" ssl="no">::/128</ip>
+  </judge_access>
+  <team_access default="allow">
+    <ip allow="yes" ssl="no">1.0.0.127</ip>
+    <ip allow="yes" ssl="no">::/128</ip>
+  </team_access>
+  <serve_control_access default="allow">
+    <ip allow="yes" ssl="no">1.0.0.127</ip>
+    <ip allow="yes" ssl="no">::/128</ip>
+  </serve_control_access>
+  <caps>
+    <cap login = "ejudge">
+      FULL_SET,
+    </cap>
+    <cap login = "TsarN">
+      MASTER_SET,
+    </cap>
+    <cap login = "dovgalyuk">
+      MASTER_SET,
+    </cap>
+  </caps>
+  <contestants min="1" max="1" initial="1">
+  </contestants>
+</contest>
+<!-- audit: created 2016/08/11 19:16:09 1 (ejudge) ::1 -->

@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="7" judge-id="1" status="CE" scoring="ACM" run-tests="0" contest-id="307" compile-error="yes" >
+  <uuid>c08ebf29-34d0-43df-b2b8-2ea72473bdd6</uuid>
+  <compiler_output>000007.cpp: In function 'int kek(std::vector&lt;std::vector&lt;long long int&gt; &gt;&amp;, int, int)':
+000007.cpp:9:28: error: 'S' was not declared in this scope
+    s[n][k] += S(s, n - i, i);
+                            ^
+</compiler_output>
+</testing-report>

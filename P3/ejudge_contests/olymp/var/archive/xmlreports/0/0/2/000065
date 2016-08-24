@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="65" judge-id="66" status="CE" scoring="ACM" run-tests="0" contest-id="342" compile-error="yes" >
+  <uuid>c09aef37-1cd9-460c-97e3-e359b20363f1</uuid>
+  <compiler_output>000065.cpp:3:19: fatal error: conio.h: No such file or directory
+ #include &lt;conio.h&gt;
+                   ^
+compilation terminated.
+</compiler_output>
+</testing-report>

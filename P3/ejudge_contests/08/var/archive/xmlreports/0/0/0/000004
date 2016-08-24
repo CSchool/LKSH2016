@@ -1,0 +1,17 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="4" judge-id="2" status="CE" scoring="ACM" run-tests="0" contest-id="308" compile-error="yes" >
+  <uuid>9f8e7e75-1ba9-45a5-bca7-3e0d9ecdd182</uuid>
+  <compiler_output>000004.cpp: In function 'int main()':
+000004.cpp:25:5: error: 'charb' was not declared in this scope
+     charb i = 0, j = st.length() - 1;
+     ^~~~~
+000004.cpp:26:17: error: 'i' was not declared in this scope
+     cout &lt;&lt; kek(i,j);
+                 ^
+000004.cpp:26:19: error: 'j' was not declared in this scope
+     cout &lt;&lt; kek(i,j);
+                   ^
+</compiler_output>
+</testing-report>

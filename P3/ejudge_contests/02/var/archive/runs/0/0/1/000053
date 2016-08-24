@@ -1,0 +1,43 @@
+import sys
+
+a, b, c, d, k = map(int, input().split())
+if a>c:
+    a,c = c,a
+    b,d = d,b
+if k==a:
+	print (b)
+	sys.exit(0)
+if k==c:
+	print(d)
+	sys.exit(0)
+s=b
+s3=0
+s2=0
+s4=1
+i=a
+while i<c:
+    z=s
+	s=s+s3
+    s3=z
+	z=s2
+	s2=s2+s4
+	s4=z
+    i+=1
+z=(d-s)//s2
+m = [0] * 3100
+m[a+1100]=b
+m[a-1+1100]=z
+if k==a-1:
+	print(z) 
+    sys.exit(0)
+if k<a:
+    i = a - 2
+    while i>=k:
+        m[i+1100]=m[i+2+1100]-m[i+1+1100]
+        i-=1
+if k>a:
+    i=a+1
+    while i<=k:
+        m[i+1100]=m[i-1+1100]+m[i-2+1100]
+        i+=1
+print(m[k+1100])

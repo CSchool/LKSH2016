@@ -1,0 +1,35 @@
+// kek.cpp: главный файл проекта.
+#include "iostream"
+#include "algorithm"
+#include "string"
+#include "vector"
+using namespace std;
+
+int main()
+{
+	string s;
+	getline(cin,s);
+	int ans=0;
+	vector<vector<int> > table(3000, vector<int> (3000,0));
+	int i=1500; int j=1500;
+	for(int k=0;k<s.size();k++){
+		table[i][j]=1;
+		if(s[k]=='U'){
+			i--;
+		}
+		if(s[k]=='D'){
+			i++;
+		}
+		if(s[k]=='R'){
+			j++;
+		}
+		if(s[k]=='L'){
+			j--;
+		}
+		if(table[i][j]>0)
+			ans++;
+	}
+	cout<<ans;
+	
+	return 0;
+}

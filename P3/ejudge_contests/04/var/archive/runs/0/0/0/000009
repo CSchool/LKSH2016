@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+vector<int> A, L;
+
+int main() {
+
+	int n, k(0);
+	cin >> n;
+
+	for (int i(0); i < n; i++){
+		int c;
+		cin >> c;
+		A.push_back(c);
+		L.push_back(0);
+	}
+
+	L.resize(n);
+	for (int i(n - 1); i >= 0; i--){
+		int max(0);
+		for (int j(i); j < n; j++){
+			if (A[j] > A[i]){
+				if (L[j] > max){
+					max = L[j];
+				}
+			}
+		}
+		L[i] = max + 1;
+		if (L[i] > k) k = L[i];
+	}
+
+	cout << k << endl;
+
+	for (int i(0); i < n; i++){
+		if (L[i] == k){
+			cout << A[i] << ' ';
+			k--;
+		}
+	}
+
+	return 0;
+}

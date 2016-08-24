@@ -1,0 +1,25 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+    int n, m, g, sum, i;
+    cin >> n >> m;
+    g = n * m;
+    vector < int > a(g);
+    for (int j = 0; j < g; j++)
+        cin >> a[j];
+    sum = a[g - 1];
+    for (int i = g - 2; i >= 0; i--)
+    {
+        if (i >= m && a[i] >= a[i + 1 - m])
+        {
+            sum += a[i + 1 - m];
+            i += 1 - m;
+        }
+        else
+            sum += a[i];
+    }
+    cout << sum << endl;
+}

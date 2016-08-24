@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    long long int x,p,n=0,d=0,q=0,c=0,i=1,f=0,r;
+    int a[5];
+    a[1]=1;
+    a[2]=5;
+    a[3]=10;
+    a[4]=25;
+    a[5]=50;
+    cin >> x;
+    r=x;
+    p=1;
+    if (x>9){
+    for(int w=1;w<=5;w++)
+    {
+        if(r%5==0){f=(r-5)/5;if(x>14){f=(r-5)/5*3-3;};break;}
+        else{r=r-1;};
+    }}
+    if(x>=5){n=p+1;};
+    if(x>=10){d=n+1;};
+    if(x>=25){q=d+1;};
+    if(x>=50){i=q+1+f;};
+    if((x>=5)&&(x<10)){i=n+f;};
+    if((x>=10)&&(x<25)){i=d+f;};
+    if((x>=25)&&(x<50)){i=q+f-1;};
+
+    cout <<i;
+
+    return 0;
+}

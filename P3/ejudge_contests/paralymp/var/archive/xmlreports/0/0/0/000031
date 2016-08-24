@@ -1,0 +1,100 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="31" judge-id="69" status="PE" scoring="ACM" run-tests="0" contest-id="341" real-time-available="yes" correct-available="yes" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" tests-mode="yes" >
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>1601.464</cpu-mhz>
+  <errors>File 001.dat is modified (1 bytes changed): (trailing empty lines removed) 
+File 004.dat is modified (1 bytes changed): (trailing empty lines removed) 
+File 005.dat is modified (1 bytes changed): (trailing empty lines removed) 
+File 009.dat is modified (1 bytes changed): (trailing empty lines removed) 
+File 011.dat is modified (1 bytes changed): (trailing empty lines removed) 
+S is out of range
+Test checker reports PRESENTATION ERROR on test 5
+N is out of range
+Test checker reports PRESENTATION ERROR on test 9
+N is out of range
+Test checker reports PRESENTATION ERROR on test 10
+N is out of range
+Test checker reports PRESENTATION ERROR on test 11</errors>
+  <compiler_output>error: cannot open /tmp/stylearch5326/tests/README
+=== 001.dat ===
+6 13
+
+
+=== 001.dat ===
+6 13
+
+
+=== 002.dat ===
+3 3
+
+=== 002.dat ===
+3 3
+
+=== 003.dat ===
+4 9
+
+=== 003.dat ===
+4 9
+
+=== 004.dat ===
+3 4
+
+
+=== 004.dat ===
+3 4
+
+
+=== 005.dat ===
+10 60
+
+
+=== 005.dat ===
+10 60
+
+
+=== 006.dat ===
+10 50
+
+=== 006.dat ===
+10 50
+
+=== 007.dat ===
+10 46
+
+=== 007.dat ===
+10 46
+
+=== 008.dat ===
+5 8
+
+=== 008.dat ===
+5 8
+
+=== 009.dat ===
+2 9
+
+
+=== 009.dat ===
+2 9
+
+
+=== 010.dat ===
+2 0
+
+=== 010.dat ===
+2 0
+
+=== 011.dat ===
+2 2
+
+
+=== 011.dat ===
+2 2
+
+
+
+</compiler_output>
+</testing-report>

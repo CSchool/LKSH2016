@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+#include "cstdlib"
+#include "algorithm"
+#include "cmath"
+
+using namespace std;
+
+int main() {
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    vector<long long> num[10];
+	int k;
+	cin >> k;
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < 10; j++) {
+			if (i == 0)
+				num[j].push_back(1);
+			else
+				switch (j) {
+				    case 0: num[j].push_back(num[4][i - 1] + num[6][i - 1]); break;
+				    case 1: num[j].push_back(num[6][i - 1] + num[8][i - 1]); break;
+				    case 2: num[j].push_back(num[7][i - 1] + num[9][i - 1]); break;
+				    case 3: num[j].push_back(num[8][i - 1] + num[4][i - 1]); break;
+				    case 4: num[j].push_back(num[9][i - 1] + num[1][i - 1] + num[0][i - 1]); break;
+				    case 5: num[j].push_back(0); break;
+				    case 6: num[j].push_back(num[7][i - 1] + num[3][i - 1] + num[0][i - 1]); break;
+				    case 7: num[j].push_back(num[6][i - 1] + num[2][i - 1]); break;
+				    case 8: num[j].push_back(num[3][i - 1] + num[1][i - 1]); break;
+				    case 9: num[j].push_back(num[4][i - 1] + num[2][i - 1]); break;
+				}
+		}
+	}
+
+	long long ans = 0;
+	ans = num[1][k - 1] + num[2][k - 1] + num[3][k - 1] + num[4][k - 1] + num[6][k - 1] + num[7][k - 1] + num[9][k - 1] + num[5][k - 1];
+
+	cout << ans;
+	return 0;
+}

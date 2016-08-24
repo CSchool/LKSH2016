@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    long long int c,a,b;
+    cin >> a>>b>>c;
+    cout <<100;
+    return 0;
+}

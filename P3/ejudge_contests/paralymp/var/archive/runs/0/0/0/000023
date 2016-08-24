@@ -1,0 +1,10 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main() {
+	int n, b, c, k=100;
+	cin >> n >> b >> c;
+	cout << endl << k;
+	_getch();
+	return 0;
+}

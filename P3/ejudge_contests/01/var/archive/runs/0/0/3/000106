@@ -1,0 +1,35 @@
+//const alh = 'abcdefghijklmnopqrstuvwxyz';
+var mas:array[1..26] of longint;
+a:string;
+i,j,n:byte;
+min,max:longint;
+
+{function check:byte;
+var a,b:byte;
+begin
+ b:=0;
+ for a:=1 to 26 do if mas[a]<>0 then inc (b);
+ if b=1 then check:=1 else check:=0;
+end;}
+
+begin
+
+for i:=1 to 26 do mas[i]:=0;
+
+readln(a);
+n:=Length(a);
+for i:=1 to n do inc(mas[ord(a[i])-ord('a')+1]);
+
+max:=0;
+min:=100;
+
+for i:=1 to 26 do
+ begin
+ if (mas[i]>max) and (mas[i]<>0) then max:=mas[i];
+ if (mas[i]<min) and (mas[i]<>0) then min:=mas[i];
+ end;
+
+{if check=1 then min:=0; }
+
+write(max-min);
+end.

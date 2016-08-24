@@ -1,0 +1,138 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{lastpage}
+\usepackage{setspace} % single spacing between lines
+\usepackage{blindtext} % for generated text - can remove
+\usepackage{titlesec} % set header spacing
+\setlength{\parindent}{15pt} % paragraph indent
+
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Олимпиадное программирование (высокий уровень). Тренировка 07 \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+%user-defined commands
+
+\newcommand{\inputFile}{стандартный ввод}
+\newcommand{\outputFile}{стандартный вывод}
+
+
+\begin{document}
+
+\singlespacing
+
+\section*{Задача A. Лесенки}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Лесенкой называется набор кубиков в один или несколько слоёв,
+в котором каждый более верхний слой содержит кубиков меньше, чем нижний.
+
+\begin{figure}[h]
+    \includegraphics[scale=0.5]{ladder.jpg}
+\end{figure}
+
+Подсчитать число лесенок, которое можно построить из $N$ кубиков.
+
+\subsection*{Формат входных данных}
+На входе записано число $N$ ($1 \le N \le 100$).
+
+\subsection*{Формат выходных данных}
+Вывести искомое количество лесенок.
+
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            3 \\
+        } & \parbox[t]{\textheight}{
+            2 \\
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+\section*{Задача B. Бросание кубика}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Кубик, грани которого помечены цифрами от 1 до 6, бросают $N$ раз.
+Найти вероятность того, что сумма выпавших чисел будет равна $Q$.
+
+\subsection*{Формат входных данных}
+В первой строке находятся числа $N$ и $Q$ через пробел ($1 \le N \le 500$, $1 \le Q \le 3000$).
+
+\subsection*{Формат выходных данных}
+Выводится единственное вещественное число, которое должно отличаться от
+истинного значения не более чем на 0.01 истинного значения.
+
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{\inputFile} & \multicolumn{1}{c|}{\outputFile} \\ \hline
+        \parbox[t]{\textheight}{
+            1 6 \\
+        } & \parbox[t]{\textheight}{
+            0.16666 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            1 7 \\
+        } & \parbox[t]{\textheight}{
+            0.0 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            4 14 \\
+        } & \parbox[t]{\textheight}{
+            0.11265 \\
+        } \\ \hline
+        \parbox[t]{\textheight}{
+            100 100 \\
+        } & \parbox[t]{\textheight}{
+            1.53e-78 \\
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+
+\end{document}

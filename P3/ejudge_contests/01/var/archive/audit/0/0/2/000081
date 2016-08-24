@@ -1,0 +1,25 @@
+Date: 2016/08/12 11:19:48
+From: p3-kudryashov (uid 39)
+Ip: 192.168.1.63
+Command: submit
+Status: ok
+Run-id: 81
+Run-status: CG
+
+Date: 2016/08/12 11:19:55
+From: SYSTEM
+Status: testing completed
+Run-id: 81
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/12 11:19:48.599150
+  Request completion time:           2016/08/12 11:19:55.817586
+  Total testing duration:            7.218
+  Waiting in compile queue duration: 0.060
+  Compilation duration:              0.155
+  Waiting in serve queue duration:   0.849
+  Waiting in run queue duration:     0.669
+  Testing duration:                  5.463
+  Post-processing duration:          0.006
+  Waiting in serve queue duration:   0.016
+

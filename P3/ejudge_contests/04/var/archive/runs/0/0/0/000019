@@ -1,0 +1,44 @@
+#include <iostream>
+
+
+using namespace std;
+
+int i[3][10000];
+
+int main() {
+	int n = 0, p = 0, max = 0, z = 0, t = 0;
+	cin >> n; 
+	n--;
+	for (int p = 0; p <= n; p++) {
+		cin >> i[1][p];
+		i[2][p] = 0;
+	}								
+	for (int p = n; p >= 0; p--)		{			
+		max = 0;
+		t = 0;
+		int y = p + 1;
+		for (y; y <= n; y++) {  
+			if (i[1][p] < i[1][y] && max < i[2][y]) {  
+				max = i[2][y];
+				t = i[1][y];
+			}
+			if ((i[1][p] < i[1][y]) && (max == i[2][y]) && (t<i[1][y])) {
+				max = i[2][y];
+			}
+		}
+		i[2][p] = max + 1;
+		if (z < i[2][p]) {		
+			z = i[2][p];
+		}
+	}	
+		cout << z << endl;
+		for (int p = 0; p <= n; p++) {
+	if (i[2][p] == z) {   
+	cout << i[1][p] << ' ';
+	z--;
+		}
+		}
+
+
+		return 0;
+}

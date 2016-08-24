@@ -1,0 +1,105 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string st;
+int zz[105][105][105];
+long long p[105][105];
+bool qq[105][105];
+
+void kek (int i, int j){
+    if (qq[i][j] == false){
+        qq[i][j] = true;
+        if (i != j) {
+            if (st[i] == '(' && st[i + 1] == ')' || st[i] == '[' && st[i + 1] == ']') {
+                if (i + 2 <= j) {
+                   kek(i + 2, j);
+                   for (int l = 0; l <= zz[i + 2][j][0]; l++)
+                      zz[i][j][l] = zz[i + 2][j][l];
+                   p[i][j] = p[i + 2][j];
+                }
+                else
+                    p[i][j] = 2;
+            return;
+            }
+            if (st[j] == ')' && st[j - 1] == '(' || st[j - 1] == '[' && st[j] == ']') {
+                if (j - 2 >= i) {
+                    kek(i, j - 2);
+                    for (int l = 0; l <= zz[i][j - 2][0]; l++)
+                       zz[i][j][l] = zz[i][j - 2][l];
+                    p[i][j] = p[i][j - 2];
+                }
+                else
+                    p[i][j] = 2;
+            return;
+            }
+            if (st[i] == '(' && st[j] == ')' || st[i] == '[' && st[j] == ']') {
+                if (i + 1 != j) {
+                kek(i + 1, j - 1);
+                for (int l = 0; l <= zz[i + 1][j - 1][0]; l++)
+                     zz[i][j][l] = zz[i + 1][j - 1][l];
+                p[i][j] = 2 + p[i + 1][j - 1];
+                }
+                else
+                p[i][j] = 2;
+                return;
+            }
+            kek(i + 1, j);
+            kek(i, j - 1);
+            if (p[i + 1][j] > p[i][j - 1]) {
+                p[i][j] = p[i + 1][j];
+                for (int l = 0; l <= zz[i + 1][j][0]; l++)
+                    zz[i][j][l] = zz[i + 1][j][l];
+                zz[i][j][0]++;
+                zz[i][j][zz[i][j][0]] = i;
+            }
+            else {
+                for (int l = 0; l <= zz[i][j - 1][0]; l++)
+                    zz[i][j][l] = zz[i][j - 1][l];
+                zz[i][j][0]++;
+                zz[i][j][zz[i][j][0]] = j;
+                p[i][j] = p[i][j - 1];
+                }
+        }
+        else {
+            p[i][j] = 0;
+            zz[i][j][0] = 1;
+            zz[i][j][1] = i;
+        }
+    }
+}
+
+int main()
+{   
+    cin >> st;
+    int i = 0, j = st.length() - 1, d=0;
+    for (int z = 0; z <= j; z++)
+        for (int l = 0; l <= j; l++) {
+            p[z][l] = 0; 
+            qq[z][l] = false; 
+            for (int w = 0; w <= j + 1; w++)
+                zz[z][l][w] = 0;
+        }
+    kek(i, j);
+  /*  cout << p[i][j] << endl;
+    for (int z = 0; z <= zz[i][j][0]; z++)
+        cout << zz[i][j][z] << " ";
+    cout << endl;*/
+    for (int z = 0; z <= j; z++) {
+        d = 0;
+        for (int l = 1; l <= zz[i][j][0]; l++){
+            if (zz[i][j][l] == z) {
+                d = 1;
+                if (st[z] == '(' || st[z] == ')')
+                    cout << "()";
+                if (st[z] == '[' || st[z] == ']')
+                    cout << "[]";
+            }
+        }
+        if (d == 0)
+        cout << st[z];
+    }
+  //  system("pause");
+    return 0;
+}

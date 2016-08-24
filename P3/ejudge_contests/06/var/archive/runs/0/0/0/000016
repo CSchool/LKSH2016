@@ -1,0 +1,72 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int a[250][250];
+int b[250][250];
+char c[250][250];
+int s[250];
+int main()
+{
+    long long int n, v=10;
+    cin >> n;
+    /*for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            cin >> a[i][j]; }}*/
+
+    for(int i=1;i<=n;i++)
+    {
+        cin >>s[i];
+        for(int j=n;j>=1;j--)
+        {
+            a[i][j]=s[i]%v;
+            s[i]=s[i]/10;}}
+
+    b[n][n]=a[n][n];
+
+    for (int i = n - 1; i>0; i--)
+    {
+        b[i][n]=a[i][n]+b[i+1][n];
+    }
+
+    for (int j = n - 1; j>0; j--)
+    {
+        b[n][j]=a[n][j]+b[n][j+1];
+    }
+
+    for (int i = n - 1; i>0; i--)
+    {
+        for (int j = n - 1; j>0; j--)
+        {
+           b[i][j]=a[i][j]+min(b[i+1][j],b[i][j+1]);
+    }}
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            c[i][j]='-';
+        }
+    }
+    c[n][n]='#';
+    c[1][1]='#';
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 1; j < n; j++)
+        {
+            if (b[i+1][j]<b[i][j+1]){c[i+1][j]='#';if (i!=n){i=1+i;j=j-1;};};
+            if (b[i+1][j]>b[i][j+1]){c[i][j+1]='#';};
+            if (b[i+1][j]==b[i][j+1]){c[i+1][j]='#';if (i+1!=n){i=i+1;j=j-1;};};
+            //if (j==n){i++;};
+        }}
+
+    for (int i = 1;i <= n;i++)
+    {
+        for (int j = 1;j <= n;j++)
+        {
+           cout << c[i][j];}cout << endl;}
+
+    return 0;
+}

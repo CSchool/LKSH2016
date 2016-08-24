@@ -1,0 +1,62 @@
+var
+  n, e, f, i, j, l, min, max, m, wes: longint;
+  p, w: array[1..500] of longint;
+  sum: array[0..10000] of longint;
+  lo: array[0..10000, 1..500] of byte;
+
+begin
+  read(e, f);
+  read(n);
+  for i := 1 To n Do read(p[i], w[i]);
+  for i := 0 To f - e Do
+    for j := 1 To n Do
+      lo[i, j] := 0;
+  sum[0] := 0;
+  for wes := 1 To f - e Do
+  begin
+    m := -1;
+    l := 0;
+    for i := 1 To n Do
+      if wes - w[i] >= 0 Then
+        if sum[wes - w[i]] >= 0 Then
+          if (m = -1) Or (sum[wes - w[i]] + p[i] < m) Then
+          begin
+            m := sum[wes - w[i]] + p[i];
+            l := i;
+          end;
+    if l <> 0 Then
+    begin
+      for i := 1 To n Do lo[wes, i] := lo[wes - w[l], i];
+      lo[wes, l] := lo[wes - w[l], l] + 1;
+    end;
+    sum[wes] := m;
+  end;
+  min := sum[wes];
+  for i := 0 To f - e Do
+    for j := 1 To n Do
+      lo[i, j] := 0;
+  sum[0] := 0;
+  for wes := 1 To f - e Do
+  begin
+    m := -1;
+    l := 0;
+    for i := 1 To n Do
+      if wes - w[i] >= 0 Then
+        if sum[wes - w[i]] >= 0 Then
+          if sum[wes - w[i]] + p[i] > m Then
+          begin
+            m := sum[wes - w[i]] + p[i];
+            l := i;
+          end;
+    if l <> 0 Then
+    begin
+      for i := 1 To n Do lo[wes, i] := lo[wes - w[l], i];
+      lo[wes, l] := lo[wes - w[l], l] + 1;
+    end;
+    sum[wes] := m;
+  end;
+  max := sum[wes];
+  if (min = -1) Or (max = -1) Then
+    writeln('This is impossible.')
+  else write(min, ' ', max);
+end.

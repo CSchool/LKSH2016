@@ -1,0 +1,43 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="51" judge-id="5" status="SE" scoring="ACM" run-tests="1" contest-id="303" real-time-available="yes" max-memory-used-available="yes" failed-test="1" time-limit-ms="2000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>c701364b-d16e-4002-ba43-dfe761dfc592</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>806.347</cpu-mhz>
+  <compiler_output>000051.cpp: In function 'int main()':
+000051.cpp:25:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i=0;i&lt;MIN.size();i++) {
+                  ~^~~~~~~~~~~
+000051.cpp:26:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int j=0;j&lt;w.size();j++) {
+                     ~^~~~~~~~~
+000051.cpp:35:5: warning: this 'else' clause does not guard... [-Wmisleading-indentation]
+     else
+     ^~~~
+000051.cpp:37:2: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'else'
+  system(&quot;pause&quot;);
+  ^~~~~~
+</compiler_output>
+  <tests>
+    <test num="1" status="SE" time="3" real-time="4" max-memory-used="4108288" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=4, maxvsz=4108288, maxrss=3112960, nvcsw=1, nivcsw=2 }</program-stats-str>
+      <input size="13">10 100
+1
+1 1
+</input>
+      <output size="5">90 90</output>
+      <stderr size="0"></stderr>
+    </test>
+  </tests>
+</testing-report>

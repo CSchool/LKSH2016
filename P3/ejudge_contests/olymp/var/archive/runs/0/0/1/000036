@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int a[10];
+int main()
+{
+    int k,n,x,c=0;
+    cin >> n;
+    for(int i=0;i<n;i++)
+    {cin >> a[i];}
+    for(int i=0;i<n-1;i++)
+    {if(a[i]>a[i+1]){x=a[i];a[i]=a[i+1];a[i+1]=x;i=0;};}
+    cin >> k;
+    x=k;
+    for(int i=n-1;i>=0;i--)
+    {
+        if(a[i]<=x){c++;x=x-a[i];i=i+1;}
+    }
+    if((c==0)||(x!=0)){cout <<-1;}else{cout <<c;}
+
+    return 0;
+}
+/*10
+1500 2000 300 400 500 1000 550 650 1 10
+750
+*/

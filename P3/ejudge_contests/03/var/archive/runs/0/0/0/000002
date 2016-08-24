@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+
+int p(int n){
+    if (n<0)
+		return 0;
+	else
+		return 1;
+}
+int z(int n){
+	if (n<0)
+		return 0;
+	else
+		return p(n)+z(n-5);
+}
+int d(int n){
+	if (n<0)
+		return 0;
+	else
+		return z(n)+d(n-10);
+}
+int q(int n){
+	if (n<0)
+		return 0;
+	else
+		return d(n)+q(n-25);
+}
+int c(int n){
+	if (n<0)
+		return 0;
+	else
+		return q(n)+c(n-50);
+}
+int main()
+    {
+    long long n;
+	n=0;
+	cin>>n;
+	cout<<c(n);
+	return 0;
+}

@@ -1,0 +1,38 @@
+var
+  n,k,i,j,max,maxn,max2,max2n:longint;
+  m,g,z,x:array[0..10001] of longint;
+Begin
+readln(n);
+for i:=1 to n do begin
+   read(m[i]); end;
+if n=1 then begin
+   writeln(n);
+   write(m[n]); halt; end;
+z[1]:=1;
+for i:=2 to n do begin
+   for j:=1 to i-1 do
+      if (z[j]>max) and (m[j]<m[i]) then begin
+          max:=z[j]; maxn:=j; end;
+      if (m[i]>m[maxn]) and (maxn>0) then begin
+      z[i]:=z[maxn]+1;
+      x[i]:=maxn;
+      if z[i]>max2 then begin
+          max2:=z[i]; max2n:=i; end; end;
+   if z[i]=0 then
+      inc(z[i]);
+   max:=0;
+   end;
+if max2n=0 then
+   max2n:=n;
+writeln(z[max2n]);
+i:=max2n;
+max:=0; maxn:=0;
+i:=max2n; g[1]:=m[max2n]; k:=1;
+while k<>z[max2n] do begin
+    inc(k);
+    g[k]:=m[x[i]];
+    i:=x[i];
+    end;
+for i:=k downto 1 do
+     write(g[i],' ');
+end.

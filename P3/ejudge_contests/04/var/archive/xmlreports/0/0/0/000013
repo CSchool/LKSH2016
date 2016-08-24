@@ -1,0 +1,45 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="13" judge-id="4" status="WA" scoring="ACM" run-tests="2" contest-id="304" real-time-available="yes" max-memory-used-available="yes" failed-test="2" time-limit-ms="5000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>6f685f56-d9d9-4911-8fd2-599c0fea7b26</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>1412.890</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="OK" time="2" real-time="3" max-memory-used="4026368"  checker-comment="ok" >
+  <program-stats-str>{ utime=1, stime=1, ptime=2, rtime=3, maxvsz=4026368, maxrss=3108864, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=6, stime=0, ptime=6, rtime=8, maxvsz=3735552, maxrss=3231744, nvcsw=6, nivcsw=0 }</checker-stats-str>
+      <input size="14">6
+2 5 3 4 6 1
+</input>
+      <output size="10">4
+2 3 4 6 </output>
+      <stderr size="0"></stderr>
+      <checker size="4">ok 
+</checker>
+    </test>
+    <test num="2" status="WA" time="3" real-time="5" max-memory-used="4026368"  checker-comment="wrong answer length is invalid. Expected 7, found 8" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=4026368, maxrss=3158016, nvcsw=1, nivcsw=2 }</program-stats-str>
+  <checker-stats-str>{ utime=9, stime=4, ptime=13, rtime=15, maxvsz=3735552, maxrss=3338240, nvcsw=6, nivcsw=3 }</checker-stats-str>
+      <input size="82">30
+28 18 6 9 22 24 17 1 1 14 8 23 10 3 26 30 2 12 23 14 1 25 7 1 15 24 3 10 11 18
+</input>
+      <output size="23">8
+1 1 8 10 12 14 15 24 </output>
+      <stderr size="0"></stderr>
+      <checker size="52">wrong answer length is invalid. Expected 7, found 8
+</checker>
+    </test>
+  </tests>
+</testing-report>

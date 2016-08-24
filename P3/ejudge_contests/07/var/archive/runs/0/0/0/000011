@@ -1,0 +1,52 @@
+#include "iostream"
+#include "algorithm"
+#include "string"
+#include "math.h"
+#include "cstdlib"
+#include "vector"
+
+using namespace std;
+
+void pushT(vector<vector<int> > &table, int n, int q){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<q;j++){
+            table[i][j]=-1;
+        }
+    }
+    for(int i=0;i<6 && i!= q;i++){
+        int j=0;
+        table[j][i]=1;
+    }
+    for(int i=1;i<n;i++){
+        int k=2;
+        for(int j=0;j<(i+1)*6/2+1;j++){
+            if(j==i){             
+                table[i][j]=1;
+            }
+            if(j>i){
+                table[i][j]=table[i][j-1]+table[i-1][j-1];
+            }
+        }
+        for(int j=(i+1)*6/2+1;j<(i+1)*6 && j != q;j++){
+            table[i][j]=table[i][j-k];
+            k+=2;
+        }
+    }
+}
+
+int main()
+{
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    int n, q;
+    cin>>n>>q;
+    vector<vector<int> > table(n, vector<int> (q));
+    pushT(table,n,q);
+    if(table[n-1][q-1] < 0 || n>100){
+        cout<<"0.0";
+        return 0;
+    }
+    cout<<(double)table[n-1][q-1]/pow(6.0,n);
+    return 0;
+}
+
