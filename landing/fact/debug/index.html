@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Отладка</title>
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/prism.css" rel="stylesheet" type="text/css" /> 
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="pageTitle page-header well">
+                <h1>Отладка</h1>
+            </div> 
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><div class="panel-title">Найдите код, подходящий к программе</div></div>
+                        <div class="panel-body">
+                            <pre>
+                                <code class="language-c">
+#                           include &lt;stdio.h&gt;
+#                          include  &lt;string.h&gt;
+
+int vs1 [ ] = {0x456E7465, 0x7220796F, 0x7572206E, 0x616D653A, 0x20000000,
+0 } ; int vs2 [ ] = { 0x496E7661 , 0x6C696420, 0x6E616D65, 0xA000000, 0 };
+int vs3  [ ] = { 0x456E7465 , 0x72207061 , 0x7373776F , 0x72643A20 , 0 } ;
+
+/******       ******        ***********        ******    ******    ******/
+void o(       int*p)       {unsigned int       *pp=p;    while(    *pp) {*
+pp = ((       *  pp&      0xff) &lt;&lt;24) |((*     pp   &    0xff00    )&lt;&lt;8)|(
+( * pp&     0xff0000     )&gt;&gt;8)        |(*pp    &gt;&gt;24);    ++pp;}    printf(
+(char*)    p); }int                   main(    ){char    n[128]    ;char v
+[128];char s[128];                    int q    = - 1;    int e=    0;int i
+=0;int l=0;int f                =0;n:;o(vs1    );gets    (n);l=    strlen(
+n); if(l &lt;5){o(                 vs2);goto e    ;}goto    s;c:e=    e+n[i++
+];e=e+0xBADC0DE;                goto l ; p:    sprintf   (v,"%X"  ,e);goto
+l;s:;o(    vs3 );                     gets(    s);for    (char*    p=s;*p;
+++ p ){     switch                    (*p){    case'e'   :return   0; case
+'n'/**/     :goto n;     case         'c' :    goto c;case'p':goto p; case
+'i'/**/       : goto      ii;case 'v':goto     v;case 'o':goto o;case '0':
+case'1'       : case       '2' : case '3':     case '4' : case'5':case'6': 
+case'7'       : case        '8':case'9':f      +=*p-'0';break;}l:;}goto ii
+
+;v: if (i!=l) goto ii;q = strncmp(v, s+f, sizeof(s)-f); goto l;o: if (q==0)
+{int vs4 [] = {0x596F7520,0x68617665 , 0x20737563 , 0x63657373, 0x66756C6C, 
+0x7920666F, 0x756E6420 , 0x74686520 , 0x636F7272 , 0x65637420 , 0x70617373,
+0x776F7264 ,0x210A0000, 0} ; o(vs4); } else{ ii:; int vs5[ ] = {0x496E7661, 
+0x6C696420, 0x70617373,0x776F7264,0x2E0A0000,0,0xDEAD};o(vs5);}e:return 0;}
+                                </code>
+                            </pre>
+                        </div>
+<!--
+                        <div class="panel-heading"><div class="panel-title">Найдите ошибки в программе и получите жетоны</div></div>
+                        <div class="panel-body">
+                            <pre>
+                                <code class="language-pascal">
+{Составьте программу удаления второго элемента массива С(N), если N лежит в диапазоне 1..100}
+var
+ c:array[1..10] of integer;
+ n, i, t:integer;
+
+begin
+ readln(n);
+ for i:=1 to n do begin
+   read(c[n]);
+ end;
+
+ for i:=2 to n do begin
+  c[i]:=c[i+1];
+ end;
+
+ for i:=1 to n do begin
+   writeln(c[n], ' ');
+ end;
+end.
+                                </code>
+                            </pre>
+                        </div>
+-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><div class="panel-title">Программы для занятий</div></div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="chess.cpp" class="list-group-item" download>Шахматы 15.08</a>
+                            </div>
+                            <div class="list-group">
+                                <a href="qsort.cpp" class="list-group-item" download>Сортировка 16.08</a>
+                            </div>
+                            <div class="list-group">
+                                <a href="fibonacci.cpp" class="list-group-item" download>Числа Фибоначчи 16.08</a>
+                            </div>
+                            <div class="list-group">
+                                <a href="poker.cpp" class="list-group-item" download>Покер 19.08</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    
+    <script src="../../assets/js/prism.js"></script>
+  </body>
+</html>

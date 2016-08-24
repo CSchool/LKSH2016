@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Learn Lua in 15 Minutes</title>
+<meta name="format-detection" content="telephone=no">
+<link href="Learn%20Lua%20in%2015%20Minutes_files/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="Learn%20Lua%20in%2015%20Minutes_files/default.css">
+<script src="Learn%20Lua%20in%2015%20Minutes_files/ga.js" async="" type="text/javascript"></script><script src="Learn%20Lua%20in%2015%20Minutes_files/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8366930-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style>
+  html {
+    //background-color: #D8D8E0;
+  }
+  body {
+    background-color: white;
+    width: 752px;
+    margin: 30px auto 50px auto;
+    font-size: 17pt;
+    font-family: 'PT Serif';
+    padding: 30px;
+    border-radius: 10px;
+  }
+  h1 {
+    margin-top: -7px;
+    margin-bottom: 0;
+  }
+  i {
+    margin-bottom: 1.5em;
+    display: block;
+  }
+  pre {
+    margin: 0;
+  }
+  .float-holder:before,
+  .float-holder:after {
+    content: "";
+    display: table;
+  }
+  .float-holder:after {
+    clear: both;
+  }
+</style>
+</head>
+<body>
+
+<h1> Learn Lua in 15 Minutes </h1>
+<!-- <i>more or less</i> -->
+
+<hr>
+
+<!--
+<p style="font-size:70%">
+  <em>Know JavaScript?
+  <a href="https://www.oreilly.com/learning/learn-lua-from-javascript-part-1-an-introduction-to-lua">
+  Learn Lua from Javascript</a>.</em>
+</p>
+-->
+
+<!--
+<p style="font-size:70%">
+  <em>For a more in-depth Lua tutorial, watch
+  <a href="https://www.youtube.com/watch?v=S4eNl1rA1Ns">this video</a>
+  or check out <a href="http://tylerneylon.github.io/video-scripts/">a
+  transcript of the video</a>.</em>
+</p>
+-->
+
+<pre><code class="lua"><span class="comment">-- Two dashes start a one-line comment.</span>
+
+<span class="comment">--[[
+     Adding two ['s and ]'s makes it a
+     multi-line comment.
+--]]</span>
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 1. Variables and flow control.</span>
+<span class="comment">----------------------------------------------------</span>
+
+num = <span class="number">42</span>  <span class="comment">-- All numbers are doubles.</span>
+<span class="comment">-- Don't freak out, 64-bit doubles have 52 bits for</span>
+<span class="comment">-- storing exact int values; machine precision is</span>
+<span class="comment">-- not a problem for ints that need &lt; 52 bits.</span>
+
+s = <span class="string">'walternate'</span>  <span class="comment">-- Immutable strings like Python.</span>
+t = <span class="string">"double-quotes are also fine"</span>
+u = <span class="string">[[ Double brackets
+       start and end
+       multi-line strings.]]</span>
+t = <span class="keyword">nil</span>  <span class="comment">-- Undefines t; Lua has garbage collection.</span>
+
+<span class="comment">-- Blocks are denoted with keywords like do/end:</span>
+<span class="keyword">while</span> num &lt; <span class="number">50</span> <span class="keyword">do</span>
+  num = num + <span class="number">1</span>  <span class="comment">-- No ++ or += type operators.</span>
+<span class="keyword">end</span>
+
+<span class="comment">-- If clauses:</span>
+<span class="keyword">if</span> num &gt; <span class="number">40</span> <span class="keyword">then</span>
+  <span class="built_in">print</span>(<span class="string">'over 40'</span>)
+<span class="keyword">elseif</span> s ~= <span class="string">'walternate'</span> <span class="keyword">then</span>  <span class="comment">-- ~= is not equals.</span>
+  <span class="comment">-- Equality check is == like Python; ok for strs.</span>
+  <span class="built_in">io</span>.write(<span class="string">'not over 40\n'</span>)  <span class="comment">-- Defaults to stdout.</span>
+<span class="keyword">else</span>
+  <span class="comment">-- Variables are global by default.</span>
+  thisIsGlobal = <span class="number">5</span>  <span class="comment">-- Camel case is common.</span>
+
+  <span class="comment">-- How to make a variable local:</span>
+  <span class="keyword">local</span> line = <span class="built_in">io</span>.read()  <span class="comment">-- Reads next stdin line.</span>
+
+  <span class="comment">-- String concatenation uses the .. operator:</span>
+  <span class="built_in">print</span>(<span class="string">'Winter is coming, '</span> .. line)
+<span class="keyword">end</span>
+
+<span class="comment">-- Undefined variables return nil.</span>
+<span class="comment">-- This is not an error:</span>
+foo = anUnknownVariable  <span class="comment">-- Now foo = nil.</span>
+
+aBoolValue = <span class="keyword">false</span>
+
+<span class="comment">-- Only nil and false are falsy; 0 and '' are true!</span>
+<span class="keyword">if</span> <span class="keyword">not</span> aBoolValue <span class="keyword">then</span> <span class="built_in">print</span>(<span class="string">'twas false'</span>) <span class="keyword">end</span>
+
+<span class="comment">-- 'or' and 'and' are short-circuited.</span>
+<span class="comment">-- This is similar to the a?b:c operator in C/js:</span>
+ans = aBoolValue <span class="keyword">and</span> <span class="string">'yes'</span> <span class="keyword">or</span> <span class="string">'no'</span>  <span class="comment">--&gt; 'no'</span>
+
+karlSum = <span class="number">0</span>
+<span class="keyword">for</span> i = <span class="number">1</span>, <span class="number">100</span> <span class="keyword">do</span>  <span class="comment">-- The range includes both ends.</span>
+  karlSum = karlSum + i
+<span class="keyword">end</span>
+
+<span class="comment">-- Use "100, 1, -1" as the range to count down:</span>
+fredSum = <span class="number">0</span>
+<span class="keyword">for</span> j = <span class="number">100</span>, <span class="number">1</span>, -<span class="number">1</span> <span class="keyword">do</span> fredSum = fredSum + j <span class="keyword">end</span>
+
+<span class="comment">-- In general, the range is begin, end[, step].</span>
+
+<span class="comment">-- Another loop construct:</span>
+<span class="keyword">repeat</span>
+  <span class="built_in">print</span>(<span class="string">'the way of the future'</span>)
+  num = num - <span class="number">1</span>
+<span class="keyword">until</span> num == <span class="number">0</span>
+
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 2. Functions.</span>
+<span class="comment">----------------------------------------------------</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n)</span></span>
+  <span class="keyword">if</span> n &lt; <span class="number">2</span> <span class="keyword">then</span> <span class="keyword">return</span> <span class="number">1</span> <span class="keyword">end</span>
+  <span class="keyword">return</span> fib(n - <span class="number">2</span>) + fib(n - <span class="number">1</span>)
+<span class="keyword">end</span>
+
+<span class="comment">-- Closures and anonymous functions are ok:</span>
+<span class="function"><span class="keyword">function</span> <span class="title">adder</span><span class="params">(x)</span></span>
+  <span class="comment">-- The returned function is created when adder is</span>
+  <span class="comment">-- called, and remembers the value of x:</span>
+  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(y)</span></span> <span class="keyword">return</span> x + y <span class="keyword">end</span>
+<span class="keyword">end</span>
+a1 = adder(<span class="number">9</span>)
+a2 = adder(<span class="number">36</span>)
+<span class="built_in">print</span>(a1(<span class="number">16</span>))  <span class="comment">--&gt; 25</span>
+<span class="built_in">print</span>(a2(<span class="number">64</span>))  <span class="comment">--&gt; 100</span>
+
+<span class="comment">-- Returns, func calls, and assignments all work</span>
+<span class="comment">-- with lists that may be mismatched in length.</span>
+<span class="comment">-- Unmatched receivers are nil;</span>
+<span class="comment">-- unmatched senders are discarded.</span>
+
+x, y, z = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>
+<span class="comment">-- Now x = 1, y = 2, z = 3, and 4 is thrown away.</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">bar</span><span class="params">(a, b, c)</span></span>
+  <span class="built_in">print</span>(a, b, c)
+  <span class="keyword">return</span> <span class="number">4</span>, <span class="number">8</span>, <span class="number">15</span>, <span class="number">16</span>, <span class="number">23</span>, <span class="number">42</span>
+<span class="keyword">end</span>
+
+x, y = bar(<span class="string">'zaphod'</span>)  <span class="comment">--&gt; prints "zaphod  nil nil"</span>
+<span class="comment">-- Now x = 4, y = 8, values 15..42 are discarded.</span>
+
+<span class="comment">-- Functions are first-class, may be local/global.</span>
+<span class="comment">-- These are the same:</span>
+<span class="function"><span class="keyword">function</span> <span class="title">f</span><span class="params">(x)</span></span> <span class="keyword">return</span> x * x <span class="keyword">end</span>
+f = <span class="function"><span class="keyword">function</span> <span class="params">(x)</span></span> <span class="keyword">return</span> x * x <span class="keyword">end</span>
+
+<span class="comment">-- And so are these:</span>
+<span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">g</span><span class="params">(x)</span></span> <span class="keyword">return</span> <span class="built_in">math</span>.sin(x) <span class="keyword">end</span>
+<span class="keyword">local</span> g; g  = <span class="function"><span class="keyword">function</span> <span class="params">(x)</span></span> <span class="keyword">return</span> <span class="built_in">math</span>.sin(x) <span class="keyword">end</span>
+<span class="comment">-- the 'local g' decl makes g-self-references ok.</span>
+
+<span class="comment">-- Trig funcs work in radians, by the way.</span>
+
+<span class="comment">-- Calls with one string param don't need parens:</span>
+<span class="built_in">print</span> <span class="string">'hello'</span>  <span class="comment">-- Works fine.</span>
+
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 3. Tables.</span>
+<span class="comment">----------------------------------------------------</span>
+
+<span class="comment">-- Tables = Lua's only compound data structure;</span>
+<span class="comment">--          they are associative arrays.</span>
+<span class="comment">-- Similar to php arrays or js objects, they are</span>
+<span class="comment">-- hash-lookup dicts that can also be used as lists.</span>
+
+<span class="comment">-- Using tables as dictionaries / maps:</span>
+
+<span class="comment">-- Dict literals have string keys by default:</span>
+t = {key1 = <span class="string">'value1'</span>, key2 = <span class="keyword">false</span>}
+
+<span class="comment">-- String keys can use js-like dot notation:</span>
+<span class="built_in">print</span>(t.key1)  <span class="comment">-- Prints 'value1'.</span>
+t.newKey = {}  <span class="comment">-- Adds a new key/value pair.</span>
+t.key2 = <span class="keyword">nil</span>   <span class="comment">-- Removes key2 from the table.</span>
+
+<span class="comment">-- Literal notation for any (non-nil) value as key:</span>
+u = {[<span class="string">'@!#'</span>] = <span class="string">'qbert'</span>, [{}] = <span class="number">1729</span>, [<span class="number">6.28</span>] = <span class="string">'tau'</span>}
+<span class="built_in">print</span>(u[<span class="number">6.28</span>])  <span class="comment">-- prints "tau"</span>
+
+<span class="comment">-- Key matching is basically by value for numbers</span>
+<span class="comment">-- and strings, but by identity for tables.</span>
+a = u[<span class="string">'@!#'</span>]  <span class="comment">-- Now a = 'qbert'.</span>
+b = u[{}]     <span class="comment">-- We might expect 1729, but it's nil:</span>
+<span class="comment">-- b = nil since the lookup fails. It fails</span>
+<span class="comment">-- because the key we used is not the same object</span>
+<span class="comment">-- as the one used to store the original value. So</span>
+<span class="comment">-- strings &amp; numbers are more portable keys.</span>
+
+<span class="comment">-- A one-table-param function call needs no parens:</span>
+<span class="function"><span class="keyword">function</span> <span class="title">h</span><span class="params">(x)</span></span> <span class="built_in">print</span>(x.key1) <span class="keyword">end</span>
+h{key1 = <span class="string">'Sonmi~451'</span>}  <span class="comment">-- Prints 'Sonmi~451'.</span>
+
+<span class="keyword">for</span> key, val <span class="keyword">in</span> <span class="built_in">pairs</span>(u) <span class="keyword">do</span>  <span class="comment">-- Table iteration.</span>
+  <span class="built_in">print</span>(key, val)
+<span class="keyword">end</span>
+
+<span class="comment">-- _G is a special table of all globals.</span>
+<span class="built_in">print</span>(<span class="built_in">_G</span>[<span class="string">'_G'</span>] == <span class="built_in">_G</span>)  <span class="comment">-- Prints 'true'.</span>
+
+<span class="comment">-- Using tables as lists / arrays:</span>
+
+<span class="comment">-- List literals implicitly set up int keys:</span>
+v = {<span class="string">'value1'</span>, <span class="string">'value2'</span>, <span class="number">1.21</span>, <span class="string">'gigawatts'</span>}
+<span class="keyword">for</span> i = <span class="number">1</span>, #v <span class="keyword">do</span>  <span class="comment">-- #v is the size of v for lists.</span>
+  <span class="built_in">print</span>(v[i])  <span class="comment">-- Indices start at 1 !! SO CRAZY!</span>
+<span class="keyword">end</span>
+<span class="comment">-- A 'list' is not a real type. v is just a table</span>
+<span class="comment">-- with consecutive integer keys, treated as a list.</span>
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 3.1 Metatables and metamethods.</span>
+<span class="comment">----------------------------------------------------</span>
+
+<span class="comment">-- A table can have a metatable that gives the table</span>
+<span class="comment">-- operator-overloadish behavior. Later we'll see</span>
+<span class="comment">-- how metatables support js-prototypey behavior.</span>
+
+f1 = {a = <span class="number">1</span>, b = <span class="number">2</span>}  <span class="comment">-- Represents the fraction a/b.</span>
+f2 = {a = <span class="number">2</span>, b = <span class="number">3</span>}
+
+<span class="comment">-- This would fail:</span>
+<span class="comment">-- s = f1 + f2</span>
+
+metafraction = {}
+<span class="function"><span class="keyword">function</span> <span class="title">metafraction.__add</span><span class="params">(f1, f2)</span></span>
+  sum = {}
+  sum.b = f1.b * f2.b
+  sum.a = f1.a * f2.b + f2.a * f1.b
+  <span class="keyword">return</span> sum
+<span class="keyword">end</span>
+
+<span class="built_in">setmetatable</span>(f1, metafraction)
+<span class="built_in">setmetatable</span>(f2, metafraction)
+
+s = f1 + f2  <span class="comment">-- call __add(f1, f2) on f1's metatable</span>
+
+<span class="comment">-- f1, f2 have no key for their metatable, unlike</span>
+<span class="comment">-- prototypes in js, so you must retrieve it as in</span>
+<span class="comment">-- getmetatable(f1). The metatable is a normal table</span>
+<span class="comment">-- with keys that Lua knows about, like __add.</span>
+
+<span class="comment">-- But the next line fails since s has no metatable:</span>
+<span class="comment">-- t = s + s</span>
+<span class="comment">-- Class-like patterns given below would fix this.</span>
+
+<span class="comment">-- An __index on a metatable overloads dot lookups:</span>
+defaultFavs = {animal = <span class="string">'gru'</span>, food = <span class="string">'donuts'</span>}
+myFavs = {food = <span class="string">'pizza'</span>}
+<span class="built_in">setmetatable</span>(myFavs, {__index = defaultFavs})
+eatenBy = myFavs.animal  <span class="comment">-- works! thanks, metatable</span>
+
+<span class="comment">-- Direct table lookups that fail will retry using</span>
+<span class="comment">-- the metatable's __index value, and this recurses.</span>
+
+<span class="comment">-- An __index value can also be a function(tbl, key)</span>
+<span class="comment">-- for more customized lookups.</span>
+
+<span class="comment">-- Values of __index,add, .. are called metamethods.</span>
+<span class="comment">-- Full list. Here a is a table with the metamethod.</span>
+
+<span class="comment">-- __add(a, b)                     for a + b</span>
+<span class="comment">-- __sub(a, b)                     for a - b</span>
+<span class="comment">-- __mul(a, b)                     for a * b</span>
+<span class="comment">-- __div(a, b)                     for a / b</span>
+<span class="comment">-- __mod(a, b)                     for a % b</span>
+<span class="comment">-- __pow(a, b)                     for a ^ b</span>
+<span class="comment">-- __unm(a)                        for -a</span>
+<span class="comment">-- __concat(a, b)                  for a .. b</span>
+<span class="comment">-- __len(a)                        for #a</span>
+<span class="comment">-- __eq(a, b)                      for a == b</span>
+<span class="comment">-- __lt(a, b)                      for a &lt; b</span>
+<span class="comment">-- __le(a, b)                      for a &lt;= b</span>
+<span class="comment">-- __index(a, b)  &lt;fn or a table&gt;  for a.b</span>
+<span class="comment">-- __newindex(a, b, c)             for a.b = c</span>
+<span class="comment">-- __call(a, ...)                  for a(...)</span>
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 3.2 Class-like tables and inheritance.</span>
+<span class="comment">----------------------------------------------------</span>
+
+<span class="comment">-- Classes aren't built in; there are different ways</span>
+<span class="comment">-- to make them using tables and metatables.</span>
+
+<span class="comment">-- Explanation for this example is below it.</span>
+
+Dog = {}                                   <span class="comment">-- 1.</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">Dog:new</span><span class="params">()</span></span>                         <span class="comment">-- 2.</span>
+  newObj = {sound = <span class="string">'woof'</span>}                <span class="comment">-- 3.</span>
+  self.__index = self                      <span class="comment">-- 4.</span>
+  <span class="keyword">return</span> <span class="built_in">setmetatable</span>(newObj, self)        <span class="comment">-- 5.</span>
+<span class="keyword">end</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">Dog:makeSound</span><span class="params">()</span></span>                   <span class="comment">-- 6.</span>
+  <span class="built_in">print</span>(<span class="string">'I say '</span> .. self.sound)
+<span class="keyword">end</span>
+
+mrDog = Dog:new()                          <span class="comment">-- 7.</span>
+mrDog:makeSound()  <span class="comment">-- 'I say woof'         -- 8.</span>
+
+<span class="comment">-- 1. Dog acts like a class; it's really a table.</span>
+<span class="comment">-- 2. function tablename:fn(...) is the same as</span>
+<span class="comment">--    function tablename.fn(self, ...)</span>
+<span class="comment">--    The : just adds a first arg called self.</span>
+<span class="comment">--    Read 7 &amp; 8 below for how self gets its value.</span>
+<span class="comment">-- 3. newObj will be an instance of class Dog.</span>
+<span class="comment">-- 4. self = the class being instantiated. Often</span>
+<span class="comment">--    self = Dog, but inheritance can change it.</span>
+<span class="comment">--    newObj gets self's functions when we set both</span>
+<span class="comment">--    newObj's metatable and self's __index to self.</span>
+<span class="comment">-- 5. Reminder: setmetatable returns its first arg.</span>
+<span class="comment">-- 6. The : works as in 2, but this time we expect</span>
+<span class="comment">--    self to be an instance instead of a class.</span>
+<span class="comment">-- 7. Same as Dog.new(Dog), so self = Dog in new().</span>
+<span class="comment">-- 8. Same as mrDog.makeSound(mrDog); self = mrDog.</span>
+
+<span class="comment">----------------------------------------------------</span>
+
+<span class="comment">-- Inheritance example:</span>
+
+LoudDog = Dog:new()                           <span class="comment">-- 1.</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">LoudDog:makeSound</span><span class="params">()</span></span>
+  s = self.sound .. <span class="string">' '</span>                       <span class="comment">-- 2.</span>
+  <span class="built_in">print</span>(s .. s .. s)
+<span class="keyword">end</span>
+
+seymour = LoudDog:new()                       <span class="comment">-- 3.</span>
+seymour:makeSound()  <span class="comment">-- 'woof woof woof'      -- 4.</span>
+
+<span class="comment">-- 1. LoudDog gets Dog's methods and variables.</span>
+<span class="comment">-- 2. self has a 'sound' key from new(), see 3.</span>
+<span class="comment">-- 3. Same as LoudDog.new(LoudDog), and converted to</span>
+<span class="comment">--    Dog.new(LoudDog) as LoudDog has no 'new' key,</span>
+<span class="comment">--    but does have __index = Dog on its metatable.</span>
+<span class="comment">--    Result: seymour's metatable is LoudDog, and</span>
+<span class="comment">--    LoudDog.__index = LoudDog. So seymour.key will</span>
+<span class="comment">--    = seymour.key, LoudDog.key, Dog.key, whichever</span>
+<span class="comment">--    table is the first with the given key.</span>
+<span class="comment">-- 4. The 'makeSound' key is found in LoudDog; this</span>
+<span class="comment">--    is the same as LoudDog.makeSound(seymour).</span>
+
+<span class="comment">-- If needed, a subclass's new() is like the base's:</span>
+<span class="function"><span class="keyword">function</span> <span class="title">LoudDog:new</span><span class="params">()</span></span>
+  newObj = {}
+  <span class="comment">-- set up newObj</span>
+  self.__index = self
+  <span class="keyword">return</span> <span class="built_in">setmetatable</span>(newObj, self)
+<span class="keyword">end</span>
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 4. Modules.</span>
+<span class="comment">----------------------------------------------------</span>
+
+
+<span class="comment">--[[ I'm commenting out this section so the rest of
+--   this script remains runnable.
+</span></code></pre><code></code><pre><code class="lua"><span class="comment">-- Suppose the file mod.lua looks like this:</span>
+<span class="keyword">local</span> M = {}
+
+<span class="keyword">local</span> <span class="function"><span class="keyword">function</span> <span class="title">sayMyName</span><span class="params">()</span></span>
+  <span class="built_in">print</span>(<span class="string">'Hrunkner'</span>)
+<span class="keyword">end</span>
+
+<span class="function"><span class="keyword">function</span> <span class="title">M.sayHello</span><span class="params">()</span></span>
+  <span class="built_in">print</span>(<span class="string">'Why hello there'</span>)
+  sayMyName()
+<span class="keyword">end</span>
+
+<span class="keyword">return</span> M
+
+<span class="comment">-- Another file can use mod.lua's functionality:</span>
+<span class="keyword">local</span> mod = <span class="built_in">require</span>(<span class="string">'mod'</span>)  <span class="comment">-- Run the file mod.lua.</span>
+
+<span class="comment">-- require is the standard way to include modules.</span>
+<span class="comment">-- require acts like:     (if not cached; see below)</span>
+<span class="keyword">local</span> mod = (<span class="function"><span class="keyword">function</span> <span class="params">()</span></span>
+  &lt;contents of mod.lua&gt;
+<span class="keyword">end</span>)()
+<span class="comment">-- It's like mod.lua is a function body, so that</span>
+<span class="comment">-- locals inside mod.lua are invisible outside it.</span>
+
+<span class="comment">-- This works because mod here = M in mod.lua:</span>
+mod.sayHello()  <span class="comment">-- Says hello to Hrunkner.</span>
+
+<span class="comment">-- This is wrong; sayMyName only exists in mod.lua:</span>
+mod.sayMyName()  <span class="comment">-- error</span>
+
+<span class="comment">-- require's return values are cached so a file is</span>
+<span class="comment">-- run at most once, even when require'd many times.</span>
+
+<span class="comment">-- Suppose mod2.lua contains "print('Hi!')".</span>
+<span class="keyword">local</span> a = <span class="built_in">require</span>(<span class="string">'mod2'</span>)  <span class="comment">-- Prints Hi!</span>
+<span class="keyword">local</span> b = <span class="built_in">require</span>(<span class="string">'mod2'</span>)  <span class="comment">-- Doesn't print; a=b.</span>
+
+<span class="comment">-- dofile is like require without caching:</span>
+<span class="built_in">dofile</span>(<span class="string">'mod2.lua'</span>)  <span class="comment">--&gt; Hi!</span>
+<span class="built_in">dofile</span>(<span class="string">'mod2.lua'</span>)  <span class="comment">--&gt; Hi! (runs it again)</span>
+
+<span class="comment">-- loadfile loads a lua file but doesn't run it yet.</span>
+f = <span class="built_in">loadfile</span>(<span class="string">'mod2.lua'</span>)  <span class="comment">-- Call f() to run it.</span>
+
+<span class="comment">-- loadstring is loadfile for strings.</span>
+g = <span class="built_in">loadstring</span>(<span class="string">'print(343)'</span>)  <span class="comment">-- Returns a function.</span>
+g()  <span class="comment">-- Prints out 343; nothing printed before now.</span>
+
+<span class="comment">--]]</span>
+
+<span class="comment">----------------------------------------------------</span>
+<span class="comment">-- 5. References.</span>
+<span class="comment">----------------------------------------------------</span>
+
+<span class="comment">--[[
+
+I was excited to learn Lua so I could make games
+with the <a href="http://love2d.org/">Löve 2D game engine</a>. That's the why.
+
+I started with <a href="http://nova-fusion.com/2012/08/27/lua-for-programmers-part-1/">BlackBulletIV's Lua for programmers</a>.
+Next I read the official <a href="http://www.lua.org/pil/contents.html">Programming in Lua</a> book.
+That's the how.
+
+It might be helpful to check out the <a href="http://lua-users.org/files/wiki_insecure/users/thomasl/luarefv51.pdf">Lua short
+reference</a> on lua-users.org.
+
+The main topics not covered are standard libraries:
+ * <a href="http://lua-users.org/wiki/StringLibraryTutorial">string library</a>
+ * <a href="http://lua-users.org/wiki/TableLibraryTutorial">table library</a>
+ * <a href="http://lua-users.org/wiki/MathLibraryTutorial">math library</a>
+ * <a href="http://lua-users.org/wiki/IoLibraryTutorial">io library</a>
+ * <a href="http://lua-users.org/wiki/OsLibraryTutorial">os library</a>
+
+By the way, this entire file is valid Lua; save it
+as <a href="http://tylerneylon.com/a/learn-lua/learn.lua">learn.lua</a> and run it with "lua learn.lua" !
+
+This was first written for tylerneylon.com. It's
+also available as a <a href="https://gist.github.com/tylerneylon/5853042">github gist</a>. Tutorials for other
+languages, in the same style as this one, are here:
+
+<a href="http://learnxinyminutes.com/">http://learnxinyminutes.com/</a>
+
+Have fun with Lua!
+
+--]]</span>
+
+</code></pre>
+
+
+<hr>
+
+<span style="float:right;font-size:80%;font-style:italic;color:gray;text-align:right">
+  <a href="http://tylerneylon.com/" style="color:gray;text-decoration:none">Tyler Neylon</a><br>
+  336.2013
+</span>
+
+</body></html>

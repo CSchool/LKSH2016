@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Сортировки</title>
+
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/prism.css" rel="stylesheet" type="text/css" /> 
+    <script src="../../assets/js/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="pageTitle page-header well">
+                <h1>Сортировки</h1>
+                <h5>лекции и исходники</h5>
+            </div> 
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading"><div class="panel-title"><a href="proofs.pdf">Лекции</a></div></div>
+                        <div class="panel-heading"><div class="panel-title">Файлы с сортировками</div></div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <p class="list-group-item">Counting sort - скучно</p>
+                                <p class="list-group-item">Квадратичные - скучно</p> 
+                                <div class="list-group-item">
+                                    <a href="heap.cpp">Heap sort</a>
+                                    <ul>
+                                    <li>Т.к. мы ни разу не пользуемся просеиванием вверх, то оно закомментировано.</li> 
+                                    <li>В таком виде кучу использовать не следует, т.к. данные открыты. (гуглите слово 
+                                        инкапсуляция).</li> 
+                                    <li>Чтобы массив сортировался по возрастанию в верщине кучи нужно
+                                    держать максимум (ну или предварительно сделать все значения в массиве отрицателными
+                                    и в конце их вернуть в исходное состояние)</li>
+                                    </ul>
+                                </div>
+                                <div class="list-group-item">
+                                    <a href="merge.cpp">Merge sort</a>
+                                </div>
+                                <div class="list-group-item">
+                                    <a href="qsort.cpp">Quick sort</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    
+    <script src="../../assets/js/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1.27cm
+]{geometry}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[parfill]{parskip}
+\usepackage{lastpage}
+\usepackage{setspace} % single spacing between lines
+\usepackage{blindtext} % for generated text - can remove
+\usepackage{titlesec} % set header spacing
+\setlength{\parindent}{15pt} % paragraph indent
+
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+\usepackage[numbered]{bookmark}
+\clubpenalty=10000
+\widowpenalty=10000
+
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small{Олимпиадное программирование (средний уровень). Перебор. Ребусы. \\ Летняя компьютерная школа ``КЭШ'', 6--26 августа 2016 года}}
+
+%user-defined commands
+
+\newcommand{\inputFile}{отсутствует}
+\newcommand{\outputFile}{стандартный вывод}
+
+\begin{document}
+
+\singlespacing
+
+\section*{Задача A. Ребус}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+Напишите программу, которая найдет все решения ребуса \texttt{ABCD}$+$\texttt{DCBA}$=$\texttt{CEEC}
+
+Решением ребуса называется такая замена букв цифрами, что каждая буква заменяется цифрой от 1 до 6
+(другие цифры в этом ребусе не допускаются) так, что написанное равенство оказывается верным.
+Разным буквам соответствуют разные цифры.
+
+
+\subsection*{Формат выходных данных}
+Выведите каждое решение ребуса на отдельной строке.
+Решение выводится в виде верного равенства, соответствующего описанному ребусу,
+в котором все буквы заменены цифрами.
+
+\subsection*{Пример (для другого ребуса)}
+
+Если бы мы решали ребус \texttt{A}$+$\texttt{B}$=$\texttt{CD},
+и допускались бы цифры от 1 до 9, то вывод мог бы быть таким: \\
+\texttt{
+3+9=12 \\
+4+8=12 \\
+4+9=13 \\
+5+7=12 \\
+5+8=13 \\
+5+9=14 \\
+6+7=13 \\
+6+8=14 \\
+6+9=15 \\
+7+5=12 \\
+7+6=13 \\
+7+8=15 \\
+7+9=16 \\
+8+4=12 \\
+8+5=13 \\
+8+6=14 \\
+8+7=15 \\
+8+9=17 \\
+9+3=12 \\
+9+4=13 \\
+9+5=14 \\
+9+6=15 \\
+9+7=16 \\
+9+8=17 \\
+}
+\newpage
+
+\section*{Задача B. Треугольники}
+
+\begin{tabularx}{\textwidth}{l l X}
+    Имя входного файла: & \texttt{\inputFile} \\
+    Имя выходного файла: & \texttt{\outputFile} \\
+    Ограничение по времени: & $2$ секунды \\
+    Ограничение по памяти: & $256$ мегабайт \\
+\end{tabularx}
+
+На плоскости даны $N$ точек. Никакие две точки не совпадают. Найдите треугольник с вершинами в этих точках, имеющий наименьший возможный периметр.
+
+\subsection*{Формат входных данных}
+
+Сначала вводится число $N$~---~количество точек ($3 \leq N \leq 50$), а затем $N$ пар вещественных чисел, задающих координаты точек.
+
+\subsection*{Формат выходных данных}
+
+Выведите три числа~---~номера точек, которые должны быть вершинами треугольника, чтобы его периметр был минимален. Если решений несколько выведите любое из них.
+
+\subsection*{Примеры}
+
+\texttt{
+    \begin{tabularx}{0.9\textwidth}{| X | X |}
+        \hline
+        \multicolumn{1}{|c|}{Ввод} & \multicolumn{1}{c|}{Вывод} \\ \hline
+        \parbox[t]{\textheight}{
+            5 \\
+            0 0 \\
+            1.3 0 \\
+            -2 0.1 \\
+            1 0 \\
+            10 10 \\
+        } & \parbox[t]{\textheight}{
+            % Пример вывода. Каждая строчка заканчивается на \\ 
+            1 2 4 \\
+        } \\ \hline
+    \end{tabularx}
+}
+\newpage
+
+\end{document}
