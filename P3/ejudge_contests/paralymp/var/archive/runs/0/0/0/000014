@@ -1,9 +1,0 @@
-#include<iostream>
-using namespace std;
-
-int main()
-{
-    int r, h, p;
-    cin >> r >> h >> p;
-    cout << 100 << endl;
-}

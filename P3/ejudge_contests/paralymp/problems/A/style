@@ -1,5 +1,0 @@
-#!/bin/bash
-a=(define do foreach for while repeat until then elif elsif elseif if else case switch)
-for i in ${a[@]}; do
-    if grep -i "$i" $1 > /dev/null 2>&1; then echo "Found '$i'"; exit 1; fi;
-done

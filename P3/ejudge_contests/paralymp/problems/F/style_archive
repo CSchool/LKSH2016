@@ -1,2 +1,0 @@
-#!/bin/bash
-EJ_NO_README=1 EJ_OUTPUT_PATTERN="%03d.dat" /home/ejudge/inst-ejudge/libexec/ejudge/checkers/style_archive "$@"

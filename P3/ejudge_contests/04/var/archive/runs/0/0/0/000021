@@ -1,9 +1,0 @@
-var i,n,b:int64;
-begin
-b:=1;
-read(n);
-
-for i:=1 to n+2 do b:=b*2;
-
-write(b);
-end.

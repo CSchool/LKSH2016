@@ -1,5 +1,0 @@
-var a,b,c:integer;
-begin
-read(a,b,c);
-write('100');
-end.
