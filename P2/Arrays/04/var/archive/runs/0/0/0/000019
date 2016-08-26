@@ -1,0 +1,29 @@
+#include<iostream>	
+using namespace std;
+long long a[1000][1000];
+int main(){
+int n,m;
+long long max;
+cin >> n >> m;
+for(int i = 0; i < n; ++i) {
+	for(int j = 0; j < m; ++j) {
+cin >> a[i][j];
+	}
+}
+max = a[0][0];
+int e1 = 0;
+int e2 = 0;
+
+for(int i = 0; i < n; ++i){
+	for(int j = 0; j < m; ++j){
+		if(a[i][j] > max){
+			max = a[i][j];
+			e1 = i;
+			e2 = j;
+		}
+	}
+}
+cout << e1 << ' ' << e2 << endl;
+
+return 0;
+}

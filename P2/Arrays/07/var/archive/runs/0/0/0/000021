@@ -1,0 +1,13 @@
+var
+a:array[0..40] of longint;
+i,n:integer;
+begin
+read(n);
+a[0]:=1;
+a[1]:=1;
+for i:=2 to n do
+begin
+a[i]:=a[i-2]+a[i-1];
+end;
+write(a[n]);
+end.

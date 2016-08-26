@@ -1,0 +1,14 @@
+var a:array[1..100,1..100] of integer;
+b,n,i,j,m:integer;
+begin
+read(n,m);
+for i:=1 to n do
+for j:=1 to m do
+read(a[i,j]);
+ for i:=1 to n do
+ begin
+for j:=1 to m do
+write(a[i,j],' ');
+writeln();    end;
+
+end.

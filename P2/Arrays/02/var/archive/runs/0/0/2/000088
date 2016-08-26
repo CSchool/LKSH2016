@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+	int n,m,x;
+	x=0;
+	int a[100][100];
+	cin>>n>>m;
+	for(int i=0;i<n;++i)
+		for(int j=0;j<m;++j){
+			cin>>a[i][j];
+			if((i+j) % 2!=0)
+				x=x+a[i][j];
+		}
+		cout<<x;
+
+
+	return 0;}

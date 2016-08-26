@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int i , b = 0;
+	cin >>  i ;
+	int a[2][10];
+	for( int z = 0 ; z <  i ; ++z)
+	{
+		cin >> a[0][z] ;
+		b += a[0][z];
+	}
+	for (int z = 0; z < i ; ++z)
+	{
+		cin >> a[1][z] ;
+		b += a[1][z] ;
+	}
+	cout << b << endl ;
+	return 0 ;
+}

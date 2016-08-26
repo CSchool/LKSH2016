@@ -1,0 +1,64 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="31" judge-id="2" status="WA" scoring="ACM" run-tests="1" contest-id="204" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>fcb63632-19d2-47c8-be1d-28167e142928</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>847.656</cpu-mhz>
+  <compiler_output>000031.cpp:8:12: warning: unused variable 'y' [-Wunused-variable]
+        int n, x, y, z;
+                  ^
+000031.cpp:8:15: warning: unused variable 'z' [-Wunused-variable]
+        int n, x, y, z;
+                     ^
+2 warnings generated.
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="5" real-time="6" max-memory-used="4325376"  checker-comment="Different size: output: 321, correct: 312" >
+  <program-stats-str>{ utime=4, stime=1, ptime=5, rtime=6, maxvsz=4325376, maxrss=3047424, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=3, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="318">9 727
+198 475 200 282 607 571 136 304 720
+210 226 18 698 321 77 289 351 9
+632 162 482 510 328 676 119 233 259
+461 409 492 704 497 710 579 543 253
+80 471 714 54 477 725 508 509 585
+365 397 142 696 45 727 579 496 2
+230 698 59 361 588 357 518 478 482
+491 154 398 106 299 274 306 692 56
+240 159 576 454 502 196 333 162 549</input>
+      <output size="321">727 475 200 282 607 571 136 304 198
+210 226 18 698 321 77 289 351 9 
+632 162 482 510 328 676 119 233 259 
+461 409 492 704 497 710 579 543 253 
+80 471 714 54 477 725 508 509 585 
+365 397 142 696 45 727 579 496 2 
+230 698 59 361 588 357 518 478 482 
+491 154 398 106 299 274 306 692 56 
+240 159 576 454 502 196 333 162 549 
+</output>
+      <correct size="312">727 475 200 282 607 571 136 304 720
+210 226 18 698 321 77 289 351 9
+632 162 482 510 328 676 119 233 259
+461 409 492 704 497 710 579 543 253
+80 471 714 54 477 725 508 509 585
+365 397 142 696 45 198 579 496 2
+230 698 59 361 588 357 518 478 482
+491 154 398 106 299 274 306 692 56
+240 159 576 454 502 196 333 162 549</correct>
+      <stderr size="0"></stderr>
+      <checker size="42">Different size: output: 321, correct: 312
+</checker>
+    </test>
+  </tests>
+</testing-report>

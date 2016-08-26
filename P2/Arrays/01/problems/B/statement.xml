@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "B"
+   type = "standard">
+  <statement language="ru_RU">
+    <title>Задача B</title>
+    <description>
+        <p>
+            У девочки Маши есть 5 кубиков. На первом кубике написана цифра 1, на втором 2, и так далее до последнего кубика. Девочка Маша очень любит компьютеры и хочет занести список своих кубиков в массив по порядку (т.е сначала первый, потом второй и т.д). Помогите ей сделать это и выведите на экран все номера кубиков.
+</p>
+    </description>
+</statement>
+  <examples>
+    <example>
+      <output>1 2 3 4 5</output>
+    </example>
+  </examples>
+</problem>

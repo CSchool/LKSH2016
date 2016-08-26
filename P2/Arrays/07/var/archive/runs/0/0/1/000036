@@ -1,0 +1,13 @@
+var
+a[0..20] of longint;
+i,n:integer;
+brgin
+read(n);
+a[0]:=0;
+a[1]:=2;
+a[2]:=3;
+a[3]:=5;
+for i:=3 to n do
+a[i]:=a[i-1]+a[i-2];
+write(a[n]);
+end.

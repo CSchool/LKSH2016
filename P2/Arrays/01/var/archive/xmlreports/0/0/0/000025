@@ -1,0 +1,43 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="25" judge-id="24" status="WA" scoring="ACM" run-tests="1" contest-id="201" real-time-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>894d1773-cd0f-4d89-b54d-99e6f7f52434</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>877.734</cpu-mhz>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000025.pas
+Linking 000025
+/usr/bin/ld: warning: link.res contains output sections; did you forget -T?
+8 lines compiled, 0.1 sec
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="0" real-time="2"  checker-comment="Answers differ: [1]: output: 6, correct: 1" >
+  <program-stats-str>{ utime=0, stime=0, ptime=0, rtime=2, maxvsz=0, maxrss=2285568, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=3, maxvsz=323584, maxrss=2351104, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="16">2 3
+1 2 3
+4 5 6
+</input>
+      <output size="1">6</output>
+      <correct size="12">1 2 3
+4 5 6
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="43">Answers differ: [1]: output: 6, correct: 1
+</checker>
+    </test>
+  </tests>
+</testing-report>

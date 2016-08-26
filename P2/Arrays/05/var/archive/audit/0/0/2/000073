@@ -1,0 +1,25 @@
+Date: 2016/08/20 11:58:59
+From: p1-strashnov (uid 9)
+Ip: 192.168.1.64
+Command: submit
+Status: ok
+Run-id: 73
+Run-status: CG
+
+Date: 2016/08/20 11:59:01
+From: SYSTEM
+Status: testing completed
+Run-id: 73
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/20 11:58:59.271410
+  Request completion time:           2016/08/20 11:59:01.402448
+  Total testing duration:            2.131
+  Waiting in compile queue duration: 0.258
+  Compilation duration:              0.403
+  Waiting in serve queue duration:   0.423
+  Waiting in run queue duration:     0.809
+  Testing duration:                  0.054
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.184
+

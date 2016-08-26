@@ -1,0 +1,50 @@
+Date: 2016/08/16 10:38:08
+From: p2-egorov (uid 27)
+Ip: 192.168.1.94
+Command: submit
+Status: ok
+Run-id: 3
+Run-status: CG
+
+Date: 2016/08/16 10:38:11
+From: SYSTEM
+Status: testing completed
+Run-id: 3
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/16 10:38:08.289554
+  Request completion time:           2016/08/16 10:38:11.637623
+  Total testing duration:            3.348
+  Waiting in compile queue duration: 0.651
+  Compilation duration:              0.622
+  Waiting in serve queue duration:   0.825
+  Waiting in run queue duration:     0.823
+  Testing duration:                  0.031
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.396
+
+Date: 2016/08/16 11:47:34
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 3
+Run-status: CG
+
+Date: 2016/08/16 11:47:39
+From: SYSTEM
+Status: testing completed
+Run-id: 3
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/16 11:47:34.354048
+  Request completion time:           2016/08/16 11:47:39.503785
+  Total testing duration:            5.150
+  Waiting in compile queue duration: 2.320
+  Compilation duration:              0.827
+  Waiting in serve queue duration:   0.416
+  Waiting in run queue duration:     0.797
+  Testing duration:                  0.030
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.760
+

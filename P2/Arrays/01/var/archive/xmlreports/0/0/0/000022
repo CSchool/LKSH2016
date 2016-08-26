@@ -1,0 +1,14 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="22" judge-id="21" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>6ebe8185-add0-4424-94b1-24a09c3942b5</uuid>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000022.pas
+000022.pas(6,6) Fatal: Syntax error, &quot;:=&quot; expected but &quot;:&quot; found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode
+</compiler_output>
+</testing-report>

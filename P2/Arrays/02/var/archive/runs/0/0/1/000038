@@ -1,0 +1,12 @@
+var
+a:array[0..10] of integer;
+i,s,n:integer;
+begin
+read(n);
+for i:=1 to n do
+begin
+read(a[i]);
+if i mod 2=0 then s:=s+a[i];
+end;
+write(s);
+end.

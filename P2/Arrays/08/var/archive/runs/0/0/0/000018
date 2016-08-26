@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int f=0;
+char a;
+	string s;
+while (a !='.')
+{
+	cin >> a;
+	if (a=='Z'){
+	f++;
+	}
+}
+cout << f << endl;
+	return 0;
+}

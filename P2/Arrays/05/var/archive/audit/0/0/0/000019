@@ -1,0 +1,25 @@
+Date: 2016/08/13 10:27:54
+From: p2-tolstikov (uid 28)
+Ip: 192.168.1.74
+Command: submit
+Status: ok
+Run-id: 19
+Run-status: CG
+
+Date: 2016/08/13 10:27:58
+From: SYSTEM
+Status: testing completed
+Run-id: 19
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/13 10:27:55.032057
+  Request completion time:           2016/08/13 10:27:58.456644
+  Total testing duration:            3.425
+  Waiting in compile queue duration: 0.921
+  Compilation duration:              0.828
+  Waiting in serve queue duration:   0.770
+  Waiting in run queue duration:     0.718
+  Testing duration:                  0.009
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.180
+

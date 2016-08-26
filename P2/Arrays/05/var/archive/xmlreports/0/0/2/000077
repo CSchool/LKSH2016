@@ -1,0 +1,54 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="77" judge-id="6" status="OK" scoring="ACM" run-tests="2" contest-id="205" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>7a2be653-0450-400b-bb22-3970652befe8</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>804.882</cpu-mhz>
+  <compiler_output>000077.cpp:19:5: warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+                        k=k;
+                        ~^~
+000077.cpp:8:9: warning: unused variable 'x' [-Wunused-variable]
+        int n, x,k;
+               ^
+2 warnings generated.
+</compiler_output>
+  <tests>
+    <test num="1" status="OK" time="4" real-time="6" max-memory-used="512000"  checker-comment="OK" >
+  <program-stats-str>{ utime=3, stime=1, ptime=4, rtime=6, maxvsz=512000, maxrss=3047424, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=512000, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="13">5
+5 4 -3 2 1
+</input>
+      <output size="1">4</output>
+      <correct size="2">4
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="2" status="OK" time="4" real-time="5" max-memory-used="4313088"  checker-comment="OK" >
+  <program-stats-str>{ utime=4, stime=0, ptime=4, rtime=5, maxvsz=4313088, maxrss=3129344, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=512000, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="15">5
+5 -3 -2 -1 4
+</input>
+      <output size="1">2</output>
+      <correct size="2">2
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+  </tests>
+</testing-report>

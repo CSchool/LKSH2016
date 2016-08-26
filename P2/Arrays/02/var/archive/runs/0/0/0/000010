@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+	int arl[10];
+	int arg[10];
+	int N;
+	int sum = 0;
+	cin>>N;
+	for(int i = 0;i<N;i++)
+		cin>>arl[i];
+	for(int i = 0;i<N;i++)
+		cin>>arg[i];
+	for(int i = 0;i<N;i++)
+	{
+	sum = sum + arl [i];
+	sum = sum + arg [i];
+	}
+	cout<<sum;
+		
+	return 0;
+}
+
+
+

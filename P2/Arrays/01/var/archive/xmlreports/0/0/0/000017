@@ -1,0 +1,14 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="17" judge-id="16" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>dd4029c0-91bd-43bc-a5f5-76518f4a0d5e</uuid>
+  <compiler_output>000017.cpp: In function 'int main()':
+000017.cpp:6:8: error: 'a' does not name a type
+  const a[i]=i;};
+        ^
+000017.cpp:4:6: warning: unused variable 'a' [-Wunused-variable]
+  int a[10];
+      ^
+</compiler_output>
+</testing-report>

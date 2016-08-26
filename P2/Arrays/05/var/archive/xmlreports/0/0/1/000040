@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="40" judge-id="27" status="CE" scoring="ACM" run-tests="0" contest-id="205" compile-error="yes" >
+  <uuid>a91034a7-428c-4eea-bfb4-a64238736402</uuid>
+  <compiler_output>000040.cpp: In function 'int main()':
+000040.cpp:17:10: error: 'i' was not declared in this scope
+  cout &lt;&lt; i &lt;&lt; endl;
+          ^
+</compiler_output>
+</testing-report>

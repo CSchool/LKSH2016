@@ -1,0 +1,50 @@
+Date: 2016/08/17 10:16:20
+From: p2-utkin (uid 25)
+Ip: 192.168.1.93
+Command: submit
+Status: ok
+Run-id: 18
+Run-status: CG
+
+Date: 2016/08/17 10:16:22
+From: SYSTEM
+Status: testing completed
+Run-id: 18
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/17 10:16:21.066483
+  Request completion time:           2016/08/17 10:16:22.877679
+  Total testing duration:            1.811
+  Waiting in compile queue duration: 0.492
+  Compilation duration:              0.309
+  Waiting in serve queue duration:   0.451
+  Waiting in run queue duration:     0.271
+  Testing duration:                  0.134
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.155
+
+Date: 2016/08/17 10:28:24
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 18
+Run-status: CG
+
+Date: 2016/08/17 10:28:31
+From: SYSTEM
+Status: testing completed
+Run-id: 18
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/17 10:28:25.353913
+  Request completion time:           2016/08/17 10:28:31.627995
+  Total testing duration:            6.274
+  Waiting in compile queue duration: 3.576
+  Compilation duration:              0.328
+  Waiting in serve queue duration:   1.094
+  Waiting in run queue duration:     0.645
+  Testing duration:                  0.496
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.134
+

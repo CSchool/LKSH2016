@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+
+int partition(int* a, int len);
+void qsort(int* a, int len);
+
+int main()
+{
+	int n;
+	cin>>n;
+	int p[100];
+	for(int i = 0;i<n;i++)cin>>p[i];
+	qsort(p,n);
+	for(int i = 0;i<n;i++)cout<<p[i]<<' ' ;
+	/*int v[40] = {0};
+	int sum = 0;
+	bool NeedPlus = false;
+	while(v[n-1]==0){
+		v[0]++;
+		sum++;
+		if(sum>n){
+			for(int j = 0;j<n-1;j++){
+				v[j+1]++;
+				sum = sum + (j + 2);
+				sum = sum - v[j] * (j + 1);
+				v[j]=0;
+				if(sum <= n)break;
+			}
+		}
+		if(sum == n){
+			for(int j = 0;j<n;j++){
+				if(NeedPlus){
+					cout<<'+'<<v[j]<<'+';
+					NeedPlus = !NeedPlus;
+				}
+				else{
+					cout<<v[j];
+				}
+					
+			}
+			cout<<endl;
+		}
+	}*/
+	return 0;
+}
+int partition(int* a, int len) {
+    int r = len;
+    int l = 1;
+
+    while (l < r) {
+        if (a[l] > a[0]) {
+            swap(a[l], a[--r]);
+        } else {
+            ++l;
+        }
+    }
+
+    swap(a[0], a[l - 1]);
+    return l - 1;
+} 
+void qsort(int* a, int len) {
+    if (len <= 1) {
+        return;
+    } else if (len == 2) {
+        if (a[0] > a[1]) {
+            swap(a[0], a[1]);
+        }
+    } else {
+        int i = rand() % len;
+        swap(a[0], a[i]);
+        int t = partition(a, len);
+        qsort(a, t);
+        qsort(a + t + 1, len - t - 1);        
+    }
+}

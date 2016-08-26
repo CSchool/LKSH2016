@@ -1,0 +1,27 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="89" judge-id="17" status="CF" scoring="ACM" run-tests="0" contest-id="201" correct-available="yes" marked-flag="no" >
+  <uuid>040ab5f2-0560-4b22-b291-3fd954cde5e4</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+
+
+run: No tests found
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>856.738</cpu-mhz>
+  <compiler_output>000089.cpp:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
+#include &lt;iostream&gt;;
+                   ^
+                   //
+1 warning generated.
+</compiler_output>
+</testing-report>

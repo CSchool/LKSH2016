@@ -1,0 +1,33 @@
+Date: 2016/08/21 09:57:47
+From: p2-smorodov (uid 21)
+Ip: 192.168.1.77
+Command: submit
+Status: ok
+Run-id: 105
+Run-status: CG
+
+Date: 2016/08/21 09:57:49
+From: SYSTEM
+Status: testing completed
+Run-id: 105
+Run-status: PR
+  Profiling information:
+  Request start time:                2016/08/21 09:57:47.481965
+  Request completion time:           2016/08/21 09:57:49.634953
+  Total testing duration:            2.153
+  Waiting in compile queue duration: 0.096
+  Compilation duration:              0.956
+  Waiting in serve queue duration:   0.018
+  Waiting in run queue duration:     0.400
+  Testing duration:                  0.014
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.668
+
+Date: 2016/08/21 10:06:08
+From: marina (uid 51)
+Ip: 192.168.1.89
+Command: change-status
+Status: ok
+Run-id: 105
+Run-status: OK
+

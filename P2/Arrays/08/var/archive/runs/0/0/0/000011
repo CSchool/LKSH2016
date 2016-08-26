@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+int main(){
+	string str = "";
+	unsigned int i = 0;
+	int count = 0;
+	getline(cin,str);
+	while(str[i] != '.' && i < str.length()){
+		if(str[i] == 'Z')++count;
+		++i;
+	}
+	cout << count << endl;
+	return 0;
+}

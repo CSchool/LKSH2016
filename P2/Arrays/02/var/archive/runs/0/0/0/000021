@@ -1,0 +1,17 @@
+var
+a,b:array[1..10] of integer;
+i,j,s,n:integer;
+begin
+read(n);
+for i:=1 to n do
+begin
+read(a[i]);
+s:=s+a[i];
+end;
+for j:=1 to n do
+begin
+read(b[j]);
+s:=s+b[j];
+end;
+write(s);
+end.

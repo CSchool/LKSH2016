@@ -1,0 +1,32 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main () 
+{
+	int N , d;
+	cin >> N;
+	int a[10];
+	int b[10];
+	for (int i = 0; i < N ; i++) 
+	{
+		cin >> a[i];
+	}
+	for (int i = 0; i < N; i++)
+	{
+		if (i == N - 1)
+		{
+			b[0] = a[i];
+		}
+		else
+		{
+			b[i + 1] = a[i];
+		}
+	}
+	for (int d = 0; N > d; d++) 
+	{
+		cout << b[d] << ' ';
+	}
+	return 0;
+}

@@ -1,0 +1,75 @@
+Date: 2016/08/12 10:44:42
+From: p2-samorodov (uid 37)
+Ip: 192.168.1.69
+Command: submit
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/12 10:44:44
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/12 10:44:42.824237
+  Request completion time:           2016/08/12 10:44:44.769858
+  Total testing duration:            1.946
+  Waiting in compile queue duration: 0.334
+  Compilation duration:              0.151
+  Waiting in serve queue duration:   0.613
+  Waiting in run queue duration:     0.780
+  Testing duration:                  0.037
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.030
+
+Date: 2016/08/12 10:51:28
+From: marina (uid 51)
+Ip: 192.168.1.65
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/12 10:51:36
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/12 10:51:28.961605
+  Request completion time:           2016/08/12 10:51:36.493115
+  Total testing duration:            7.532
+  Waiting in compile queue duration: 6.724
+  Compilation duration:              0.103
+  Waiting in serve queue duration:   0.105
+  Waiting in run queue duration:     0.330
+  Testing duration:                  0.002
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.268
+
+Date: 2016/08/12 10:52:13
+From: marina (uid 51)
+Ip: 192.168.1.65
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/12 10:52:19
+From: SYSTEM
+Status: testing completed
+Run-id: 10
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/12 10:52:13.604285
+  Request completion time:           2016/08/12 10:52:19.438870
+  Total testing duration:            5.835
+  Waiting in compile queue duration: 5.523
+  Compilation duration:              0.054
+  Waiting in serve queue duration:   0.010
+  Waiting in run queue duration:     0.178
+  Testing duration:                  0.002
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.066
+

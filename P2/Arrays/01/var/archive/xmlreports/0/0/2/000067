@@ -1,0 +1,62 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="67" judge-id="24" status="WA" scoring="ACM" run-tests="2" contest-id="201" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="2" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>e586e303-8482-45e1-8d1d-555c5f7094c4</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>1468.066</cpu-mhz>
+  <compiler_output>000067.cpp:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
+#include &lt;iostream&gt;;
+                   ^
+                   //
+1 warning generated.
+</compiler_output>
+  <tests>
+    <test num="1" status="OK" time="3" real-time="5" max-memory-used="2428928"  checker-comment="OK" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=2428928, maxrss=3059712, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=323584, maxrss=1777664, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="16">2 3
+1 2 3
+4 5 6
+</input>
+      <output size="14">1 2 3 
+4 5 6 
+</output>
+      <correct size="12">1 2 3
+4 5 6
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="2" status="WA" time="2" real-time="3" max-memory-used="2428928"  checker-comment="Answers differ: [4]: output: 4, correct: 1" >
+  <program-stats-str>{ utime=2, stime=0, ptime=2, rtime=3, maxvsz=2428928, maxrss=2998272, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=0, ptime=0, rtime=2, maxvsz=2682880, maxrss=1777664, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="22">3 3
+1 2 3
+1 2 3
+1 2 3
+</input>
+      <output size="14">1 2 3 
+4 5 6 
+</output>
+      <correct size="18">1 2 3
+1 2 3
+1 2 3
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="43">Answers differ: [4]: output: 4, correct: 1
+</checker>
+    </test>
+  </tests>
+</testing-report>

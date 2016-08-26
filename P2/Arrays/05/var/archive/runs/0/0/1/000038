@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main(){
+		int N;
+		cin>>N;
+		int ima,imi;
+		bool ma,mi;
+		ma = mi = true;
+		int max=-999999;
+		int min=999999;
+		int a[100];
+		for(int i = 0;i<N;i++)
+				cin>>a[i];
+		for(int i = 0;i<N;i++){
+			if(a[i]>max && a[i]>=0)max = a[i];
+			if(a[i]<min && a[i]>=0)min = a[i];
+		}
+		for(int i = 0;i<N;i++){
+			if (a[i]==max && ma){
+				ima=i;
+				ma = false;
+			}
+			if (a[i]==min && mi){
+				imi=i;
+				mi = false;
+			}}
+		for(int i = 0;i<N;i++){
+			
+		}
+			cout<<abs(imi-ima);
+		return 0;
+		}
+

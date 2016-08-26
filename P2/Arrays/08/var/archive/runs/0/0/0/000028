@@ -1,0 +1,21 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+int main() {
+     int n;
+int a[1000];
+int max1 = 0;
+int max2 = 0;
+int x;
+
+cin >> n;
+
+for 
+
+cout << max1 << ' ' << max2;
+
+	system("pause");
+	return 0;
+}

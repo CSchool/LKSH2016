@@ -1,0 +1,24 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="47" judge-id="3" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>5cf4fa8d-48b3-4b2a-9c4d-06b1eba40d7e</uuid>
+  <compiler_output>000047.cpp: In function 'int main()':
+000047.cpp:4:7: error: 'n' was not declared in this scope
+  cin&gt;&gt;n&gt;&gt;m;
+       ^
+000047.cpp:4:10: error: 'm' was not declared in this scope
+  cin&gt;&gt;n&gt;&gt;m;
+          ^
+000047.cpp:8:8: error: 'a' was not declared in this scope
+   cin&gt;&gt;a[i][j];};
+        ^
+000047.cpp:11:9: error: 'a' was not declared in this scope
+   cout&lt;&lt;a[i][j]&lt;&lt;' ';};
+         ^
+000047.cpp:12:11: error: expected '}' at end of input
+  return 0;}
+           ^
+000047.cpp:12:11: error: expected '}' at end of input
+</compiler_output>
+</testing-report>

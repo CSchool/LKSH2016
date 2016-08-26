@@ -1,0 +1,15 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="40" judge-id="39" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>b829f915-c873-44ae-8b7e-173a4c5f386d</uuid>
+  <compiler_output>000040.cpp:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
+#include &lt;iostream&gt;;
+                   ^
+                   //
+000040.cpp:6:13: error: default initialization of an object of const type 'const int [10]'
+                const int a[10];
+                          ^
+1 warning and 1 error generated.
+</compiler_output>
+</testing-report>

@@ -1,0 +1,26 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="44" judge-id="43" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>65816c33-771d-4098-a2c5-f0325d36acc0</uuid>
+  <compiler_output>000044.cpp: In function 'int main()':
+000044.cpp:5:2: error: expected initializer before 'cin'
+  cin&gt;&gt;n;
+  ^~~
+000044.cpp:6:7: error: 'm' was not declared in this scope
+  cin&gt;&gt;m;
+       ^
+000044.cpp:10:9: error: 'a' was not declared in this scope
+    cin&gt;&gt;a[i,j];};}
+         ^
+000044.cpp:10:13: warning: left operand of comma operator has no effect [-Wunused-value]
+    cin&gt;&gt;a[i,j];};}
+             ^
+000044.cpp:13:10: error: 'a' was not declared in this scope
+    cout&lt;&lt;a[i,j]&lt;&lt;' ';};}
+          ^
+000044.cpp:13:14: warning: left operand of comma operator has no effect [-Wunused-value]
+    cout&lt;&lt;a[i,j]&lt;&lt;' ';};}
+              ^
+</compiler_output>
+</testing-report>

@@ -1,0 +1,21 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int m[10];
+	int i, y;
+	cin >> i;
+	y = 0;
+	for (int x=0; x<i; x++) 
+	{
+		cin >> m[x];
+		if (x % 2 == 0)
+		{
+			y = y +	m[x];
+		}
+	}
+	cout << y << endl;
+	return 0;
+}

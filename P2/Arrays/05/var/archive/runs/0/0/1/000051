@@ -1,0 +1,14 @@
+var k,i,n: integer; a: array [1..100] of integer;
+begin
+
+ readln (n);
+
+ for i:=1 to n do
+  read(a[i]);
+
+ for i:=1 to n do
+  if (a[i]>=0) then k:=k+1;
+
+ writeln (k);
+
+end.

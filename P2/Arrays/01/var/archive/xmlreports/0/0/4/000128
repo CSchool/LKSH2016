@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="128" judge-id="3" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>5c1b7d76-f75a-4c2f-b9dc-8e96c8542eab</uuid>
+  <compiler_output>000128.cpp:1:1: error: expected unqualified-id
+/rightcode\
+^
+1 error generated.
+</compiler_output>
+</testing-report>

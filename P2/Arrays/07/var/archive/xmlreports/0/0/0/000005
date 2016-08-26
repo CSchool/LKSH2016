@@ -1,0 +1,8 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="5" judge-id="9" status="CE" scoring="ACM" run-tests="0" contest-id="207" compile-error="yes" >
+  <uuid>388feb59-c191-4d6d-949b-b36056143876</uuid>
+  <compiler_output>g++: error trying to exec 'cc1plus': execvp: No such file or directory
+</compiler_output>
+</testing-report>

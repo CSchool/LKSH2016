@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main () 
+{
+	int st[100];
+	int N;
+	int sum = 0;
+	cin >>N;
+	N= N-1;
+	for(int i = 0;i<N;i++)
+		cin >> st[i];
+
+	for(int i = 0;i<N;i++)
+		sum+=st[i];
+	cout << sum;
+	return 0;
+}

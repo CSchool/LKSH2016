@@ -1,0 +1,47 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="46" judge-id="37" status="WA" scoring="ACM" run-tests="1" contest-id="203" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>7820eccb-ca1b-4f32-bb2c-8c77e246a82f</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>800.000</cpu-mhz>
+  <compiler_output>000046.cpp: In function 'int main()':
+000046.cpp:11:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  for (int i= 1; i&lt;n;++i) 
+  ^~~
+000046.cpp:19:3: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'for'
+   cout&lt;&lt;max&lt;&lt;' ';
+   ^~~~
+000046.cpp:21:14: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if(a[i]=max){
+              ^
+000046.cpp:6:8: warning: variable 'j' set but not used [-Wunused-but-set-variable]
+  int n,j;
+        ^
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="3" real-time="5" max-memory-used="323584"  checker-comment="Answers differ: [2]: output: 1, correct: 0" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=323584, maxrss=2949120, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=2498560, maxrss=1880064, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="27">10
+1 2 8 6 4 10 9 23 67 89
+</input>
+      <output size="20">1 1 2 3 4 5 6 7 8 9 </output>
+      <correct size="4">1 0
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="43">Answers differ: [2]: output: 1, correct: 0
+</checker>
+    </test>
+  </tests>
+</testing-report>

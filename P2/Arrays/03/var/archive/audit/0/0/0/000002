@@ -1,0 +1,25 @@
+Date: 2016/08/11 10:00:17
+From: p2-teterina (uid 23)
+Ip: 192.168.1.113
+Command: submit
+Status: ok
+Run-id: 2
+Run-status: CG
+
+Date: 2016/08/11 10:00:20
+From: SYSTEM
+Status: testing completed
+Run-id: 2
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/11 10:00:17.489160
+  Request completion time:           2016/08/11 10:00:20.833715
+  Total testing duration:            3.345
+  Waiting in compile queue duration: 0.542
+  Compilation duration:              0.926
+  Waiting in serve queue duration:   0.626
+  Waiting in run queue duration:     0.981
+  Testing duration:                  0.019
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.251
+

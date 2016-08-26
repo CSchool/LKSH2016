@@ -1,0 +1,60 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="51" judge-id="21" status="OK" scoring="ACM" run-tests="3" contest-id="203" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>8eafb6e4-a262-429a-b338-f9b6a090b983</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>800.000</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="OK" time="3" real-time="5" max-memory-used="327680"  checker-comment="OK" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=327680, maxrss=3108864, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="25">10 7
+7 7 7 7 7 7 7 7 7 7
+</input>
+      <output size="2">10</output>
+      <correct size="3">10
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="2" status="OK" time="3" real-time="4" max-memory-used="327680"  checker-comment="OK" >
+  <program-stats-str>{ utime=1, stime=2, ptime=3, rtime=4, maxvsz=327680, maxrss=2977792, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=3, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="10">3 4
+1 2 3
+</input>
+      <output size="1">0</output>
+      <correct size="2">0
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="3" status="OK" time="3" real-time="4" max-memory-used="327680"  checker-comment="OK" >
+  <program-stats-str>{ utime=3, stime=0, ptime=3, rtime=4, maxvsz=327680, maxrss=3121152, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=3, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="20">8 9
+9 9 9 3 4 5 9 9
+</input>
+      <output size="1">5</output>
+      <correct size="2">5
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+  </tests>
+</testing-report>

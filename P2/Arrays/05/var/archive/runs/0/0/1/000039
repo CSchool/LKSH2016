@@ -1,0 +1,10 @@
+var
+a,b:array[0..100] of integer;
+i,n,s:integer;
+begin
+read(n);
+s:=0;
+for i:=0 to n-1 do read(a[i],b[i]);
+for i:=0 to n-1 do s:=s+a[i]*b[i];
+write(s);
+end.

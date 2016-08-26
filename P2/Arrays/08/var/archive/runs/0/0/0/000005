@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+	int a = 0;
+	string s = "";
+	while (s != " We are on the magic bridge!")
+	{
+		getline (cin, s);
+		a ++;
+
+	}
+	cout << a-1 << endl;
+	return 0;
+}

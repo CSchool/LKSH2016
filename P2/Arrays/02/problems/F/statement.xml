@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "F"
+   type = "standard">
+  <statement language="ru_RU">
+    <title>Задача F</title>
+    <description>
+        <p>Пусть у вас есть двумерный массив А размером NxM. Найдите сумму элементов, таких что сумма индекса строки и индекса столбца будет нечетным.
+</p> <br/>
+<p>
+    <b>Входные данные:</b><br/>
+    Вам даны два натуральных числа N и M (0 &lt; N, M &lt; 10). 
+    На следующей строке записан двумерный массив, размер которого NхM.
+</p>
+<br/>
+<p>
+    <b>Выходные данные:</b><br/>
+    Ваша задача вывести сумму элементов, которые удовлетворяют условию выше.
+</p><br/>
+    </description>
+  </statement>
+  <examples>
+    <example>
+        <input>
+1 1
+2
+ 
+</input>
+<output>
+0
+</output>
+    </example>
+  </examples>
+</problem>

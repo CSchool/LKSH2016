@@ -1,0 +1,33 @@
+Date: 2016/08/16 14:27:35
+From: p2-rozin-dmitry (uid 32)
+Ip: 192.168.1.79
+Command: submit
+Status: ok
+Run-id: 120
+Run-status: CG
+
+Date: 2016/08/16 14:27:39
+From: SYSTEM
+Status: testing completed
+Run-id: 120
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/16 14:27:35.878646
+  Request completion time:           2016/08/16 14:27:39.049820
+  Total testing duration:            3.171
+  Waiting in compile queue duration: 0.790
+  Compilation duration:              0.739
+  Waiting in serve queue duration:   0.559
+  Waiting in run queue duration:     0.184
+  Testing duration:                  0.000
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.900
+
+Date: 2016/08/16 18:55:06
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: change-status
+Status: ok
+Run-id: 120
+Run-status: OK
+

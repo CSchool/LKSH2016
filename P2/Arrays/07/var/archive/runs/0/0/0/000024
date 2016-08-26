@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cin>>n;
+	int code[45];
+	code[0] = 0;
+	code[1] = 1;
+	code[2] = 2;
+	code[3] = 4;
+	for(int i = 4;i <= n; i++)
+		code[i]= code[i-1] + code[i-2] + code[i-3];
+	cout << code[n] << endl;
+	return 0;
+}

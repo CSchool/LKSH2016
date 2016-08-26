@@ -1,0 +1,50 @@
+Date: 2016/08/17 10:04:26
+From: p2-teterina (uid 23)
+Ip: 192.168.1.75
+Command: submit
+Status: ok
+Run-id: 12
+Run-status: CG
+
+Date: 2016/08/17 10:04:28
+From: SYSTEM
+Status: testing completed
+Run-id: 12
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/17 10:04:26.637950
+  Request completion time:           2016/08/17 10:04:28.554661
+  Total testing duration:            1.917
+  Waiting in compile queue duration: 0.609
+  Compilation duration:              0.769
+  Waiting in serve queue duration:   0.004
+  Waiting in run queue duration:     0.093
+  Testing duration:                  0.093
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.349
+
+Date: 2016/08/17 10:28:24
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 12
+Run-status: CG
+
+Date: 2016/08/17 10:28:30
+From: SYSTEM
+Status: testing completed
+Run-id: 12
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/17 10:28:25.121414
+  Request completion time:           2016/08/17 10:28:30.995957
+  Total testing duration:            5.875
+  Waiting in compile queue duration: 2.560
+  Compilation duration:              0.264
+  Waiting in serve queue duration:   0.795
+  Waiting in run queue duration:     0.468
+  Testing duration:                  0.028
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   1.760
+

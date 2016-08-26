@@ -1,0 +1,75 @@
+Date: 2016/08/12 10:43:53
+From: p2-smorodov (uid 21)
+Ip: 192.168.1.112
+Command: submit
+Status: ok
+Run-id: 8
+Run-status: CG
+
+Date: 2016/08/12 10:43:57
+From: SYSTEM
+Status: testing completed
+Run-id: 8
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/12 10:43:53.336721
+  Request completion time:           2016/08/12 10:43:57.484168
+  Total testing duration:            4.147
+  Waiting in compile queue duration: 0.867
+  Compilation duration:              0.987
+  Waiting in serve queue duration:   0.493
+  Waiting in run queue duration:     0.829
+  Testing duration:                  0.049
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.923
+
+Date: 2016/08/12 10:51:28
+From: marina (uid 51)
+Ip: 192.168.1.65
+Command: rejudge
+Status: ok
+Run-id: 8
+Run-status: CG
+
+Date: 2016/08/12 10:51:36
+From: SYSTEM
+Status: testing completed
+Run-id: 8
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/12 10:51:28.872786
+  Request completion time:           2016/08/12 10:51:36.549780
+  Total testing duration:            7.677
+  Waiting in compile queue duration: 5.795
+  Compilation duration:              0.423
+  Waiting in serve queue duration:   0.111
+  Waiting in run queue duration:     0.998
+  Testing duration:                  0.023
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.327
+
+Date: 2016/08/12 10:52:13
+From: marina (uid 51)
+Ip: 192.168.1.65
+Command: rejudge
+Status: ok
+Run-id: 8
+Run-status: CG
+
+Date: 2016/08/12 10:52:19
+From: SYSTEM
+Status: testing completed
+Run-id: 8
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/12 10:52:13.515191
+  Request completion time:           2016/08/12 10:52:19.498706
+  Total testing duration:            5.984
+  Waiting in compile queue duration: 4.292
+  Compilation duration:              0.462
+  Waiting in serve queue duration:   0.316
+  Waiting in run queue duration:     0.654
+  Testing duration:                  0.130
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.129
+

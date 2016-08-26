@@ -1,0 +1,23 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int m[2][10];
+	int i, y;
+	cin >> i;
+	y = 0;
+	for (int x=0; x<i; x++)
+	{ 
+		cin >> m[0][x];
+		y = y + m[0][x];
+	}
+	for (int x=0; x<i; x++)
+	{ 
+		cin >> m[1][x];
+		y = y + m[1][x];
+	}
+	cout << y << endl;
+	return 0;
+}

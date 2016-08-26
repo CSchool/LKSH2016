@@ -1,0 +1,35 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="11" judge-id="5" status="WA" scoring="ACM" run-tests="1" contest-id="206" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>c6354435-a89a-4586-b998-500baa9b2cdd</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>1415.136</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="WA" time="2" real-time="3" max-memory-used="323584"  checker-comment="Answers differ: [1]: output: 21, correct: 100" >
+  <program-stats-str>{ utime=2, stime=0, ptime=2, rtime=3, maxvsz=323584, maxrss=2985984, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=323584, maxrss=2347008, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="231">78
+21 50 33 9 21 80 58 77 80 41 35 39 36 89 38 84 72 100 23 29 33 32 42 66 97 72 35 14 13 26 29 10 97 17 26 94 94 65 3 35 64 64 65 64 40 30 16 93 7 36 3 68 65 7 19 62 48 83 14 61 29 93 68 55 62 9 33 54 26 20 81 17 43 97 2 28 62 56
+</input>
+      <output size="228">21 50 33 9 21 80 58 77 80 41 35 39 36 89 38 84 72 100 23 29 33 32 42 66 97 72 35 14 13 26 29 10 97 17 26 94 94 65 3 35 64 64 65 64 40 30 16 93 7 36 3 68 65 7 19 62 48 83 14 61 29 93 68 55 62 9 33 54 26 20 81 17 43 97 2 28 62 56
+</output>
+      <correct size="228">100 97 97 97 94 94 93 93 89 84 83 81 80 80 77 72 72 68 68 66 65 65 65 64 64 64 62 62 62 61 58 56 55 54 50 48 43 42 41 40 39 38 36 36 35 35 35 33 33 33 32 30 29 29 29 28 26 26 26 23 21 21 20 19 17 17 16 14 14 13 10 9 9 7 7 3 3 2
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="46">Answers differ: [1]: output: 21, correct: 100
+</checker>
+    </test>
+  </tests>
+</testing-report>

@@ -1,0 +1,28 @@
+#include<iostream>	
+using namespace std;
+
+int main()
+{
+	int d;
+	cin >> d;
+	int c=0;
+	int n=0;
+	int p=0;
+	int a[10];
+	int b[10];
+
+	for(int i = 0; i < d; i++)
+		cin >> a[i]; 
+
+	for(int j = 0; j< d; j++)
+		cin >> b[j];
+		
+	for(int i = 0; i < d; i++ ){
+		c = c + a[i];
+	}
+	for(int j = 0; j < d; j++){	
+		n = n + b[j];}
+		p = c + n;
+		cout << p;
+	return 0;
+}

@@ -1,0 +1,16 @@
+Date: 2016/08/17 09:59:35
+From: p2-smorodov (uid 21)
+Ip: 192.168.1.97
+Command: submit
+Status: ok
+Run-id: 1
+Run-status: CG
+
+Date: 2016/08/17 10:28:24
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 1
+Run-status: CG
+

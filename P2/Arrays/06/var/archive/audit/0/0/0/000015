@@ -1,0 +1,66 @@
+Date: 2016/08/16 11:25:15
+From: p2-vasilyev (uid 22)
+Ip: 192.168.1.63
+Command: submit
+Status: ok
+Run-id: 15
+Run-status: CG
+
+Date: 2016/08/16 11:25:19
+From: SYSTEM
+Status: testing completed
+Run-id: 15
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/16 11:25:15.865733
+  Request completion time:           2016/08/16 11:25:19.015049
+  Total testing duration:            3.149
+  Waiting in compile queue duration: 0.685
+  Compilation duration:              1.017
+  Waiting in serve queue duration:   0.407
+  Waiting in run queue duration:     0.791
+  Testing duration:                  0.088
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.161
+
+Date: 2016/08/16 11:41:23
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: change-status
+Status: ok
+Run-id: 15
+Run-status: WA
+
+Date: 2016/08/16 11:46:02
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 15
+Run-status: CG
+
+Date: 2016/08/16 11:46:10
+From: SYSTEM
+Status: testing completed
+Run-id: 15
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/16 11:46:02.754726
+  Request completion time:           2016/08/16 11:46:10.834725
+  Total testing duration:            8.080
+  Waiting in compile queue duration: 5.898
+  Compilation duration:              0.984
+  Waiting in serve queue duration:   0.316
+  Waiting in run queue duration:     0.598
+  Testing duration:                  0.021
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.262
+
+Date: 2016/08/16 11:47:50
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: change-status
+Status: ok
+Run-id: 15
+Run-status: WA
+

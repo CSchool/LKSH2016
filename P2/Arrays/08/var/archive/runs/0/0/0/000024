@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int a = 0;
+	string s;
+		getline(cin, s);
+		
+		for (int i = 0; i < s.length(); ++i)
+			if (s[i] == 'C' && s[i+1] == 'h' && s[i+2] == 'a' && s[i+3] == 'r' && s[i+4] == 'l' && s[i+5] == 'i' && s[i+6] == 'e') {
+				cout << "YES" << endl;
+				a = 1;
+				break;
+			};
+		if (a == 0) cout << "NO" << endl;
+		
+	return 0;
+}

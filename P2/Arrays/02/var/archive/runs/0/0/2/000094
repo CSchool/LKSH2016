@@ -1,0 +1,35 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+
+	int n;
+	int a[10];
+	int kl = 0;
+	int kj = 0;
+	int klj = 0;
+
+	cin >> n;
+
+	for (int i = 0; i<n; ++i) {
+
+		cin >> a[i];
+
+		kl += a[i];
+
+	}
+
+	for (int i = 0; i<n; ++i) {
+
+		cin >> a[i];
+
+		kj += a[i];
+
+	}
+
+	klj = kl+ kj;
+	cout << klj;
+
+	return 0;
+}

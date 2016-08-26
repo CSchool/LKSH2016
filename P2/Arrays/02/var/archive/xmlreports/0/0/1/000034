@@ -1,0 +1,13 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="34" judge-id="7" status="CE" scoring="ACM" run-tests="0" contest-id="202" compile-error="yes" >
+  <uuid>3f09ee96-a375-48f4-8861-31cc078c5d0a</uuid>
+  <compiler_output>000034.c:2:1: error: unknown type name 'using'
+ using namespace std;
+ ^~~~~
+000034.c:2:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'std'
+ using namespace std;
+                 ^~~
+</compiler_output>
+</testing-report>

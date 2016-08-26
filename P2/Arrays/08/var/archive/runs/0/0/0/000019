@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+#define YES "YES"
+#define NO "NO"
+int main(){
+	string str = "";
+	int i = 0;
+	int count = 0;
+	getline(cin,str);
+	if((signed int)str.find("Charlie") == -1)cout<< NO <<endl;
+	else cout << YES << endl;
+	return 0;
+}

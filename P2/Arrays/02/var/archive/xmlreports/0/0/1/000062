@@ -1,0 +1,32 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="62" judge-id="2" status="CE" scoring="ACM" run-tests="0" contest-id="202" compile-error="yes" >
+  <uuid>9e475410-f578-4154-bb72-7247e1d6c5df</uuid>
+  <compiler_output>000062.cpp:13:7: error: invalid operands to binary expression ('ostream' (aka 'basic_ostream&lt;char&gt;') and 'int')
+        cout &gt;&gt; z;
+        ~~~~ ^  ~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/streambuf:168:9: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+        operator&gt;&gt;(basic_istream&lt;_CharT2, _Traits2&gt;&amp;,
+        ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/istream:756:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;char, _Traits&gt;&amp; __in, unsigned char&amp; __c)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/istream:761:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;char, _Traits&gt;&amp; __in, signed char&amp; __c)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/istream:803:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;char, _Traits&gt;&amp; __in, unsigned char* __s)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/istream:808:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;char, _Traits&gt;&amp; __in, signed char* __s)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/bits/istream.tcc:923:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;_CharT, _Traits&gt;&amp; __in, _CharT&amp; __c)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/6.1.1/../../../../include/c++/6.1.1/bits/istream.tcc:955:5: note: candidate template ignored: could not match 'basic_istream' against 'basic_ostream'
+    operator&gt;&gt;(basic_istream&lt;_CharT, _Traits&gt;&amp; __in, _CharT* __s)
+    ^
+1 error generated.
+</compiler_output>
+</testing-report>

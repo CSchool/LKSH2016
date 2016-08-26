@@ -1,0 +1,21 @@
+var a:array[1..100,1..100] of integer;
+b,n,i,j,m:integer;
+begin
+ b:=1;
+  for i:=1 to 3 do
+ begin
+for j:=1 to 3 do
+begin
+ a[i,j]:=b;
+  b:=b+1;
+  end;
+   end;
+ for i:=1 to 3 do
+ begin
+for j:=1 to 3 do
+write(a[i,j],' ');
+writeln();    end;
+
+
+
+         end.

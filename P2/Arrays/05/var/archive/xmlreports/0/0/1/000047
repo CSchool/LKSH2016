@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="47" judge-id="34" status="CE" scoring="ACM" run-tests="0" contest-id="205" compile-error="yes" >
+  <uuid>13290264-ac97-4186-9c33-8807025b4847</uuid>
+  <compiler_output>000047.cpp: In function 'int main()':
+000047.cpp:8:6: error: expected ';' before 'b'
+  v=0 b=0;
+      ^
+</compiler_output>
+</testing-report>

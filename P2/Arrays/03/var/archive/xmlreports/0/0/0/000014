@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="14" judge-id="5" status="CE" scoring="ACM" run-tests="0" contest-id="203" compile-error="yes" >
+  <uuid>b68547b4-0963-46da-93a3-0bc3f931be39</uuid>
+  <compiler_output>000014.cpp:29:3: error: use of undeclared identifier 'system'
+         system(&quot;pause&quot;);
+         ^
+1 error generated.
+</compiler_output>
+</testing-report>

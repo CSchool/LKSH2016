@@ -1,0 +1,51 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="82" judge-id="4" status="OK" scoring="ACM" run-tests="2" contest-id="202" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>bee6c72b-964d-4330-9902-9a7f00d50e1b</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>810.546</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="OK" time="4" real-time="6" max-memory-used="4313088"  checker-comment="OK" >
+  <program-stats-str>{ utime=2, stime=2, ptime=4, rtime=6, maxvsz=4313088, maxrss=3080192, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=516096, maxrss=2088960, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="14">3
+0 0 0
+0 0 0
+</input>
+      <output size="2">0
+</output>
+      <correct size="2">0
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="2" status="OK" time="3" real-time="4" max-memory-used="4288512"  checker-comment="OK" >
+  <program-stats-str>{ utime=3, stime=0, ptime=3, rtime=4, maxvsz=4288512, maxrss=2977792, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=507904, maxrss=2088960, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="22">5
+1 2 3 4 5
+0 1 0 1 0
+</input>
+      <output size="3">17
+</output>
+      <correct size="3">17
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+  </tests>
+</testing-report>

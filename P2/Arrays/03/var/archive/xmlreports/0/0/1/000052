@@ -1,0 +1,34 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="52" judge-id="1" status="WA" scoring="ACM" run-tests="1" contest-id="203" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>923952c2-0a52-4fc7-a5b2-3d34d043bcab</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>895.507</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="WA" time="4" real-time="5" max-memory-used="516096"  checker-comment="Answers differ: [1]: output: 10, correct: 9" >
+  <program-stats-str>{ utime=4, stime=0, ptime=4, rtime=5, maxvsz=516096, maxrss=3162112, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=516096, maxrss=2027520, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="24">10
+1 2 3 4 5 6 7 8 9 10
+</input>
+      <output size="2">10</output>
+      <correct size="2">9
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="44">Answers differ: [1]: output: 10, correct: 9
+</checker>
+    </test>
+  </tests>
+</testing-report>

@@ -1,0 +1,38 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="19" judge-id="20" status="WA" scoring="ACM" run-tests="1" contest-id="205" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>92085eea-5ad6-46ab-aa26-3d2749a4f1db</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>873.925</cpu-mhz>
+  <compiler_output>000019.cpp: In function 'int main()':
+000019.cpp:10:5: warning: unused variable 'c' [-Wunused-variable]
+ int c;
+     ^
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="5" real-time="6" max-memory-used="4026368"  checker-comment="Answers differ: [1]: output: 0, correct: 914" >
+  <program-stats-str>{ utime=5, stime=0, ptime=5, rtime=6, maxvsz=4026368, maxrss=2981888, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=2498560, maxrss=2334720, nvcsw=1, nivcsw=2 }</checker-stats-str>
+      <input size="357">91
+972 604 248 461 869 954 582 759 179 742 109 117 444 876 152 96 118 533 95 924 195 692 25 493 380 140 218 785 491 748 220 631 95 426 815 533 540 570 455 943 493 882 662 45 991 72 728 910 67 388 980 618 13 104 192 801 350 224 681 615 491 884 766 858 441 277 801 800 392 764 395 78 493 575 615 158 201 837 51 780 857 969 832 208 495 820 460 413 517 749 914
+</input>
+      <output size="232">0 1 2 4 5 6 7 9 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 29 30 32 33 34 35 36 37 38 39 40 41 42 43 45 46 47 49 50 51 53 54 55 56 57 58 59 61 62 63 64 66 67 68 69 70 71 72 73 74 75 76 77 78 79 81 82 83 84 85 86 87 88 89 90 </output>
+      <correct size="354">914 749 517 413 460 820 495 208 832 969 857 780 51 837 201 158 615 575 493 78 395 764 392 800 801 277 441 858 766 884 491 615 681 224 350 801 192 104 13 618 980 388 67 910 728 72 991 45 662 882 493 943 455 570 540 533 815 426 95 631 220 748 491 785 218 140 380 493 25 692 195 924 95 533 118 96 152 876 444 117 109 742 179 759 582 954 869 461 248 604 972
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="45">Answers differ: [1]: output: 0, correct: 914
+</checker>
+    </test>
+  </tests>
+</testing-report>

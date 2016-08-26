@@ -1,0 +1,23 @@
+program fg;
+var a:array [0..9] of integer;
+i,n: integer;
+begin
+n:=1;
+ for i:=0 to 4 do
+ begin
+   a[i]:=n;
+   n:=n+1;
+end;
+ for i:=0 to 4 do
+ write (a[i],' ');
+ end.
+
+
+
+
+
+
+
+
+
+

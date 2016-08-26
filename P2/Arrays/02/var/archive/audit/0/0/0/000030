@@ -1,0 +1,25 @@
+Date: 2016/08/09 11:55:20
+From: marina (uid 51)
+Ip: 192.168.1.76
+Command: submit
+Status: ok
+Run-id: 30
+Run-status: CG
+
+Date: 2016/08/09 11:55:23
+From: SYSTEM
+Status: testing completed
+Run-id: 30
+Run-status: WA
+  Profiling information:
+  Request start time:                2016/08/09 11:55:20.329830
+  Request completion time:           2016/08/09 11:55:23.162488
+  Total testing duration:            2.833
+  Waiting in compile queue duration: 0.371
+  Compilation duration:              0.941
+  Waiting in serve queue duration:   0.823
+  Waiting in run queue duration:     0.430
+  Testing duration:                  0.015
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.254
+

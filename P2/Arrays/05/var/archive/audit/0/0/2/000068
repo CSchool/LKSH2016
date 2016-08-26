@@ -1,0 +1,25 @@
+Date: 2016/08/20 10:08:01
+From: p2-rozin-dmitry (uid 32)
+Ip: 192.168.1.73
+Command: submit
+Status: ok
+Run-id: 68
+Run-status: CG
+
+Date: 2016/08/20 10:08:05
+From: SYSTEM
+Status: testing completed
+Run-id: 68
+Run-status: TL
+  Profiling information:
+  Request start time:                2016/08/20 10:08:01.942961
+  Request completion time:           2016/08/20 10:08:05.836224
+  Total testing duration:            3.893
+  Waiting in compile queue duration: 0.753
+  Compilation duration:              0.731
+  Waiting in serve queue duration:   0.578
+  Waiting in run queue duration:     0.085
+  Testing duration:                  1.013
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.733
+

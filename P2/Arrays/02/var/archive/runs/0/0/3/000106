@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+void left(int j);
+void right(int j);
+
+int ar[30][30];
+int N,M;
+int x;
+
+int main() {
+	
+
+	cin >> N >> M;
+	cin >> x;
+	x %= N;
+	for(int i = 0;i<N;i++)
+		for(int j = 0;j<M;j++)
+			cin >> ar[i][j];
+	for(int i = 0;i<N;i++){
+		if(i%2)right(i);
+		else left(i);
+	}
+	for(int i = 0;i<N;i++){
+		for(int j = 0;j<M;j++)
+			cout << ar[i][j] << ' ';
+		cout << endl;
+	}
+	return 0;
+}
+void left(int j){
+	int tmp[30];
+	int f = 0;
+	while(f < x){
+		int i = 0;
+		tmp[N-1] = ar[j][0];
+		for(int i = 1;i < M;i++)
+			tmp[i-1] = ar[j][i];
+		for(int i = 0;i < M;i++)
+			ar[j][i] = tmp[i];
+		f++;
+	}
+}
+void right(int j){
+	int tmp[30];
+	int f = 0;
+	while(f < x){
+		tmp[0] = ar[j][N-1];
+		for(int i = 1;i < M;i++)
+			tmp[i] = ar[j][i-1];
+		for(int i = 0;i < M;i++)ar[j][i] = tmp[i];
+		f++;
+	}
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "C"
+   type = "standard">
+  <statement language="ru_RU">
+    <title>Задача C</title>
+    <description>
+    <p>
+    Пусть у вас есть одномерный массив размером N. Сделайте циклический сдвиг элементов этого массива на 1 вправо (т.е так, что нулевой элемент станет первым, первый вторым ... последний станет нулевым).
+</p> <br/>
+<p>
+    <b>Входные данные:</b><br/>
+    Вам дано натуральное число N (0 &lt; N &lt; 10). 
+    На следующей строке записан одномерный массив, размер которого N.
+</p>
+<br/>
+<p>
+    <b>Выходные данные:</b><br/>
+    Ваша задача сделать сдвиг и вывести новый массив.
+</p><br/>
+    </description>
+  </statement>
+  <examples>
+    <example>
+        <input>
+3 
+0 1 2 
+</input>
+<output>
+2 0 1
+</output>
+    </example>
+  </examples>
+</problem>

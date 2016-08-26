@@ -1,0 +1,19 @@
+#include  <iostream>
+using namespace std;
+ long long a[1001][1001];
+	int n,m;
+	int x=0;
+	int z=0;
+	
+int main() {
+
+     cin>>n>>m;
+	for (int i= 0; i<n; ++i)
+		for (int j= 0; j<m; ++j)
+		cin >> a[i][j];
+	int max = a[0][0]; 
+	for (int i= 0; i<n; ++i)
+		for (int j= 0; j<m; ++j)
+		if(a[i][j]>max){ max=a[i][j];  x=i; z=j;}
+		cout<<x<<' '<<z;
+		return 0;}

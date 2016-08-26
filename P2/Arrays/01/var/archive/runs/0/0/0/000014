@@ -1,0 +1,13 @@
+program fg;
+var a:array [0..9] of integer;
+i,n: integer;
+begin
+ for i:=0 to 9 do
+ read (a[i]);
+ for i:=0 to 9 do
+ write (a[i],' ');
+ end.
+
+
+
+

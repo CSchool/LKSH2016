@@ -1,0 +1,32 @@
+#include<iostream>
+
+using namespace std;
+
+int main () {
+
+	int n;
+	int a[40];
+	int f = 0;
+
+	cin >> n;
+
+	a[0] = 1; a[1] = 1;
+
+	if(n == 0) {
+
+		f = 1;
+
+	} else {
+
+	for(int i = 2;i<n;++i) {
+
+		f = a[i-1] + a[i-2];
+		
+
+		}
+	}
+	cout << f << endl;
+
+	//system("pause");
+	return 0;
+}

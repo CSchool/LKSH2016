@@ -1,0 +1,11 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="9" judge-id="10" status="CE" scoring="ACM" run-tests="0" contest-id="205" compile-error="yes" >
+  <uuid>523fe1b5-417b-44af-9ea0-184b1d90013e</uuid>
+  <compiler_output>000009.c:1:20: fatal error: iostream: No such file or directory
+ #include &lt;iostream&gt;
+                    ^
+compilation terminated.
+</compiler_output>
+</testing-report>

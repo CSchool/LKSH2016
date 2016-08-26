@@ -1,0 +1,25 @@
+Date: 2016/08/17 09:53:44
+From: p2-matrosov (uid 36)
+Ip: 192.168.1.101
+Command: submit
+Status: ok
+Run-id: 78
+Run-status: CG
+
+Date: 2016/08/17 09:53:45
+From: SYSTEM
+Status: testing completed
+Run-id: 78
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/17 09:53:44.328604
+  Request completion time:           2016/08/17 09:53:45.920774
+  Total testing duration:            1.592
+  Waiting in compile queue duration: 0.155
+  Compilation duration:              0.755
+  Waiting in serve queue duration:   0.284
+  Waiting in run queue duration:     0.186
+  Testing duration:                  0.177
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.035
+

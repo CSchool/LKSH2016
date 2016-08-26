@@ -1,0 +1,44 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="49" judge-id="40" status="WA" scoring="ACM" run-tests="1" contest-id="203" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>74807004-f692-46c7-a554-1bb3d9b21abb</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>872.851</cpu-mhz>
+  <compiler_output>000049.cpp: In function 'int main()':
+000049.cpp:11:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  for (int i= 1; i&lt;n;++i) 
+  ^~~
+000049.cpp:19:3: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'for'
+   cout&lt;&lt;min&lt;&lt;' ';
+   ^~~~
+000049.cpp:6:8: warning: variable 'j' set but not used [-Wunused-but-set-variable]
+  int n,j;
+        ^
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="3" real-time="5" max-memory-used="4026368"  checker-comment="Answers differ: [1]: output: 1, correct: 0" >
+  <program-stats-str>{ utime=2, stime=1, ptime=3, rtime=5, maxvsz=4026368, maxrss=2949120, nvcsw=1, nivcsw=1 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=1, ptime=1, rtime=3, maxvsz=2498560, maxrss=1880064, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="14">5 6
+1 9 2 8 3
+</input>
+      <output size="4">1 1 </output>
+      <correct size="2">0
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="43">Answers differ: [1]: output: 1, correct: 0
+</checker>
+    </test>
+  </tests>
+</testing-report>

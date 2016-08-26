@@ -1,0 +1,39 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="1" judge-id="2" status="WA" scoring="ACM" run-tests="1" contest-id="204" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>ef1682ec-04fe-413b-8cd2-1354b4cd022b</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>893.359</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="WA" time="3" real-time="4" max-memory-used="323584"  checker-comment="Answers differ: [1]: output: 11767, correct: 6" >
+  <program-stats-str>{ utime=3, stime=0, ptime=3, rtime=4, maxvsz=323584, maxrss=3080192, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=2, maxvsz=323584, maxrss=1880064, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="188">8 6
+372 552 203 434 253 558
+514 11 468 269 802 754
+41 103 364 492 79 264
+0 354 301 341 524 207
+889 885 448 183 253 636
+686 669 219 743 924 722
+555 300 311 516 616 954
+6 298 757 301 689 372</input>
+      <output size="5">11767</output>
+      <correct size="3">6 5</correct>
+      <stderr size="0"></stderr>
+      <checker size="47">Answers differ: [1]: output: 11767, correct: 6
+</checker>
+    </test>
+  </tests>
+</testing-report>

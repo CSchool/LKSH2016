@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main () 
+{
+	int st[200];
+	int N;
+	int x;
+	cin>> N;
+	cin>> x;
+	for(int i = 0;i<N;i++)
+		cin>>st[i];
+
+	for(int i = 0;i<N;i++)
+		cout<<(st[i]+=5)<<' ';
+	return 0;
+}

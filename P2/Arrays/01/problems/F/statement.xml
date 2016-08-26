@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "D"
+   type = "standard">
+   <statement language="ru_RU">
+    <title>Задача F</title>
+    <description>
+               <p>
+              Пусть у вас есть одномерный массив размером 10, который заполнен числами 1 2 3 4 5 6 7 8 9 10. Ваша задача прибавить к каждому элементу число 5 и вывести массив.
+               </p>
+     <br/> 
+        </description>
+</statement>
+</problem>

@@ -1,0 +1,25 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="9" judge-id="8" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>56ef3629-3e81-4cd8-a97b-417b583d681d</uuid>
+  <compiler_output>000009.cpp:3:3: error: invalid preprocessing directive #Visual
+ # Visual C++ Express 2008
+   ^~~~~~
+000009.cpp:2:1: error: 'Microsoft' does not name a type
+ Microsoft Visual Studio Solution File, Format Version 10.00
+ ^~~~~~~~~
+000009.cpp:12:41: error: expected unqualified-id before '.' token
+   {BAE5D724-A0D7-4332-8567-6118F53E2753}.Debug|Win32.ActiveCfg = Debug|Win32
+                                         ^
+000009.cpp:13:41: error: expected unqualified-id before '.' token
+   {BAE5D724-A0D7-4332-8567-6118F53E2753}.Debug|Win32.Build.0 = Debug|Win32
+                                         ^
+000009.cpp:14:41: error: expected unqualified-id before '.' token
+   {BAE5D724-A0D7-4332-8567-6118F53E2753}.Release|Win32.ActiveCfg = Release|Win32
+                                         ^
+000009.cpp:15:41: error: expected unqualified-id before '.' token
+   {BAE5D724-A0D7-4332-8567-6118F53E2753}.Release|Win32.Build.0 = Release|Win32
+                                         ^
+</compiler_output>
+</testing-report>

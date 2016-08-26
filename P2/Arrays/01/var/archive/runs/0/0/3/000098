@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+	for(int a = 1; a <= 6; a++){
+		for(int	b = 1; b <= 6; b++){
+			if(b != a){
+				for(int c = 1; c <= 6; c++){
+					if(c != a && c != b){
+						for(int d = 1; d <= 6; d++){
+							if(d != a && d != b && d != c){
+								for(int e = 1; e <= 6; e++){
+									if(e != a && e != b && e != c && e != d){
+
+										int f = d + c * 10 + b * 100 + a * 1000;
+										int s = a + b * 10 + c * 100 + d * 1000;
+										int r = c + e * 10 + e * 100 + c * 1000;
+
+										if(f+s == r){
+											cout << f << '+' << s << '=' << r << endl;
+										}
+									}
+								}
+							}
+					}
+				}
+			}
+		}
+	}
+} 
+return 0;
+}

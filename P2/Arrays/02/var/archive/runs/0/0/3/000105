@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+	int ar[10];
+	int tmp[11];
+	int N;
+	cin >> N;
+	int x;
+	cin >> x;
+	x %= N;
+	for(int i = 0;i<N;i++)
+		cin>>ar[i];
+	int i = 0;
+	while(i < x){
+	tmp[0]=ar[N-1];
+	for(int i = 1;i<N;i++)
+		tmp[i]=ar[i-1];
+	for(int i = 0;i<N;i++)ar[i] = tmp[i];
+	i++;
+	}
+	for(int i = 0;i<N;i++)
+		cout<<tmp[i]<<' ';
+	return 0;
+}
+

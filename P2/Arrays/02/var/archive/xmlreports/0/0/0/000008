@@ -1,0 +1,15 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="8" judge-id="3" status="CE" scoring="ACM" run-tests="0" contest-id="202" compile-error="yes" >
+  <uuid>d896e305-b17e-419e-9310-2ef7da5cf483</uuid>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000008.pas
+000008.pas(8,1) Error: Identifier not found &quot;brgin&quot;
+000008.pas(9,1) Fatal: Syntax error, &quot;;&quot; expected but &quot;identifier READ&quot; found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode
+</compiler_output>
+</testing-report>

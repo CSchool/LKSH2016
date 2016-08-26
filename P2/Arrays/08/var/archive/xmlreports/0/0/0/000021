@@ -1,0 +1,51 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="21" judge-id="21" status="OK" scoring="ACM" run-tests="2" contest-id="208" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>0b06af75-aab8-4c1c-ac47-4859de8361de</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>1179.003</cpu-mhz>
+  <compiler_output>000021.cpp: In function 'int main()':
+000021.cpp:11:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int i = 0; i &lt; s.length(); ++i)
+                   ~~^~~~~~~~~~~~
+</compiler_output>
+  <tests>
+    <test num="1" status="OK" time="2" real-time="3" max-memory-used="327680"  checker-comment="OK" >
+  <program-stats-str>{ utime=2, stime=0, ptime=2, rtime=3, maxvsz=327680, maxrss=3092480, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=0, ptime=0, rtime=1, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="30">EFEWAGZZZedsfdsZZZ kjdfsdZZZ.
+</input>
+      <output size="2">9
+</output>
+      <correct size="2">9
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+    <test num="2" status="OK" time="1" real-time="2" max-memory-used="327680"  checker-comment="OK" >
+  <program-stats-str>{ utime=0, stime=1, ptime=1, rtime=2, maxvsz=327680, maxrss=3100672, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=0, stime=0, ptime=0, rtime=1, maxvsz=327680, maxrss=2035712, nvcsw=1, nivcsw=0 }</checker-stats-str>
+      <input size="15">djfadsjkfadfd.
+</input>
+      <output size="2">0
+</output>
+      <correct size="2">0
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="3">OK
+</checker>
+    </test>
+  </tests>
+</testing-report>

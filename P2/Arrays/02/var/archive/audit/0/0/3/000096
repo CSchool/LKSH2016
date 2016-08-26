@@ -1,0 +1,25 @@
+Date: 2016/08/19 10:29:51
+From: p2-utkin (uid 25)
+Ip: 192.168.1.88
+Command: submit
+Status: ok
+Run-id: 96
+Run-status: CG
+
+Date: 2016/08/19 10:29:54
+From: SYSTEM
+Status: testing completed
+Run-id: 96
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/19 10:29:52.165284
+  Request completion time:           2016/08/19 10:29:54.841499
+  Total testing duration:            2.676
+  Waiting in compile queue duration: 0.726
+  Compilation duration:              0.472
+  Waiting in serve queue duration:   0.430
+  Waiting in run queue duration:     0.466
+  Testing duration:                  0.072
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.510
+

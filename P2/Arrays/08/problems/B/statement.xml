@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "B"
+   type = "standard">
+   <statement language="ru_RU">
+      <title>Zeeeeeeeeeeeeeeeeeeeeeeeeeeee!</title>
+    <description>
+        <p>
+            По дороге к Банановому Королю, единороги нашли в лесу букву Zeee. Другие единороги (те, которые не Чарли) стали с ней разговаривать на испанском. Чарли очень любопытный единорог, поэтому он решил посчитать, сколько раз другие единороги произнесут букву Z.
+    </p><p>
+    <b>Входные данные:</b><br/>
+    На вход подается предложение, оканчивающееся точкой.
+    
+</p>
+<br/>
+<p>
+    <b>Выходные данные:</b><br/>
+   Помогите Чарли посчитать количество букв Z в разговоре.
+</p><br/>
+    </description>
+  </statement>
+  <examples>
+    <example>
+        <input>
+ ZEEEEEE! ZEEEEEE. 
+</input>
+<output>
+ 2 
+</output>
+    </example>
+  </examples>
+</problem>

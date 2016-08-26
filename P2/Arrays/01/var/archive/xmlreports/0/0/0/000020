@@ -1,0 +1,15 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="20" judge-id="19" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>e0476c35-b723-4495-8f81-18c8bbd002a0</uuid>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000020.pas
+000020.pas(2,14) Error: Error in type definition
+000020.pas(6,6) Fatal: Syntax error, &quot;:=&quot; expected but &quot;:&quot; found
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode
+</compiler_output>
+</testing-report>

@@ -1,0 +1,28 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="4" judge-id="3" status="SE" scoring="ACM" run-tests="1" contest-id="201" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>49bba99b-817a-453e-b832-6422e94c6f91</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>915.917</cpu-mhz>
+  <compiler_output></compiler_output>
+  <tests>
+    <test num="1" status="SE" time="3" real-time="4" max-memory-used="323584" >
+  <program-stats-str>{ utime=3, stime=0, ptime=3, rtime=4, maxvsz=323584, maxrss=3194880, nvcsw=1, nivcsw=1 }</program-stats-str>
+      <input size="20">0 1 2 3 4 5 6 7 8 9
+</input>
+      <output size="20">0 1 2 3 4 5 6 7 8 9 </output>
+      <stderr size="0"></stderr>
+    </test>
+  </tests>
+</testing-report>

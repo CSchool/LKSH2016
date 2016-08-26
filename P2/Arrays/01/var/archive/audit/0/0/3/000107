@@ -1,0 +1,25 @@
+Date: 2016/08/16 10:16:36
+From: p2-panteleev (uid 33)
+Ip: 192.168.1.65
+Command: submit
+Status: ok
+Run-id: 107
+Run-status: CG
+
+Date: 2016/08/16 10:16:40
+From: SYSTEM
+Status: testing completed
+Run-id: 107
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/16 10:16:36.892975
+  Request completion time:           2016/08/16 10:16:40.056997
+  Total testing duration:            3.164
+  Waiting in compile queue duration: 0.025
+  Compilation duration:              0.525
+  Waiting in serve queue duration:   0.617
+  Waiting in run queue duration:     0.998
+  Testing duration:                  0.000
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.998
+

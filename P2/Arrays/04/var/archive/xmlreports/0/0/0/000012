@@ -1,0 +1,17 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="12" judge-id="13" status="CE" scoring="ACM" run-tests="0" contest-id="204" compile-error="yes" >
+  <uuid>a2199a3e-7083-440f-b87b-91bbae196b04</uuid>
+  <compiler_output>000012.cpp: In function 'int main()':
+000012.cpp:17:14: error: expected primary-expression before '&gt;' token
+   if(a[i][j]=&gt;max){ max=a[i][j];  x=i; z=j;}
+              ^
+000012.cpp:15:2: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  for (int i= 0; i&lt;n; ++i)
+  ^~~
+000012.cpp:18:3: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'for'
+   cout&lt;&lt;x&lt;&lt;' '&lt;&lt;z;
+   ^~~~
+</compiler_output>
+</testing-report>

@@ -1,0 +1,25 @@
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int n;
+	int shirina;
+	int dlina;
+	int a[100][2];
+	int plowad;
+	int summaplowadey = 0;
+		
+	cin >> n;
+
+	for (int i = 0;i<n;++i) {
+		cin >> shirina >> dlina;
+		for (int j = 0;j<n;++j) {
+			plowad = shirina*dlina;
+	}
+		summaplowadey += plowad;
+	}
+	cout << summaplowadey;
+	//system("pause");
+	return 0;
+}

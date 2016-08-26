@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "A"
+   type = "standard">
+  <statement language="ru_RU">
+    <title>Волшебный мост.</title>
+    <description>
+        <p>
+            По пути на конфетную гору Чарли и два других единорога остановились на волшебном мосту. Эти единороги считают необходимым сообщить Чарли, где именно они находятся. Они начинают кричать его имя, а затем, как только они убедятся в том, что Чарли их услышал, скажут: "We are on the magic bridge!". 
+    </p><p>
+    <b>Входные данные:</b><br/>
+    На вход подается имя Charlie различными вариантами несколько раз, пока не будет введена фраза "We are on the magic bridge!".
+</p>
+<br/>
+<p>
+    <b>Выходные данные:</b><br/>
+   Выведите количество повторений имени Charlie.
+</p><br/>
+    </description>
+  </statement>
+  <examples>
+    <example>
+        <input>
+ Charlie 
+ Chaaaaarlie 
+ Charlieeee 
+ Chaaarlieee 
+ We are on the magic bridge! 
+</input>
+<output>
+ 4 
+</output>
+    </example>
+  </examples>
+</problem>

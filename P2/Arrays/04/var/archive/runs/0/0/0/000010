@@ -1,0 +1,17 @@
+var
+a:array[0..1000,0..1000] of longint;
+i,j,i1,j1,max,n,m:longint;
+begin
+read(n,m);
+for i:=0 to n-1 do
+for j:=0 to m-1 do read(a[i,j]);
+max:=a[0,0];
+for i:=0 to n-1 do
+for j:=0 to m-1 do
+begin
+if max<a[i,j] then max:=a[i,j];
+i1:=i;
+j1:=j;
+end;
+write(i1,' ',j1);
+end.

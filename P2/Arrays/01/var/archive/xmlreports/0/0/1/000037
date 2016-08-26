@@ -1,0 +1,19 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="37" judge-id="36" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>1c43c1e9-dce4-4a7c-9070-53e1192a63b0</uuid>
+  <compiler_output>000037.cpp:1:20: warning: extra tokens at end of #include directive [-Wextra-tokens]
+#include &lt;iostream&gt;;
+                   ^
+                   //
+000037.cpp:6:13: error: array initializer must be an initializer list
+                const int a[5] = 1 2 3 4 5 ;
+                          ^
+000037.cpp:6:21: error: expected ';' at end of declaration
+                const int a[5] = 1 2 3 4 5 ;
+                                  ^
+                                  ;
+1 warning and 2 errors generated.
+</compiler_output>
+</testing-report>

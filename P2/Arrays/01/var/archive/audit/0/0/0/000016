@@ -1,0 +1,25 @@
+Date: 2016/08/07 10:40:21
+From: p1-panov (uid 7)
+Ip: 192.168.1.96
+Command: submit
+Status: ok
+Run-id: 16
+Run-status: CG
+
+Date: 2016/08/07 10:40:23
+From: SYSTEM
+Status: testing completed
+Run-id: 16
+Run-status: OK
+  Profiling information:
+  Request start time:                2016/08/07 10:40:21.908108
+  Request completion time:           2016/08/07 10:40:23.896875
+  Total testing duration:            1.989
+  Waiting in compile queue duration: 0.003
+  Compilation duration:              0.745
+  Waiting in serve queue duration:   0.148
+  Waiting in run queue duration:     0.972
+  Testing duration:                  0.009
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.110
+

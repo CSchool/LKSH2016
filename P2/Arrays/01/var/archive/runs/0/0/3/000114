@@ -1,0 +1,18 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, i , y;
+	int m [100];
+	cin >> a >> b;
+	i = a * b;
+	for (int x = 0; x < i; x++)
+	{
+		cin >> y;
+		m[x] = y;
+		cout << m[x] << ' ';
+	}
+	return 0;
+}

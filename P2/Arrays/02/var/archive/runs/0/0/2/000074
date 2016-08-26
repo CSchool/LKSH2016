@@ -1,0 +1,26 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int i, y, a, t;
+	a = 0;
+	t = 0;
+	cin >> y >> i;
+	int m[10][10];
+		while (i > t)
+	{
+		for (int x=0; x<y; x++) 
+		{
+		cin >> m[t][x];
+		if ((t + x) % 2 == 1)
+		{
+			a = a + m[t][x];
+		}
+		}
+		t = t + 1;
+	}
+		cout << a << endl;
+	return 0;
+}

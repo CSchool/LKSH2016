@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+long long ma = -999999999;
+long long dek[1000][1000];
+long long im,jm;
+
+int main() {
+	int N,M;
+	cin>>N>>M;
+	for(int i = 0;i<N;i++)
+		for(int j = 0;j<M;j++)
+			cin>>dek[i][j];
+	for(int i = 0;i<N;i++)
+		for(int j = 0;j<M;j++){
+			if(dek[i][j]== -1)continue;
+			if(dek[i][j]>ma){
+				ma = dek[i][j];
+				im = i;
+				jm = j;
+			}
+		}
+		cout<<im<<' '<<jm;
+		return 0;
+}
+

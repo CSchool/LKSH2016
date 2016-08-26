@@ -1,0 +1,17 @@
+var n,i,j,k,b: integer; a: array[1..100] of integer;
+begin
+
+ readln (n);
+
+ for i:= 1 to n do
+  read (a[i]);
+
+ for i:= 1 to n do begin
+  k:=0;
+  b:= n div 2 +1;
+  for j:= 2 to b do
+   if (a[i] mod j = 0) then k:=k+1;
+  if ((k>0) and (a[i]<>2) and (a[i]<>3)) or (a[i]=1) then write (i,' ');
+  end;
+
+end.

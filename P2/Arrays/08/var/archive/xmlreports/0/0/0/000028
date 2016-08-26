@@ -1,0 +1,14 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="28" judge-id="28" status="CE" scoring="ACM" run-tests="0" contest-id="208" compile-error="yes" >
+  <uuid>e7e7001c-8805-449e-9fb0-fe86b0a92bcd</uuid>
+  <compiler_output>000028.cpp:17:1: error: expected '(' after 'for'
+cout &lt;&lt; max1 &lt;&lt; ' ' &lt;&lt; max2;
+^
+000028.cpp:19:2: error: use of undeclared identifier 'system'
+        system(&quot;pause&quot;);
+        ^
+2 errors generated.
+</compiler_output>
+</testing-report>

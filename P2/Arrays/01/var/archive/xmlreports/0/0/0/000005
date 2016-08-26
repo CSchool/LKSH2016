@@ -1,0 +1,18 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="5" judge-id="4" status="CE" scoring="ACM" run-tests="0" contest-id="201" compile-error="yes" >
+  <uuid>f54dce09-de4e-47d6-80a6-ef9f1ec75242</uuid>
+  <compiler_output>Free Pascal Compiler version 3.0.0 [2015/11/26] for x86_64
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Linux for x86-64
+Compiling 000005.pas
+000005.pas(3,3) Error: Identifier not found &quot;intweger&quot;
+000005.pas(3,11) Error: Error in type definition
+000005.pas(5,5) Error: Ordinal expression expected
+000005.pas(6,5) Error: Ordinal expression expected
+000005.pas(7,4) Fatal: There were 4 errors compiling module, stopping
+Fatal: Compilation aborted
+Error: /usr/bin/ppcx64 returned an error exitcode
+</compiler_output>
+</testing-report>

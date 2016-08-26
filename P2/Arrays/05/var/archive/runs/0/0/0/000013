@@ -1,0 +1,8 @@
+var
+a:array[0..100] of integer;
+i,n:integer;
+begin
+read(n);
+for i:=0 to n -1 do read(a[i]);
+for i:=n-1 downto 0 do write(a[i],' ');
+end.

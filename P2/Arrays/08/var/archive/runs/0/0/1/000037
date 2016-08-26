@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+
+	string s;
+	int k = 0;
+	int max = 0;
+	int min = 10000;
+	getline (cin, s);
+	int n = s.length();
+
+	for (char i = 'a'; i <= 'z'; ++i) {
+		k = 0;
+		for (int j = 0; j < n; ++j)
+			if (s[j] == i) k++;
+		if (k > max) max = k;
+		if (k < min && k != 0) min = k;
+	}
+
+	k = max - min;
+	cout << k << endl;
+
+	return 0;
+
+}

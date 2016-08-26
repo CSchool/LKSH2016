@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<problem
+   package = "ru.ejudge.sample_contest"
+   id = "G"
+   type = "standard">
+  <statement language="ru_RU">
+    <title>Задача G</title>
+    <description>
+        <p>
+            Пусть у вас есть одномерный массив А размером N. Необходимо сделать циклический сдвиг на х элементов вправо.
+</p> <br/>
+<p>
+    <b>Входные данные:</b><br/>
+    Вам даны два натуральных числа N и х (0 &lt; N, х &lt; 10), но при этом х может оказаться больше, чем N.
+    На следующей строке записан одномерный массив, размер которого N.
+</p><br/>
+<p>
+    <b>Выходные данные:</b><br/>
+    Ваша задача вывести массив, который получится после сдвига.
+</p><br/>
+    </description>
+  </statement>
+  <examples>
+    <example>
+        <input>
+3 2
+1 2 3 
+</input>
+<output>
+2 3 1
+</output>
+    </example>
+  </examples>
+</problem>

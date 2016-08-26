@@ -1,0 +1,38 @@
+Content-type: text/xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<testing-report run-id="20" judge-id="21" status="WA" scoring="ACM" run-tests="1" contest-id="205" real-time-available="yes" max-memory-used-available="yes" correct-available="yes" failed-test="1" time-limit-ms="1000" real-time-limit-ms="5000" marked-flag="no" >
+  <uuid>d278a5a2-ee1c-4adc-96c1-0b56e8a4a96a</uuid>
+  <comment>
+
+run: ATTENTION: core file pattern in /proc/sys/kernel/core_pattern
+is set to pipe the core file to a helper program.
+This is NOT RECOMMENDED for correct judging.
+Please, modify the core_pattern file.
+For example, consider disabling abrtd.
+
+</comment>
+  <host>tsarn-arch</host>
+  <cpu-model>Intel(R) Core(TM) i5-2450M CPU @ 2.50GHz</cpu-model>
+  <cpu-mhz>827.832</cpu-mhz>
+  <compiler_output>000020.cpp: In function 'int main()':
+000020.cpp:10:5: warning: unused variable 'c' [-Wunused-variable]
+ int c;
+     ^
+</compiler_output>
+  <tests>
+    <test num="1" status="WA" time="4" real-time="5" max-memory-used="323584"  checker-comment="Answers differ: [1]: output: 2, correct: 0" >
+  <program-stats-str>{ utime=3, stime=1, ptime=4, rtime=5, maxvsz=323584, maxrss=2953216, nvcsw=1, nivcsw=0 }</program-stats-str>
+  <checker-stats-str>{ utime=1, stime=0, ptime=1, rtime=3, maxvsz=323584, maxrss=2334720, nvcsw=1, nivcsw=1 }</checker-stats-str>
+      <input size="25">10
+2 3 4 5 6 7 8 9 10 11
+</input>
+      <output size="10">2 4 6 7 8 </output>
+      <correct size="11">0 1 3 5 9 
+</correct>
+      <stderr size="0"></stderr>
+      <checker size="43">Answers differ: [1]: output: 2, correct: 0
+</checker>
+    </test>
+  </tests>
+</testing-report>

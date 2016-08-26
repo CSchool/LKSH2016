@@ -1,0 +1,25 @@
+Date: 2016/08/21 10:18:23
+From: p2-egorov (uid 27)
+Ip: 192.168.1.79
+Command: submit
+Status: ok
+Run-id: 34
+Run-status: CG
+
+Date: 2016/08/21 10:18:26
+From: SYSTEM
+Status: testing completed
+Run-id: 34
+Run-status: PE
+  Profiling information:
+  Request start time:                2016/08/21 10:18:23.118356
+  Request completion time:           2016/08/21 10:18:26.400514
+  Total testing duration:            3.282
+  Waiting in compile queue duration: 0.695
+  Compilation duration:              1.004
+  Waiting in serve queue duration:   0.507
+  Waiting in run queue duration:     0.584
+  Testing duration:                  0.007
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.485
+

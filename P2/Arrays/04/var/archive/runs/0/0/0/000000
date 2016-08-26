@@ -1,0 +1,29 @@
+#include<iostream>	
+using namespace std;
+int main()
+{
+int d;
+cin >> d;
+int n;
+cin >> n;
+int c = 0 ;
+int p = 0 ;
+int k = 0 ;
+int a[10][10];
+for(int i = 0; i < d; i++){
+	for(int j = 0; j< d; j++){
+	
+		cin>> a [i][j];
+
+		if (a[i][j] > c) {c = a [ i ] [ j ]; p = i; k = j;}   
+	}
+}
+	
+cout<< p << " " << k << endl;
+
+
+
+
+
+return 0;
+}

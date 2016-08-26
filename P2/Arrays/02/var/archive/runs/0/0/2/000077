@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int  N ,x;
+	cin >> N >> x;
+	int a[100];
+	for(int i= 0 ;i < N ;i++)
+	{
+		cin >> a[i];
+		a[i]+=x ;
+		cout << a[i] << ' ' ;
+	}
+	return 0;
+}

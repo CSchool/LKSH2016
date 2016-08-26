@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main () {
+	int n, z;
+	cin >> n;
+	int a[10];
+	for (int c = 0; c < n; c++)
+	{
+		cin >> a[c];
+		if (a[c] % 2 == 0)
+		{
+			z = z + a[c];
+		}
+	}
+	cout << z;
+}

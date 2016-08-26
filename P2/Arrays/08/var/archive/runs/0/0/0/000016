@@ -1,0 +1,14 @@
+var
+s:string:='We are on the magic bridge!';
+s1:string;
+k:integer;
+begin
+k:=0;
+readln(s1);
+while not(s1=s) do
+begin
+readln(s1);
+k:=k+1
+end;
+write(k);
+end.

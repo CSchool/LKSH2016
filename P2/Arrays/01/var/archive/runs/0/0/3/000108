@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b, i;
+	cin >> a >> b;
+	i = a * b;
+	int m [100];
+	int y;
+	for (int x=0; x<i; x++)
+	{
+		cin >> y;
+		m[x] = y;
+	}
+	for (int x=0; x<i; x++)
+	{
+		cout << m[x] << ' ';
+	}
+	return 0;
+}

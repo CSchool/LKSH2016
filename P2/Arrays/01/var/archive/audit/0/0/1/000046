@@ -1,0 +1,64 @@
+Date: 2016/08/08 09:44:22
+From: p2-panov (uid 7)
+Ip: 192.168.1.96
+Command: submit
+Status: ok
+Run-id: 46
+Run-status: CG
+
+Date: 2016/08/08 09:44:24
+From: SYSTEM
+Status: testing completed
+Run-id: 46
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/08 09:44:22.382801
+  Request completion time:           2016/08/08 09:44:24.823320
+  Total testing duration:            2.441
+  Waiting in compile queue duration: 0.207
+  Compilation duration:              0.703
+  Waiting in serve queue duration:   0.453
+  Waiting in run queue duration:     0.376
+  Testing duration:                  0.036
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.666
+
+Date: 2016/08/08 10:19:30
+From: ejudge (uid 1)
+Ip: 192.168.1.100
+Command: rejudge
+Status: ok
+Run-id: 46
+Run-status: CG
+
+Date: 2016/08/08 10:19:32
+From: SYSTEM
+Status: testing completed
+Run-id: 46
+Run-status: CF
+  Profiling information:
+  Request start time:                2016/08/08 10:19:30.380416
+  Request completion time:           2016/08/08 10:19:32.127830
+  Total testing duration:            1.747
+  Waiting in compile queue duration: 0.079
+  Compilation duration:              0.377
+  Waiting in serve queue duration:   0.611
+  Waiting in run queue duration:     0.231
+  Testing duration:                  0.000
+  Post-processing duration:          0.000
+  Waiting in serve queue duration:   0.449
+
+Date: 2016/08/11 09:50:38
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: set-marked
+Status: ok
+Run-id: 46
+
+Date: 2016/08/11 09:50:49
+From: ejudge (uid 1)
+Ip: 127.0.0.1
+Command: set-unmarked
+Status: ok
+Run-id: 46
+

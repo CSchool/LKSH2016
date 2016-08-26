@@ -1,0 +1,16 @@
+Date: 2016/08/17 10:04:09
+From: p2-kniginitskiy (uid 26)
+Ip: 192.168.1.61
+Command: submit
+Status: ok
+Run-id: 10
+Run-status: CG
+
+Date: 2016/08/17 10:28:24
+From: marina (uid 51)
+Ip: 192.168.1.84
+Command: rejudge
+Status: ok
+Run-id: 10
+Run-status: CG
+

@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+char s;
+int main()
+{
+	int x=0;
+	while(s!='.'){
+		cin>>s;
+		if(s=='Z')
+			x++;
+	}
+	cout<<x<<endl;
+	return 0;
+}

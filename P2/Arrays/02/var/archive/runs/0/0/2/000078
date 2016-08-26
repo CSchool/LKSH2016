@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int a[10];
+	int  N, b  ;
+	cin >> N ;
+	for(int i = 0 ;i < N ;++i)
+	{
+		cin >> a[i];
+		b += a[i];}
+	    cout << b;
+	return 0;
+}

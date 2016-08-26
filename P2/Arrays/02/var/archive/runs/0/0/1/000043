@@ -1,0 +1,16 @@
+#include<iostream>	
+using namespace std;
+
+int main(){
+	int i=0;
+	int S=0;
+	int n;
+	cin>>n;
+	int a[100] ;
+	for(i=0 ; i<n;i++)
+	cin>>a[i];
+	for(i=0 ; i<n;i++){
+		S=S+a[i];}
+	cout<<S<< ' ';
+return 0;	
+}

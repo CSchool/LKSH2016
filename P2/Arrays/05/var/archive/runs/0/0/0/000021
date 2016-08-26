@@ -1,0 +1,30 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+int a=0;
+int mas[100][100]; 
+
+cin >> a;
+int s=0;
+ 
+for(int i=0;i<a;i++)
+{
+	for(int m=0;m<2;m++)
+	{
+		cin >> mas[i][m];
+	}
+}
+
+for(int i=0;i<a;i++)
+{
+	for(int m=0;m<2;m=m+2)
+	{
+		s += mas[i][0]* mas[i][1];
+	}
+}
+  cout << s;
+	return 0;
+}
